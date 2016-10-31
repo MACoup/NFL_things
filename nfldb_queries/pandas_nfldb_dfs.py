@@ -3,11 +3,14 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import itertools
 import seaborn
+import numpy as np
 
 pd.set_option('display.max_columns', 30)
 
 passing_df = pd.read_csv('Data/passing_df.csv')
 receiving_df = pd.read_csv('Data/receiving_df.csv')
+rushing_df = pd.read_csv('Data/rushing_df.csv')
+tight_end_df = pd.read_csv('Data/tight_end_df.csv')
 
 # create new column for the player's team's score
 def team_score(row):
@@ -40,19 +43,30 @@ passing_df['team_score'] = passing_df.apply(lambda row: team_score(row), axis=1)
 
 receiving_df['team_score'] = receiving_df.apply(lambda row: team_score(row), axis=1)
 
+rushing_df['team_score'] = rushing_df.apply(lambda row: team_score(row), axis=1)
+
+tight_end_df['team_score'] = tight_end_df.apply(lambda row: team_score(row), axis=1)
+
+
 # get touchdown points for each player
 passing_df['total_td_points'] = passing_df['passing_tds'] * 6
 receiving_df['total_td_points'] = receiving_df['receiving_tds'] * 6
+rushing_df['total_td_points'] = rushing_df['receiving_tds'] * 6
+tight_end_df['total_td_points'] = tight_end_df['receiving_tds'] * 6
+
 
 # get score percentage
 passing_df['td_score_percentage'] = passing_df['total_td_points']/passing_df['team_score']
-receiving_df['total_score_percentage'] = receiving_df['total_td_points']/passing_df['team_score']
-
+receiving_df['total_score_percentage'] = receiving_df['total_td_points']/receiving_df['team_score']
+rushing_df['total_score_percentage'] = rushing_df['total_td_points']/rushing_df['team_score']
+tight_end_df['total_score_percentage'] = tight_end_df['total_td_points']/rushing_df['team_score']
 
 drop_cols = ['home_team', 'home_score', 'away_team', 'away_score']
 
 passing_df.drop(drop_cols, axis=1, inplace=True)
 receiving_df.drop(drop_cols, axis=1, inplace=True)
+rushing_df.drop(drop_cols, axis=1, inplace=True)
+tight_end_df.drop(drop_cols, axis=1, inplace=True)
 
 
 def plot_score_percentage():
@@ -134,6 +148,29 @@ def rec_rush_data(df, year=None, week=None, player=None):
     df['DK points'] = df['DK points'] + df['receiving_rec'] + (df['receiving_yds'] * 0.1) + (df['receiving_tds'] * 6) + (df['receiving_twoptm'] * 2) + (df['rushing_yds'] * 0.1) + (df['rushing_tds'] * 6) + (df['rushing_twoptm'] * 2) + (df['fumble_rec_tds'] * 6) + (df['kicking_rec_tds'] * 6) + (df['punt_ret_tds'] * 6 ) - (df['fumbles_total'])
     return df
 
+
+# messing around with groupby
+rec_df = rec_rush_data(receiving_df)
+rec_2015 = rec_df[rec_df['season_year'] == 2015]
+grouped_2015 = rec_2015.groupby('full_name')
+grouped_mean_std = grouped_2015['DK points'].agg([np.mean, np.std]).sort_values('mean', ascending=False).reset_index()
+grouped_mean_std['std_diff'] = grouped_mean_std['mean'] - grouped_mean_std['std']
+
 if __name__ == '__main__':
-    week6_rec_rush = rec_rush_data(receiving_df, year=2016, week=6)
-    week6_pass = passing_data(passing_df, year=2016, week=6)
+    pass_2016 = passing_data(passing_df, year=2016)
+    rec_2016 = rec_rush_data(receiving_df, year=2016)
+    rush_2016 = rec_rush_data(rushing_df, year=2016)
+    tight_end_2016 = rec_rush_data(tight_end_df, year=2016)
+
+    son_mon_teams = ['MIN', 'CHI', 'PHI', 'DAL']
+
+    pass_son_mon_night = pass_2016[pass_2016['team'].isin(son_mon_teams)]
+    rec_son_mon_night = rec_2016[rec_2016['team'].isin(son_mon_teams)]
+    rush_son_mon_night = rush_2016[rush_2016['team'].isin(son_mon_teams)]
+    tight_end_son_mon_night = tight_end_2016[tight_end_2016['team'].isin(son_mon_teams)]
+
+    # finding sun_mon_night_pass data
+    grouped_p = pass_son_mon_night.groupby(['full_name']).mean().reset_index()
+    grouped_rec = rec_son_mon_night.groupby(['full_name']).mean().reset_index()
+    grouped_rush = rush_son_mon_night.groupby(['full_name']).mean().reset_index()
+    grouped_tight_end = tight_end_son_mon_night.groupby(['full_name']).mean().reset_index()
