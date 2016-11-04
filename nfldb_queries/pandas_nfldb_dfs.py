@@ -78,19 +78,6 @@ def DK_def_pa_points(row):
     return row['DK points']
 
 
-# get touchdown points for each player
-passing_df['total_td_points'] = passing_df['passing_tds'] * 6
-receiving_df['total_td_points'] = receiving_df['receiving_tds'] * 6
-rushing_df['total_td_points'] = rushing_df['receiving_tds'] * 6
-tight_end_df['total_td_points'] = tight_end_df['receiving_tds'] * 6
-
-
-# get score percentage
-passing_df['td_score_percentage'] = passing_df['total_td_points']/passing_df['team_score']
-receiving_df['total_score_percentage'] = receiving_df['total_td_points']/receiving_df['team_score']
-rushing_df['total_score_percentage'] = rushing_df['total_td_points']/rushing_df['team_score']
-tight_end_df['total_score_percentage'] = tight_end_df['total_td_points']/rushing_df['team_score']
-
 drop_cols = ['home_team', 'home_score', 'away_team', 'away_score']
 
 passing_df.drop(drop_cols, axis=1, inplace=True)
@@ -114,10 +101,20 @@ def passing_data(df, year=None, week=None, player=None):
         df = df[df['full_name'] == player]
     else:
         pass
-    df['yds_per_rec'] = df['receiving_yds'] / df['receiving_rec']
+    df['total_points'] = (df['passing_tds'] * 6) + (df['rushing_tds'] * 6) + (df['passing_twoptm'] * 2) + (df['receiving_tds'] * 6) + (df['rushing_twoptm'] * 2) + (df['fumble_rec_tds'] * 6) + (df['puntret_tds'] * 6) + (df['kicking_rec_tds'] * 6) + (df['kickret_tds'] * 6)
+
+    df['cmp_percentage'] = df['passing_cmp']/df['passing_att']
+
+    df['score_percentage'] = df['total_points']/df['team_score']
+
     df['yds_per_rush'] = df['rushing_yds'] / df['rushing_att']
+
     df['DK points'] = df.apply(lambda row: DK_passing_bonus(row), axis=1)
+
+    pd.get_dummies(df[['season_year', 'season_type', 'week']])
+
     df['DK points'] = df['DK points'] + (df['passing_yds']* 0.04) + (df['passing_tds']*4) + (df['passing_twoptm'] * 2) + (df['rushing_yds'] * 0.1) + (df['rushing_tds'] * 6) + (df['rushing_twoptm'] * 2) + (df['receiving_yds'] * 0.1) + (df['receiving_tds'] * 6) + (df['receiving_twoptm'] * 2) + (df['receiving_rec']) + (df['fumble_rec_tds'] * 6) + (df['puntret_tds'] * 6) + (df['kicking_rec_tds'] * 6) + (df['kickret_tds'] * 6) - (df['passing_int']) - (df['fumbles_total'])
+
     return df
 
 def rec_rush_data(df, year=None, week=None, player=None):
@@ -133,8 +130,18 @@ def rec_rush_data(df, year=None, week=None, player=None):
         df = df[df['full_name'] == player]
     else:
         pass
+    df['total_points'] = (df['receiving_tds'] * 6) + (df['rushing_tds'] * 6) + (df['rushing_twoptm'] * 2) + (df['receiving_twoptm'] * 2) + (df['fumble_rec_tds'] * 6) + (df['puntret_tds'] * 6) + (df['kicking_rec_tds'] * 6) + (df['kickret_tds'] * 6)
+
+    df['rec_percentage'] = df['receiving_rec']/df['receiving_tar']
+
+    df['score_percentage'] = df['total_points']/df['team_score']
+
     df['yds_per_rec'] = df['receiving_yds'] / df['receiving_rec']
+
     df['yds_per_rush'] = df['rushing_yds'] / df['rushing_att']
+
+    pd.get_dummies(df[['season_year', 'season_type', 'week']])
+
     df['DK points'] = df.apply(lambda row: DK_receiving_rush_bonus(row), axis=1)
     df['DK points'] = df['DK points'] + (df['rushing_yds'] * 0.1) + (df['rushing_tds'] * 6) + (df['rushing_twoptm'] * 2) + (df['receiving_yds'] * 0.1) + (df['receiving_tds'] * 6) + (df['receiving_twoptm'] * 2) + (df['receiving_rec']) + (df['fumble_rec_tds'] * 6) + (df['puntret_tds'] * 6) + (df['kicking_rec_tds'] * 6) + (df['kickret_tds'] * 6) - (df['fumbles_total'])
     return df
@@ -152,7 +159,11 @@ def defense_data(df, year=None, week=None, team=None):
         df = df[df['team'] == team]
     else:
         pass
+
+    pd.get_dummies(df[['season_year', 'season_type', 'week']])
+
     df['DK points'] = df.apply(lambda row: DK_def_pa_points(row), axis=1)
+
     df['DK points'] = df['DK points'] + df['sack'] + (df['ints'] * 2) + (df['fumble_rec'] * 2) + (df['fumble_rec_tds'] * 6) + (df['kickret_tds'] * 6) + (df['puntret_tds'] * 6) + (df['misc_tds'] * 6)  + (df['int_tds'] * 6) + (df['safety'] * 2) + (df['punt_block'] * 2) + (df['fg_block'] * 2) + (df['xp_block'] * 2)
     return df
 

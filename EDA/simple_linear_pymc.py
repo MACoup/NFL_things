@@ -12,12 +12,12 @@ from pandas_nfldb_dfs import passing, rec, rush, te, dst
 # passing regression with statsmodels
 y = passing['DK points']
 x = passing['team_score']
-
+x = sm.add_constant(x)
 model_1 = sm.OLS(y, x).fit()
 
-x2 = passing[['team_score', 'passing_att']]
+x2 = passing['team_score']
 
-model_2 = sm.OLS(y, x2).fit()
+# model_2 = sm.OLS(y, x2).fit()
 
 
 # passing regression with pymc3
@@ -30,7 +30,7 @@ with pm.Model() as model:
     b = pm.Normal('b', mu=0, sd=20)
     sigma = pm.Uniform('sigma', lower=0, upper=20)
 
-    y_est = a*x + b
+    y_est = a*x2 + b
 
     likelihood = pm.Normal('y', mu=y_est, sd=sigma, observed=y)
 
@@ -42,20 +42,22 @@ with pm.Model() as model:
     pm.traceplot(trace)
 
 # passing regression with pymc3 GLM formulas
-    data = dict(x=x, y=y)
+data = dict(x=x2, y=y)
 
 with pm.Model() as model2:
     pm.glm.glm('y ~ x', data)
     step2 = pm.NUTS()
     trace2 = pm.sample(2000, step2, progressbar=True)
-    # pm.traceplot(trace2)
+    pm.traceplot(trace2)
 
 # plotting
-plt.figure(figsize=(10, 8))
-plt.scatter(x, y, s=30, label='data')
+fig = plt.figure(figsize=(10, 8))
+ax = fig.add_subplot(111)
+ax.scatter(x2, y, s=30, label='data')
 pm.glm.plot_posterior_predictive(trace2, samples=100,
                                  label='posterior predictive regression lines',
                                  c='black', alpha=0.2)
-plt.plot(x, model_1.predict(x), label='Ordinary Least Squares Line', lw=3, color='r')
-plt.set_ylabel('DK points')
+ax.plot(x, model_1.predict(x), label='Ordinary Least Squares Line', lw=3, color='r')
+ax.set_ylim(0, 5)
+ax.set_xlim(0, 1)
 plt.legend(loc='best')
