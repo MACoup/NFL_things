@@ -10,12 +10,16 @@ from pandas_nfldb_dfs import passing, rec, rush, te, dst
 
 
 # passing regression with statsmodels
-y = passing['DK points']
-x = passing['team_score']
-x = sm.add_constant(x)
-model_1 = sm.OLS(y, x).fit()
+passing = passing[passing['season_type'] == 'Regular']
+y = passing.pop('DK points')
+drop_cols = ['Unnamed: 0', 'season_year', 'season_type', 'week', 'team', 'full_name', 'position']
+passing.drop(drop_cols, axis=1, inplace=True)
+x2 = passing.values
+x = sm.add_constant(x2)
+# model_1 = sm.OLS(y, x).fit()
+drop_cols = ['Unnamed: 0', 'season_year', 'season_type', 'week', 'team', 'full_name', 'position']
 
-x2 = passing['team_score']
+
 
 # model_2 = sm.OLS(y, x2).fit()
 
@@ -47,17 +51,17 @@ data = dict(x=x2, y=y)
 with pm.Model() as model2:
     pm.glm.glm('y ~ x', data)
     step2 = pm.NUTS()
-    trace2 = pm.sample(2000, step2, progressbar=True)
+    trace2 = pm.sample(2000, step=step2, progressbar=True)
     pm.traceplot(trace2)
 
 # plotting
-fig = plt.figure(figsize=(10, 8))
-ax = fig.add_subplot(111)
-ax.scatter(x2, y, s=30, label='data')
-pm.glm.plot_posterior_predictive(trace2, samples=100,
-                                 label='posterior predictive regression lines',
-                                 c='black', alpha=0.2)
-ax.plot(x, model_1.predict(x), label='Ordinary Least Squares Line', lw=3, color='r')
-ax.set_ylim(0, 5)
-ax.set_xlim(0, 1)
-plt.legend(loc='best')
+# fig = plt.figure(figsize=(10, 8))
+# ax = fig.add_subplot(111)
+# ax.scatter(x2, y, s=30, label='data')
+# pm.glm.plot_posterior_predictive(trace2, samples=100,
+#                                  label='posterior predictive regression lines',
+#                                  c='black', alpha=0.2)
+# ax.plot(x, model_1.predict(x), label='Ordinary Least Squares Line', lw=3, color='r')
+# ax.set_ylim(0, 5)
+# ax.set_xlim(0, 1)
+# plt.legend(loc='best')
