@@ -1,0 +1,1 @@
+Week;Year;GID;Name;Pos;Team;h/a;Oppt;DK points;DK salary

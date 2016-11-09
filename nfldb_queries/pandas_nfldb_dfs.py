@@ -28,6 +28,12 @@ def opp_team_score(row):
     else:
         return row['home_score']
 
+def home_away(row):
+    if row['team'] == row['home_team']:
+        return 1
+    else:
+        return 0
+
 def DK_passing_bonus(row):
     if row['passing_yds'] >= 300:
         row['DK points'] = 3
@@ -50,13 +56,20 @@ def DK_receiving_rush_bonus(row):
 
 # get team score for each player
 passing_df['team_score'] = passing_df.apply(lambda row: team_score(row), axis=1)
+passing_df['opp_score'] = passing_df.apply(lambda row: opp_team_score(row), axis=1)
+passing_df['h/a'] = passing_df.apply(lambda row: home_away(row), axis=1)
 
 receiving_df['team_score'] = receiving_df.apply(lambda row: team_score(row), axis=1)
+receiving_df['opp_score'] = receiving_df.apply(lambda row: opp_team_score(row), axis=1)
+receiving_df['h/a'] = receiving_df.apply(lambda row: home_away(row), axis=1)
 
 rushing_df['team_score'] = rushing_df.apply(lambda row: team_score(row), axis=1)
+rushing_df['opp_score'] = rushing_df.apply(lambda row: opp_team_score(row), axis=1)
 
 tight_end_df['team_score'] = tight_end_df.apply(lambda row: team_score(row), axis=1)
+tight_end_df['opp_score'] = tight_end_df.apply(lambda row: opp_team_score(row), axis=1)
 
+defense_df['team_score'] = defense_df.apply(lambda row: team_score(row), axis=1)
 defense_df['opp_score'] = defense_df.apply(lambda row: opp_team_score(row), axis=1)
 
 

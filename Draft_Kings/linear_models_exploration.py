@@ -4,6 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn
 import statsmodels.api as sm
+import itertools
 
 
 
@@ -78,9 +79,12 @@ Week 5 showed much more correlation between point per dollar and total value tha
 def plot_value(pp):
     x = pp['points_per_dollar']
     y = pp['total_value_inversed']
+    labels = pp['Player']
     fig = plt.figure(figsize=(12,8))
     ax = fig.add_subplot(111)
     ax.scatter(x, y)
+    for label, x, y in itertools.izip(labels, x, y):
+        ax.annotate(label, xy = (x, y))
     ax.set_xlabel('Point per Dollar')
     ax.set_ylabel('Total_value')
     plt.show()
