@@ -1,6 +1,8 @@
 import pandas as pd
 import numpy as np
 from Final_DF import FinalDF
+import matplotlib.pyplot as plt
+import seaborn
 from sklearn.model_selection import train_test_split, GridSearchCV, cross_val_score
 from sklearn.ensemble import GradientBoostingRegressor
 from sklearn.metrics import mean_squared_error
@@ -48,4 +50,11 @@ def calc_GBR():
 
     gs.fit(x_2014, y_2014)
 
-    return gs.best_params_
+    print 'CV score: ', gs.score_
+    return RMSE(gs)
+
+def plot_y():
+    fig = plt.figure(figsize=(10,8))
+    ax = fig.add_subplot(111)
+    ax.hist(y_2015, bins=20)
+    plt.show()

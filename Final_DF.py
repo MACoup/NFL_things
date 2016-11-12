@@ -17,11 +17,7 @@ class FinalDF(object):
         self.season_type = season_type
 
     def _load_salaries(self):
-        df = pd.read_csv(dk_data_root + '/player_scores/Week1_Year2014_player_scores2.txt', delimiter=';')
-        df['Name'] = df['Name'].apply(lambda x: ' '.join(x.split(', ')[::-1]))
-        df['h/a'] = df['h/a'].map({'h' : 0, 'a' : 1})
-        df.rename(index=str, columns={'Name': 'full_name', 'Week': 'week', 'Year': 'season_year', 'Pos': 'position'}, inplace=True)
-        df = df[['week', 'season_year', 'full_name', 'position', 'DK salary']]
+        df = pd.DataFrame()
         for y in range(2014, 2017):
             for w in range(1, 18):
                 new_df = pd.read_csv(dk_data_root + '/player_scores/Week{}_Year{}_player_scores2.txt'.format(w, y), delimiter=';')
@@ -40,16 +36,17 @@ class FinalDF(object):
         return df
 
     def _get_nfldb_df(self):
-        if self.position == 'QB':
-            df = passing
-        if self.position == 'WR':
-            df = rec
-        if self.position == 'RB':
-            df = rush
-        if self.position == 'TE':
-            df = te
-        if self.position == 'DST':
-            df = dst
+        if self.position:
+            if self.position == 'QB':
+                df = passing
+            elif self.position == 'WR':
+                df = rec
+            elif self.position == 'RB':
+                df = rush
+            elif self.position == 'TE':
+                df = te
+            elif self.position == 'DST':
+                df = dst
         if self.season_type:
             df = df[df['season_type'] == self.season_type]
         if self.year:
@@ -64,7 +61,7 @@ class FinalDF(object):
         df = df1.merge(df2, on=['week', 'season_year', 'position', 'full_name'])
         return df
 
-    def df(self):
+    def get_df(self):
         df = self._merge_df()
         df['points_per_dollar'] = (df['DK points'] / df['DK salary']) * 1000
         return df
