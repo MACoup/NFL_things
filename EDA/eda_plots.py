@@ -5,13 +5,7 @@ import seaborn
 import scipy.stats as scs
 import sys
 sys.path.append('/Users/MACDaddy/fantasy_football/NFL_things/nfldb_queries/')
-from pandas_nfldb_dfs import passing_df, receiving_df, rushing_df, tight_end_df, defense_df, passing_data, rec_rush_data, defense_data
-
-passing = passing_data(passing_df)
-rec = rec_rush_data(receiving_df)
-rush = rec_rush_data(rushing_df)
-te = rec_rush_data(tight_end_df)
-defense = defense_data(defense_df)
+from pandas_nfldb_dfs import passing, rec, rush, te, dst
 
 # plot Aaron Rodgers DK points for all regular season games 2009 - 2015
 
@@ -82,7 +76,7 @@ def plot_mle(df, col, ax=None, gamma=True, normal=True):
 
     return ax
 
-cols = ['DK points', 'passing_yds', 'rushing_yds', 'td_score_percentage']
+cols = ['DK points', 'passing_yds', 'rushing_yds', 'score_percentage']
 
 def plot_many(df, cols, plot_funcs, gamma=True, normal=True):
     cols_srt = sorted(cols)

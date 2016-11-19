@@ -28,11 +28,16 @@ class FinalDF(object):
                 df = df.append(new_df)
         df['week'] = df['week'].astype(int)
         df['season_year'] = df['season_year'].astype(int)
+        df['position'].replace(to_replace='Def', value='DST', inplace=True)
+        df['full_name'].replace(to_replace='Odell Beckham Jr.', value='Odell Beckham', inplace=True)
         return df
 
     def _sal_position(self):
         df = self._load_salaries()
-        df = df[df['position'] == self.position]
+        if self.position:
+            df = df[df['position'] == self.position]
+        else:
+            df = df
         return df
 
     def _get_nfldb_df(self):
@@ -47,6 +52,8 @@ class FinalDF(object):
                 df = te
             elif self.position == 'DST':
                 df = dst
+        else:
+            df = passing.append(rec).append(rush).append(te).append(dst)
         if self.season_type:
             df = df[df['season_type'] == self.season_type]
         if self.year:

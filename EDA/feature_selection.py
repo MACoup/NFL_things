@@ -10,6 +10,8 @@ import statsmodels.api as sm
 from sklearn.feature_selection import RFE
 
 
+drop_cols = ['Unnamed: 0', 'season_year', 'season_type', 'week', 'team', 'full_name', 'position', 'receiving_rec', 'receiving_tar', 'yds_per_rush']
+
 def get_cols(l):
     col_lst = []
     for num, col in l:
@@ -20,14 +22,13 @@ def get_cols(l):
 
 def feature_selection(df, season_type=None, drop_cols=None, model='LinearRegression()', feature_selection='RFE'):
     if season_type:
-        passing = passing[passing['season_type'] == 'season_type']
+        df = df[df['season_type'] == season_type]
     if drop_cols:
-        drop_cols = ['Unnamed: 0', 'season_year', 'season_type', 'week', 'team', 'full_name', 'position', 'receiving_rec', 'receiving_tar', 'yds_per_rush']
+        df = df.drop(drop_cols, axis=1, inplace=False)
 
-        passing.drop(drop_cols, axis=1, inplace=True)
-
-    y = passing.pop('DK points')
-    x = passing.values
+    df.replace([np.inf, -np.inf], np.nan).fillna(0, axis=1, inplace=True)
+    y = df.pop('DK points')
+    x = df.values
 
     x = StandardScaler().fit_transform(x)
 
@@ -40,8 +41,12 @@ def feature_selection(df, season_type=None, drop_cols=None, model='LinearRegress
         selector = RFE(estimator, 10)
         selector.fit(X_train, y_train)
 
-        l_cols = zip(selector.ranking_, passing.columns)
+        l_cols = zip(selector.ranking_, df.columns)
 
-     new_l = get_cols(l_cols)
+    new_l = get_cols(l_cols)
 
-     return passing
+    return new_l
+
+
+if __name__ == '__main__':
+    feature_selection(passing, season_type='Regular', drop_cols=drop_cols)
