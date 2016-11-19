@@ -38,8 +38,8 @@ te = rotogrinders_soup(te_grinders)
 defst = rotogrinders_soup(dst_grinders)
 
 if __name__ == '__main__':
-    qb.to_csv('/Users/MACDaddy/fantasy_football/NFL_things/Draft_Kings/Data/qb_grinders_week10.csv')
-    rb.to_csv('/Users/MACDaddy/fantasy_football/NFL_things/Draft_Kings/Data/rb_grinders_week10.csv')
-    wr.to_csv('/Users/MACDaddy/fantasy_football/NFL_things/Draft_Kings/Data/wr_grinders_week10.csv')
-    te.to_csv('/Users/MACDaddy/fantasy_football/NFL_things/Draft_Kings/Data/te_grinders_week10.csv')
-    defst.to_csv('/Users/MACDaddy/fantasy_football/NFL_things/Draft_Kings/Data/defst_grinders_week10.csv')
+    qb.to_csv('/Users/MACDaddy/fantasy_football/NFL_things/Draft_Kings/Data/qb_grinders_week11.csv')
+    rb.to_csv('/Users/MACDaddy/fantasy_football/NFL_things/Draft_Kings/Data/rb_grinders_week11.csv')
+    wr.to_csv('/Users/MACDaddy/fantasy_football/NFL_things/Draft_Kings/Data/wr_grinders_week11.csv')
+    te.to_csv('/Users/MACDaddy/fantasy_football/NFL_things/Draft_Kings/Data/te_grinders_week11.csv')
+    defst.to_csv('/Users/MACDaddy/fantasy_football/NFL_things/Draft_Kings/Data/defst_grinders_week11.csv')

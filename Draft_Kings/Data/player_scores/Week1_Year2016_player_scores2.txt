@@ -345,7 +345,7 @@ Week;Year;GID;Name;Pos;Team;h/a;Oppt;DK points;DK salary
 1;2016;4661;O'Leary, Nick;TE;buf;a;bal;0;2500
 1;2016;4620;Simonson, Scott;TE;car;a;den;0;2500
 1;2016;5110;Paul, Niles;TE;was;h;pit;0;2500
-1;2016;4433;Phillips, John;TE;den;h;car;0;2500
+1;2016;4433;Phillips, John;TE;nor;h;oak;0;2500
 1;2016;4570;Escobar, Gavin;TE;dal;h;nyg;0;2600
 1;2016;4535;Smith, Lee;TE;oak;a;nor;0;2500
 1;2016;4327;Fasano, Anthony;TE;ten;h;min;0;2500

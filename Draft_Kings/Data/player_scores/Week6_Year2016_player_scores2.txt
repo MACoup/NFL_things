@@ -315,7 +315,7 @@ Week;Year;GID;Name;Pos;Team;h/a;Oppt;DK points;DK salary
 6;2016;4262;Witten, Jason;TE;dal;a;gnb;8.2;4200
 6;2016;4582;Kelce, Travis;TE;kan;a;oak;6.2;5000
 6;2016;4626;Swoope, Erik;TE;ind;a;hou;6.2;2500
-6;2016;4433;Phillips, John;TE;den;a;sdg;6.1;2500
+6;2016;4433;Phillips, John;TE;nor;h;car;6.1;2500
 6;2016;4592;Griffin, Ryan;TE;hou;h;ind;6.1;2500
 6;2016;4542;Green, Virgil;TE;den;a;sdg;5.1;2800
 6;2016;4661;O'Leary, Nick;TE;buf;h;sfo;4.9;2500

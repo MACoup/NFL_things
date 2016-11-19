@@ -302,7 +302,7 @@ Week;Year;GID;Name;Pos;Team;h/a;Oppt;DK points;DK salary
 8;2016;4403;Davis, Kellen;TE;nyj;a;cle;0;2500
 8;2016;4664;O'Shaughnessy, James;TE;kan;a;ind;0;2500
 8;2016;5110;Paul, Niles;TE;was;a;cin;0;2500
-8;2016;4433;Phillips, John;TE;den;h;sdg;0;2500
+8;2016;4433;Phillips, John;TE;nor;h;sea;0;2500
 8;2016;4570;Escobar, Gavin;TE;dal;h;phi;0;2500
 8;2016;4676;Heuerman, Jeff;TE;den;h;sdg;0;2500
 8;2016;4457;Myers, Brandon;TE;tam;h;oak;0;2500

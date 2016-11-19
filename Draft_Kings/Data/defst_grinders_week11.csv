@@ -1,0 +1,30 @@
+,player,salary,team,position,opp,ceiling,floor,proj_points
+0,Los Angeles Rams,3100,LAR,DST,MIA,,,9.74
+1,New England Patriots,3600,NEP,DST,SFO,,,8.86
+2,Miami Dolphins,2900,MIA,DST,LAR,,,7.78
+3,Kansas City Chiefs,3400,KCC,DST,TBB,,,10.2
+4,Cincinnati Bengals,3000,CIN,DST,BUF,,,8.1
+5,Tampa Bay Buccaneers,2600,TBB,DST,KCC,,,5.23
+6,San Francisco 49ers,2000,SFO,DST,NEP,,,3.28
+7,Philadelphia Eagles,2500,PHI,DST,SEA,,,7.88
+8,Houston Texans,2600,HOU,DST,OAK,,,6.42
+9,Oakland Raiders,2800,OAK,DST,HOU,,,7.16
+10,Washington Redskins,2600,WAS,DST,GBP,,,5.66
+11,Green Bay Packers,2800,GBP,DST,WAS,,,6.61
+12,Seattle Seahawks,3800,SEA,DST,PHI,,,10.8
+13,Buffalo Bills,2700,BUF,DST,CIN,,,6.11
+14,Cleveland Browns,2100,CLE,DST,PIT,,,5.28
+15,Chicago Bears,2500,CHI,DST,NYG,,,5.26
+16,New York Giants,3500,NYG,DST,CHI,,,10.08
+17,Dallas Cowboys,2600,DAL,DST,BAL,,,7.6
+18,Baltimore Ravens,2500,BAL,DST,DAL,,,6.94
+19,New Orleans Saints,2000,NOS,DST,CAR,,,4.26
+20,Carolina Panthers,2700,CAR,DST,NOS,,,6.68
+21,Jacksonville Jaguars,2400,JAC,DST,DET,,,5.74
+22,Detroit Lions,3200,DET,DST,JAC,,,8.92
+23,Minnesota Vikings,3300,MIN,DST,ARI,,,9.44
+24,Pittsburgh Steelers,3700,PIT,DST,CLE,,,9.29
+25,Arizona Cardinals,3100,ARI,DST,MIN,,,9.04
+26,Indianapolis Colts,2700,IND,DST,TEN,,,7.12
+27,Tennessee Titans,2200,TEN,DST,IND,,,6.78
+28,player,salary,team,pos,opp,ceil,floor,fpts

@@ -311,7 +311,7 @@ Week;Year;GID;Name;Pos;Team;h/a;Oppt;DK points;DK salary
 5;2016;4668;Swaim, Geoff;TE;dal;h;cin;0;2500
 5;2016;4620;Simonson, Scott;TE;car;h;tam;0;2500
 5;2016;5110;Paul, Niles;TE;was;a;bal;0;2500
-5;2016;4433;Phillips, John;TE;den;h;atl;0;2500
+5;2016;4433;Phillips, John;TE;nor;h;-;0;2500
 5;2016;4570;Escobar, Gavin;TE;dal;h;cin;0;2500
 5;2016;4676;Heuerman, Jeff;TE;den;h;atl;0;2500
 5;2016;4574;Rivera, Mychal;TE;oak;h;sdg;0;2500

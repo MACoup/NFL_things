@@ -341,7 +341,7 @@ Week;Year;GID;Name;Pos;Team;h/a;Oppt;DK points;DK salary
 7;2016;4403;Davis, Kellen;TE;nyj;h;bal;0;2500
 7;2016;4664;O'Shaughnessy, James;TE;kan;h;nor;0;2500
 7;2016;4637;Supernaw, Phillip;TE;ten;h;ind;0;2500
-7;2016;4433;Phillips, John;TE;den;h;hou;0;2500
+7;2016;4433;Phillips, John;TE;nor;a;kan;0;2500
 7;2016;4656;Uzomah, C.J.;TE;cin;h;cle;0;2500
 7;2016;4676;Heuerman, Jeff;TE;den;h;hou;0;2500
 7;2016;4542;Green, Virgil;TE;den;h;hou;0;2700

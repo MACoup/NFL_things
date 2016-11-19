@@ -341,7 +341,7 @@ Week;Year;GID;Name;Pos;Team;h/a;Oppt;DK points;DK salary
 4;2016;4668;Swaim, Geoff;TE;dal;a;sfo;0;2500
 4;2016;4620;Simonson, Scott;TE;car;a;atl;0;2500
 4;2016;5110;Paul, Niles;TE;was;h;cle;0;2500
-4;2016;4433;Phillips, John;TE;den;a;tam;0;2500
+4;2016;4433;Phillips, John;TE;nor;a;sdg;0;2500
 4;2016;4570;Escobar, Gavin;TE;dal;a;sfo;0;2500
 4;2016;4457;Myers, Brandon;TE;tam;h;den;0;2500
 4;2016;4327;Fasano, Anthony;TE;ten;a;hou;0;2500

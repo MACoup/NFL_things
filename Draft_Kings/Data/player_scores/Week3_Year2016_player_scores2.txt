@@ -321,7 +321,7 @@ Week;Year;GID;Name;Pos;Team;h/a;Oppt;DK points;DK salary
 3;2016;4573;Reed, Jordan;TE;was;a;nyg;9.6;6500
 3;2016;4363;Celek, Brent;TE;phi;h;pit;9.1;2800
 3;2016;4629;Rodgers, Richard;TE;gnb;h;det;8.9;2700
-3;2016;4433;Phillips, John;TE;den;a;cin;8.9;2500
+3;2016;4433;Phillips, John;TE;nor;h;atl;8.9;2500
 3;2016;4603;Amaro, Jace;TE;ten;h;oak;8.9;2500
 3;2016;4576;Sims, Dion;TE;mia;h;cle;8.6;2500
 3;2016;4551;Allen, Dwayne;TE;ind;h;sdg;6.5;3800

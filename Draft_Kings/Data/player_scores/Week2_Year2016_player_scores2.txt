@@ -378,7 +378,7 @@ Week;Year;GID;Name;Pos;Team;h/a;Oppt;DK points;DK salary
 2;2016;4675;Henry, Hunter;TE;sdg;h;jac;0;2500
 2;2016;4661;O'Leary, Nick;TE;buf;h;nyj;0;2500
 2;2016;4620;Simonson, Scott;TE;car;h;sfo;0;2500
-2;2016;4433;Phillips, John;TE;den;h;ind;0;2500
+2;2016;4433;Phillips, John;TE;nor;a;nyg;0;2500
 2;2016;4642;Harris, Demetrius;TE;kan;a;hou;0;2500
 2;2016;4570;Escobar, Gavin;TE;dal;a;was;0;2600
 2;2016;4457;Myers, Brandon;TE;tam;a;ari;0;2500
