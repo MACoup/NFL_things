@@ -103,7 +103,7 @@ def plot_many_kde(df, cols):
                     layout=(2,2))
     for col, ax in zip(cols_srt, axes.flatten()):
         data = df[col]
-        density = scs.kde.gaussian_kde(data)
+        density = scs.kde.gaussian_kde(data, bw_method=0.3)
         x_vals = np.linspace(data.min(), data.max(), 100)
         kde_vals = density(x_vals)
         ax.plot(x_vals, kde_vals, 'r-')

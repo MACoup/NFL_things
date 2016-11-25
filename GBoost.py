@@ -89,4 +89,4 @@ def plot_y():
 
 gbc = calc_GBC()
 df_2016_2['pred_class_label'] = gbc.predict(x_2016_c)
-df_16_names = df_2016_2[['full_name', 'DK salary', 'class_label', 'pred_class_label']]
+df_16_names = df_2016_2[['full_name', 'week', 'DK salary', 'class_label', 'pred_class_label']]

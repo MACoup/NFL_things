@@ -60,7 +60,6 @@ x_2015 = StandardScaler().fit_transform(x_2015)
 a_rodg_DK = a_rodg['DK points']
 passing_DK = passing_2015_['DK points']
 
-a_rodg_diff = a_rodg_DK - passing_DK
 
 def RMSE(model):
     train_predicted = model.predict(x_rodg_2015)
