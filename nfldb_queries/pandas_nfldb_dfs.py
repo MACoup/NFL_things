@@ -4,6 +4,9 @@ import matplotlib.pyplot as plt
 import itertools
 import seaborn
 import numpy as np
+import sys
+sys.path.append('/Users/MACDaddy/fantasy_football/NFL_things/Draft_Kings/Data/NFL_lines/')
+# from format_lines import all_lines
 
 pd.set_option('display.max_columns', 30)
 
@@ -27,6 +30,12 @@ def opp_team_score(row):
         return row['away_score']
     else:
         return row['home_score']
+
+def opp_team(row):
+    if row['team'] == row['home_team']:
+        return row['away_team']
+    else:
+        return row['home_team']
 
 def home_away(row):
     if row['team'] == row['home_team']:
@@ -57,6 +66,7 @@ def DK_receiving_rush_bonus(row):
 # get team score for each player
 passing_df['team_score'] = passing_df.apply(lambda row: team_score(row), axis=1)
 passing_df['opp_score'] = passing_df.apply(lambda row: opp_team_score(row), axis=1)
+passing_df['opp_team'] = passing_df.apply(lambda row: opp_team(row), axis=1)
 passing_df['h/a'] = passing_df.apply(lambda row: home_away(row), axis=1)
 
 receiving_df['team_score'] = receiving_df.apply(lambda row: team_score(row), axis=1)
@@ -65,12 +75,15 @@ receiving_df['h/a'] = receiving_df.apply(lambda row: home_away(row), axis=1)
 
 rushing_df['team_score'] = rushing_df.apply(lambda row: team_score(row), axis=1)
 rushing_df['opp_score'] = rushing_df.apply(lambda row: opp_team_score(row), axis=1)
+rushing_df['h/a'] = rushing_df.apply(lambda row: home_away(row), axis=1)
 
 tight_end_df['team_score'] = tight_end_df.apply(lambda row: team_score(row), axis=1)
 tight_end_df['opp_score'] = tight_end_df.apply(lambda row: opp_team_score(row), axis=1)
+tight_end_df['h/a'] = tight_end_df.apply(lambda row: home_away(row), axis=1)
 
 defense_df['team_score'] = defense_df.apply(lambda row: team_score(row), axis=1)
 defense_df['opp_score'] = defense_df.apply(lambda row: opp_team_score(row), axis=1)
+defense_df['h/a'] = defense_df.apply(lambda row: home_away(row), axis=1)
 
 
 def DK_def_pa_points(row):
