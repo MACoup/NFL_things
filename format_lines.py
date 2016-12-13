@@ -37,6 +37,7 @@ def form(df):
     strip(df)
     change_team_2015(df)
     get_season_yrs_wks(df)
+    df.dropna(axis=0, inplace=True)
     return df
 
 def get_year(df):
@@ -63,5 +64,5 @@ lines_2013 = form(lines_2013)
 lines_2014 = form(lines_2014)
 lines_2015 = form(lines_2015)
 
-# need to get this working correctly
+
 all_lines = lines_2009.append(lines_2010).append(lines_2011).append(lines_2012).append(lines_2012).append(lines_2013).append(lines_2014).append(lines_2015)
