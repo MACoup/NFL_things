@@ -10,6 +10,10 @@ dk_data_root = '/Users/MACDaddy/fantasy_football/NFL_things/Draft_Kings/Data'
 
 class FinalDF(object):
 
+    '''
+    This creates the DataFrame that will be used in analysis. It combines the position dataframes with the salary dataframes.
+    '''
+
     def __init__(self, season_type=None, position=None, year=None, week=None):
         self.position = position
         self.year = year
@@ -17,6 +21,9 @@ class FinalDF(object):
         self.season_type = season_type
 
     def _load_salaries(self):
+        '''
+        Formats salary dataframes. Creates a dataframe from each individual salary file, then appends them together. 
+        '''
         df = pd.DataFrame()
         for y in range(2014, 2017):
             for w in range(1, 18):
@@ -33,6 +40,9 @@ class FinalDF(object):
         return df
 
     def _sal_position(self):
+        '''
+        Gets the correct position salary dataframe.
+        '''
         df = self._load_salaries()
         if self.position:
             df = df[df['position'] == self.position]
@@ -41,6 +51,9 @@ class FinalDF(object):
         return df
 
     def _get_nfldb_df(self):
+        '''
+        Creates the correct position statistic dataframe.
+        '''
         if self.position:
             if self.position == 'QB':
                 df = passing
@@ -63,12 +76,18 @@ class FinalDF(object):
         return df
 
     def _merge_df(self):
+        '''
+        Merges the two dataframes.
+        '''
         df1 = self._get_nfldb_df()
         df2 = self._sal_position()
         df = df1.merge(df2, on=['week', 'season_year', 'position', 'full_name'])
         return df
 
     def get_df(self):
+        '''
+        Allows the user to get the final dataframe.
+        '''
         df = self._merge_df()
         df['points_per_dollar'] = (df['DK points'] / df['DK salary']) * 1000
         return df
