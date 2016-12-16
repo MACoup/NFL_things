@@ -31,14 +31,8 @@ def change_team_2015(df):
 def get_season_yrs_wks(df):
     df['Year'] = get_year(df)
     df['week'] = df['Date'].map(get_weeks(df))
-
-def form(df):
-    to_datetime(df)
-    strip(df)
-    change_team_2015(df)
-    get_season_yrs_wks(df)
     df.dropna(axis=0, inplace=True)
-    return df
+    df['week'] = df['week'].astype(int)
 
 def get_year(df):
     year = df['Date'][0].year
@@ -54,6 +48,29 @@ def get_weeks(df):
         day1 = week[-1]
     return week_dict
 
+def vis_df(df):
+    df2 = df[['Vis Team', 'Vis Spread', 'Over Under', 'Year', 'week']]
+    df2.rename(index=str, columns = {'Vis Team': 'team', 'Vis Spread': 'spread', 'Over Under': 'o/u', 'Year': 'season_year'}, inplace=True)
+    return df2
+
+def home_df(df):
+    df2 = df[['Home Team', 'Home Spread', 'Over Under', 'Year', 'week']]
+    df2.rename(index=str, columns = {'Home Team': 'team', 'Home Spread': 'spread', 'Over Under': 'o/u', 'Year': 'season_year'}, inplace=True)
+    return df2
+
+def append_dfs(df):
+    v_df = vis_df(df)
+    h_df = home_df(df)
+    df = pd.concat([v_df, h_df], axis=0, ignore_index=True)
+    return df
+
+def form(df):
+    to_datetime(df)
+    strip(df)
+    change_team_2015(df)
+    get_season_yrs_wks(df)
+    df = append_dfs(df)
+    return df
 
 
 lines_2009 = form(lines_2009)
@@ -63,6 +80,10 @@ lines_2012 = form(lines_2012)
 lines_2013 = form(lines_2013)
 lines_2014 = form(lines_2014)
 lines_2015 = form(lines_2015)
+
+
+
+
 
 
 all_lines = lines_2009.append(lines_2010).append(lines_2011).append(lines_2012).append(lines_2012).append(lines_2013).append(lines_2014).append(lines_2015)

@@ -5,6 +5,7 @@ import seaborn
 import sys
 sys.path.append('/Users/MACDaddy/fantasy_football/NFL_things/nfldb_queries/')
 from pandas_nfldb_dfs import passing, rec, rush, te, dst
+from format_lines import lines_2009, lines_2010, lines_2011, lines_2012, lines_2013, lines_2014, lines_2015, all_lines
 
 dk_data_root = '/Users/MACDaddy/fantasy_football/NFL_things/Draft_Kings/Data'
 
@@ -22,7 +23,7 @@ class FinalDF(object):
 
     def _load_salaries(self):
         '''
-        Formats salary dataframes. Creates a dataframe from each individual salary file, then appends them together. 
+        Formats salary dataframes. Creates a dataframe from each individual salary file, then appends them together.
         '''
         df = pd.DataFrame()
         for y in range(2014, 2017):
@@ -48,6 +49,33 @@ class FinalDF(object):
             df = df[df['position'] == self.position]
         else:
             df = df
+        return df
+
+    def _load_lines(self):
+        '''
+        Adds the vegas lines to the dataframe.
+        '''
+        if self.season_type != 'Regular':
+            return None
+        elif self.year:
+            if self.year == 2009:
+                df = lines_2009
+            elif self.year == 2010:
+                df = lines_2010
+            elif self.year == 2011:
+                df = lines_2011
+            elif self.year == 2012:
+                df = lines_2012
+            elif self.year == 2013:
+                df = lines_2013
+            elif self.year == 2014:
+                df = lines_2014
+            elif self.year == 2015:
+                df = lines_2015
+        else:
+            df = all_lines
+        if self.week:
+            df = df[df['week'] == self.week]
         return df
 
     def _get_nfldb_df(self):
@@ -84,10 +112,20 @@ class FinalDF(object):
         df = df1.merge(df2, on=['week', 'season_year', 'position', 'full_name'])
         return df
 
+    def _add_lines(self):
+        '''
+        Add the spreads and lines to the dataframe.
+        '''
+        df1 = self._load_lines()
+        df2 = self._merge_df()
+        df = df1.merge(df2, on=['week', 'season_year', 'team'])
+        return df
+
+
     def get_df(self):
         '''
         Allows the user to get the final dataframe.
         '''
-        df = self._merge_df()
+        df = self._add_lines()
         df['points_per_dollar'] = (df['DK points'] / df['DK salary']) * 1000
         return df
