@@ -2,12 +2,13 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn
+import os
 import sys
-sys.path.append('/Users/MACDaddy/fantasy_football/NFL_things/nfldb_queries/')
+sys.path.append(os.path.relpath('nfldb_queries/'))
 from pandas_nfldb_dfs import passing, rec, rush, te, dst
 from format_lines import lines_2009, lines_2010, lines_2011, lines_2012, lines_2013, lines_2014, lines_2015, all_lines
 
-dk_data_root = '/Users/MACDaddy/fantasy_football/NFL_things/Draft_Kings/Data'
+dk_data_root = 'Draft_Kings/Data'
 
 class FinalDF(object):
 

@@ -4,19 +4,15 @@ import matplotlib.pyplot as plt
 import itertools
 import seaborn
 import numpy as np
-import sys
-sys.path.append('/Users/MACDaddy/fantasy_football/NFL_things/Draft_Kings/Data/NFL_lines/')
-# from format_lines import all_lines
+import os
 
 pd.set_option('display.max_columns', 30)
 
-root_file = '/Users/MACDaddy/fantasy_football/NFL_things'
-
-passing_df = pd.read_csv(root_file + '/nfldb_queries/Data/passing_df.csv')
-receiving_df = pd.read_csv(root_file + '/nfldb_queries/Data/receiving_df.csv')
-rushing_df = pd.read_csv(root_file + '/nfldb_queries/Data/rushing_df.csv')
-tight_end_df = pd.read_csv(root_file + '/nfldb_queries/Data/tight_end_df.csv')
-defense_df = pd.read_csv(root_file + '/nfldb_queries/Data/defense_df.csv')
+passing_df = pd.read_csv('Data/passing_df.csv')
+receiving_df = pd.read_csv('Data/receiving_df.csv')
+rushing_df = pd.read_csv('Data/rushing_df.csv')
+tight_end_df = pd.read_csv('Data/tight_end_df.csv')
+defense_df = pd.read_csv('Data/defense_df.csv')
 
 # create new column for the player's team's score
 def team_score(row):
