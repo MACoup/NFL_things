@@ -195,3 +195,11 @@ rec = rec_rush_data(receiving_df)
 rush = rec_rush_data(rushing_df)
 te = rec_rush_data(tight_end_df)
 dst = defense_data(defense_df)
+
+if __name__ == '__main__':
+
+    passing.to_csv('Data/passing.csv', index=False)
+    rec.to_csv('Data/rec.csv', index=False)
+    rush.to_csv('Data/rush.csv', index=False)
+    te.to_csv('Data/te.csv', index=False)
+    dst.to_csv('Data/dst.csv', index=False)

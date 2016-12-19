@@ -23,8 +23,8 @@ defense_df = pd.read_sql_query("SELECT game.season_year, game.season_type, game.
 
 if __name__ == '__main__':
 
-    passing_df.to_csv('/Users/MACDaddy/fantasy_football/NFL_things/nfldb_queries/Data/passing_df.csv')
-    receiving_df.to_csv('/Users/MACDaddy/fantasy_football/NFL_things/nfldb_queries/Data/receiving_df.csv')
-    rushing_df.to_csv('/Users/MACDaddy/fantasy_football/NFL_things/nfldb_queries/Data/rushing_df.csv')
-    tight_end_df.to_csv('/Users/MACDaddy/fantasy_football/NFL_things/nfldb_queries/Data/tight_end_df.csv')
-    defense_df.to_csv('/Users/MACDaddy/fantasy_football/NFL_things/nfldb_queries/Data/defense_df.csv')
+    passing_df.to_csv('/Users/MACDaddy/fantasy_football/NFL_things/nfldb_queries/Data/passing_df.csv', index=False)
+    receiving_df.to_csv('/Users/MACDaddy/fantasy_football/NFL_things/nfldb_queries/Data/receiving_df.csv', index=False)
+    rushing_df.to_csv('/Users/MACDaddy/fantasy_football/NFL_things/nfldb_queries/Data/rushing_df.csv', index=False)
+    tight_end_df.to_csv('/Users/MACDaddy/fantasy_football/NFL_things/nfldb_queries/Data/tight_end_df.csv', index=False)
+    defense_df.to_csv('/Users/MACDaddy/fantasy_football/NFL_things/nfldb_queries/Data/defense_df.csv', index=False)
