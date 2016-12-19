@@ -2,7 +2,6 @@ from __future__ import division
 import pandas as pd
 import matplotlib.pyplot as plt
 import itertools
-import seaborn
 import numpy as np
 import os
 
@@ -195,6 +194,7 @@ rec = rec_rush_data(receiving_df)
 rush = rec_rush_data(rushing_df)
 te = rec_rush_data(tight_end_df)
 dst = defense_data(defense_df)
+all_stats = passing.append(rec).append(rush).append(te).append(dst)
 
 if __name__ == '__main__':
 
@@ -203,3 +203,4 @@ if __name__ == '__main__':
     rush.to_csv('Data/rush.csv', index=False)
     te.to_csv('Data/te.csv', index=False)
     dst.to_csv('Data/dst.csv', index=False)
+    all_stats.to_csv('Data/all_stats.csv', index=False)
