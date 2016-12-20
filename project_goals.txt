@@ -1,5 +1,7 @@
 1. I want to make the file system more efficient. Need to experiment with ways in which to do this.
 
-2. Definitely some data leakage happening. I need to create a new feature matrix that contains only variables not known at the time of the event.
+2. Clean up the code by using helper functions to organize things better.
+
+3. Definitely some data leakage happening. I need to create a new feature matrix that contains only variables not known at the time of the event.
     a. With this, looking at different correlations with the in game stats
     b. This could get into game theory land

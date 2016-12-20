@@ -7,12 +7,13 @@ import os
 
 pd.set_option('display.max_columns', 30)
 
-passing_df = pd.read_csv('Data/passing_df.csv')
-receiving_df = pd.read_csv('Data/receiving_df.csv')
-rushing_df = pd.read_csv('Data/rushing_df.csv')
-tight_end_df = pd.read_csv('Data/tight_end_df.csv')
-defense_df = pd.read_csv('Data/defense_df.csv')
-
+def load_dfs():
+    passing_df = pd.read_csv('Data/passing_df.csv')
+    receiving_df = pd.read_csv('Data/receiving_df.csv')
+    rushing_df = pd.read_csv('Data/rushing_df.csv')
+    tight_end_df = pd.read_csv('Data/tight_end_df.csv')
+    defense_df = pd.read_csv('Data/defense_df.csv')
+    return passing_df, receiving_df, rushing_df, tight_end_df, defense_df
 # create new column for the player's team's score
 def team_score(row):
     if row['team'] == row['home_team']:
@@ -59,26 +60,28 @@ def DK_receiving_rush_bonus(row):
 
 
 # get team score for each player
-passing_df['team_score'] = passing_df.apply(lambda row: team_score(row), axis=1)
-passing_df['opp_score'] = passing_df.apply(lambda row: opp_team_score(row), axis=1)
-passing_df['opp_team'] = passing_df.apply(lambda row: opp_team(row), axis=1)
-passing_df['h/a'] = passing_df.apply(lambda row: home_away(row), axis=1)
 
-receiving_df['team_score'] = receiving_df.apply(lambda row: team_score(row), axis=1)
-receiving_df['opp_score'] = receiving_df.apply(lambda row: opp_team_score(row), axis=1)
-receiving_df['h/a'] = receiving_df.apply(lambda row: home_away(row), axis=1)
+def team_score_player(df):
+    passing_df['team_score'] = passing_df.apply(lambda row: team_score(row), axis=1)
+    passing_df['opp_score'] = passing_df.apply(lambda row: opp_team_score(row), axis=1)
+    passing_df['opp_team'] = passing_df.apply(lambda row: opp_team(row), axis=1)
+    passing_df['h/a'] = passing_df.apply(lambda row: home_away(row), axis=1)
 
-rushing_df['team_score'] = rushing_df.apply(lambda row: team_score(row), axis=1)
-rushing_df['opp_score'] = rushing_df.apply(lambda row: opp_team_score(row), axis=1)
-rushing_df['h/a'] = rushing_df.apply(lambda row: home_away(row), axis=1)
+    receiving_df['team_score'] = receiving_df.apply(lambda row: team_score(row), axis=1)
+    receiving_df['opp_score'] = receiving_df.apply(lambda row: opp_team_score(row), axis=1)
+    receiving_df['h/a'] = receiving_df.apply(lambda row: home_away(row), axis=1)
 
-tight_end_df['team_score'] = tight_end_df.apply(lambda row: team_score(row), axis=1)
-tight_end_df['opp_score'] = tight_end_df.apply(lambda row: opp_team_score(row), axis=1)
-tight_end_df['h/a'] = tight_end_df.apply(lambda row: home_away(row), axis=1)
+    rushing_df['team_score'] = rushing_df.apply(lambda row: team_score(row), axis=1)
+    rushing_df['opp_score'] = rushing_df.apply(lambda row: opp_team_score(row), axis=1)
+    rushing_df['h/a'] = rushing_df.apply(lambda row: home_away(row), axis=1)
 
-defense_df['team_score'] = defense_df.apply(lambda row: team_score(row), axis=1)
-defense_df['opp_score'] = defense_df.apply(lambda row: opp_team_score(row), axis=1)
-defense_df['h/a'] = defense_df.apply(lambda row: home_away(row), axis=1)
+    tight_end_df['team_score'] = tight_end_df.apply(lambda row: team_score(row), axis=1)
+    tight_end_df['opp_score'] = tight_end_df.apply(lambda row: opp_team_score(row), axis=1)
+    tight_end_df['h/a'] = tight_end_df.apply(lambda row: home_away(row), axis=1)
+
+    defense_df['team_score'] = defense_df.apply(lambda row: team_score(row), axis=1)
+    defense_df['opp_score'] = defense_df.apply(lambda row: opp_team_score(row), axis=1)
+    defense_df['h/a'] = defense_df.apply(lambda row: home_away(row), axis=1)
 
 
 def DK_def_pa_points(row):
@@ -112,16 +115,10 @@ defense_df.drop(drop_cols, axis=1, inplace=True)
 def passing_data(df, year=None, week=None, player=None):
     if year:
         df = df[df['season_year'] == year]
-    else:
-        pass
-    if week:
+    elif week:
         df = df[df['week'] == week]
-    else:
-        pass
-    if player:
+    elif player:
         df = df[df['full_name'] == player]
-    else:
-        pass
     df['total_points'] = (df['passing_tds'] * 6) + (df['rushing_tds'] * 6) + (df['passing_twoptm'] * 2) + (df['receiving_tds'] * 6) + (df['rushing_twoptm'] * 2) + (df['fumble_rec_tds'] * 6) + (df['puntret_tds'] * 6) + (df['kicking_rec_tds'] * 6) + (df['kickret_tds'] * 6)
 
     df['cmp_percentage'] = df['passing_cmp']/df['passing_att']
@@ -189,14 +186,18 @@ def defense_data(df, year=None, week=None, team=None):
     return df
 
 
-passing = passing_data(passing_df)
-rec = rec_rush_data(receiving_df)
-rush = rec_rush_data(rushing_df)
-te = rec_rush_data(tight_end_df)
-dst = defense_data(defense_df)
-all_stats = passing.append(rec).append(rush).append(te).append(dst)
+
 
 if __name__ == '__main__':
+
+    passing_df, receiving_df, rushing_df, tight_end_df, defense_df = load_dfs()
+
+    passing = passing_data(passing_df)
+    rec = rec_rush_data(receiving_df)
+    rush = rec_rush_data(rushing_df)
+    te = rec_rush_data(tight_end_df)
+    dst = defense_data(defense_df)
+    all_stats = passing.append(rec).append(rush).append(te).append(dst)
 
     passing.to_csv('Data/passing.csv', index=False)
     rec.to_csv('Data/rec.csv', index=False)
