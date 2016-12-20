@@ -3,9 +3,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn
 import scipy.stats as scs
-import sys
-sys.path.append('/Users/MACDaddy/fantasy_football/NFL_things/nfldb_queries/')
-from pandas_nfldb_dfs import passing, rec, rush, te, dst
+
+filepath = '../nfldb_queries/Data/'
+
+passing = pd.read_csv(filepath + 'passing.csv')
 
 # plot Aaron Rodgers DK points for all regular season games 2009 - 2015
 

@@ -1,14 +1,9 @@
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
-import seaborn
-import os
-import sys
-sys.path.append(os.path.relpath('nfldb_queries/'))
-from pandas_nfldb_dfs import passing, rec, rush, te, dst
-from format_lines import lines_2009, lines_2010, lines_2011, lines_2012, lines_2013, lines_2014, lines_2015, all_lines
 
-dk_data_root = 'Draft_Kings/Data'
+
+dk_data_root = '../Draft_Kings/Data/'
+data_root = '../nfldb_queries/Data/'
 
 class FinalDF(object):
 
@@ -60,21 +55,21 @@ class FinalDF(object):
             return None
         elif self.year:
             if self.year == 2009:
-                df = lines_2009
+                df = pd.read_csv(dk_data_root + 'NFL_lines/lines_2009.csv')
             elif self.year == 2010:
-                df = lines_2010
+                df = pd.read_csv(dk_data_root + 'NFL_lines/lines_2010.csv')
             elif self.year == 2011:
-                df = lines_2011
+                df = pd.read_csv(dk_data_root + 'NFL_lines/lines_2011.csv')
             elif self.year == 2012:
-                df = lines_2012
+                df = pd.read_csv(dk_data_root + 'NFL_lines/lines_2012.csv')
             elif self.year == 2013:
-                df = lines_2013
+                df = pd.read_csv(dk_data_root + 'NFL_lines/lines_2013.csv')
             elif self.year == 2014:
-                df = lines_2014
+                df = pd.read_csv(dk_data_root + 'NFL_lines/lines_2014.csv')
             elif self.year == 2015:
-                df = lines_2015
+                df = pd.read_csv(dk_data_root + 'NFL_lines/lines_2015.csv')
         else:
-            df = all_lines
+            df = pd.read_csv(dk_data_root + 'NFL_lines/all_lines.csv')
         if self.week:
             df = df[df['week'] == self.week]
         return df
@@ -85,17 +80,17 @@ class FinalDF(object):
         '''
         if self.position:
             if self.position == 'QB':
-                df = passing
+                df = pd.read_csv(data_root + 'passing.csv')
             elif self.position == 'WR':
-                df = rec
+                df = pd.read_csv(data_root + 'rec.csv')
             elif self.position == 'RB':
-                df = rush
+                df = pd.read_csv(data_root + 'rush.csv')
             elif self.position == 'TE':
-                df = te
+                df = pd.read_csv(data_root + 'te.csv')
             elif self.position == 'DST':
-                df = dst
+                df = pd.read_csv(data_root + 'dst.csv')
         else:
-            df = passing.append(rec).append(rush).append(te).append(dst)
+            df = pd.read_csv(data_root + 'all_stats.csv')
         if self.season_type:
             df = df[df['season_type'] == self.season_type]
         if self.year:

@@ -3,10 +3,11 @@ import numpy as np
 from Final_DF import FinalDF
 import matplotlib.pyplot as plt
 import seaborn
-import sys
-sys.path.append('/Users/MACDaddy/fantasy_football/NFL_things/nfldb_queries/')
-from pandas_nfldb_dfs import passing, rec, rush, te, dst
 from sklearn.cluster import KMeans
+
+filepath = '../nfldb_queries/Data/'
+
+passing = pd.read_csv(filepath + 'passing.csv')
 
 fin = FinalDF(season_type='Regular', position='QB')
 df = fin.get_df()

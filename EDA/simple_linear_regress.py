@@ -5,9 +5,10 @@ import seaborn
 import pymc3 as pm
 import statsmodels.api as sm
 from statsmodels.graphics import regressionplots
-import sys
-sys.path.append('/Users/MACDaddy/fantasy_football/NFL_things/nfldb_queries/')
-from pandas_nfldb_dfs import passing, rec, rush, te, dst
+
+filepath = '../nfldb_queries/Data/'
+
+passing = pd.read_csv(filepath + 'passing.csv')
 
 
 passing = passing[passing['season_type'] == 'Regular']
