@@ -1,8 +1,5 @@
 import pandas as pd
 import numpy as np
-import sys
-sys.path.append('/Users/MACDaddy/fantasy_football/NFL_things/nfldb_queries/')
-from pandas_nfldb_dfs import passing, rec, rush, te, dst
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
@@ -10,7 +7,9 @@ import statsmodels.api as sm
 from sklearn.feature_selection import RFE
 
 
-drop_cols = ['Unnamed: 0', 'season_year', 'season_type', 'week', 'team', 'full_name', 'position', 'receiving_rec', 'receiving_tar', 'yds_per_rush']
+
+
+
 
 def get_cols(l):
     col_lst = []
@@ -20,17 +19,19 @@ def get_cols(l):
     return col_lst
 
 
-def feature_selection(df, season_type=None, drop_cols=None, model='LinearRegression()', feature_selection='RFE'):
-    if season_type:
-        df = df[df['season_type'] == season_type]
+def feature_selection_func(df, drop_cols=None, model='LinearRegression()', feature_selection='RFE'):
+
     if drop_cols:
         df = df.drop(drop_cols, axis=1, inplace=False)
 
     df.replace([np.inf, -np.inf], np.nan).fillna(0, axis=1, inplace=True)
-    y = df.pop('DK points')
-    x = df.values
 
-    x = StandardScaler().fit_transform(x)
+
+
+    y = df.pop('DK points')
+    x = df
+
+    # x = StandardScaler().fit_transform(x)
 
     X_train, X_test, y_train, y_test = train_test_split(x, y)
 
@@ -49,4 +50,7 @@ def feature_selection(df, season_type=None, drop_cols=None, model='LinearRegress
 
 
 if __name__ == '__main__':
-    feature_selection(passing, season_type='Regular', drop_cols=drop_cols)
+    passing = pd.read_csv('../nfldb_queries/Data/passing.csv')
+
+    drop_cols = ['Unnamed: 0', 'season_year', 'season_type', 'week', 'team', 'full_name', 'position', 'receiving_rec', 'receiving_tar', 'yds_per_rush', 'opp_team']
+    feature_selection_func(passing, drop_cols=drop_cols)
