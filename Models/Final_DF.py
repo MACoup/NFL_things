@@ -8,7 +8,7 @@ data_root = '../nfldb_queries/Data/'
 class FinalDF(object):
 
     '''
-    This creates the DataFrame that will be used in analysis. It combines the position dataframes with the salary dataframes.
+    This creates the DataFrame that will be used in analysis. It combines the position dataframes with the salary and betting line dataframes.
     '''
 
     def __init__(self, season_type=None, position=None, year=None, week=None):
