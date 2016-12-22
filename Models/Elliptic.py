@@ -3,9 +3,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn
 from sklearn.covariance import EllipticEnvelope
-import sys
-sys.path.append('/Users/MACDaddy/fantasy_football/NFL_things/nfldb_queries/')
-from pandas_nfldb_dfs import passing, rec, rush, te, dst
 from Final_DF import FinalDF
 from scipy.stats import scoreatpercentile
 from sklearn import preprocessing
