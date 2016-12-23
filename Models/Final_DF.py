@@ -11,11 +11,12 @@ class FinalDF(object):
     This creates the DataFrame that will be used in analysis. It combines the position dataframes with the salary and betting line dataframes.
     '''
 
-    def __init__(self, season_type=None, position=None, year=None, week=None):
+    def __init__(self, season_type=None, position=None, year=None, week=None, load_lines=True):
         self.position = position
         self.year = year
         self.week = week
         self.season_type = season_type
+        self.load_lines = load_lines
 
     def _load_salaries(self):
         '''
@@ -51,28 +52,30 @@ class FinalDF(object):
         '''
         Adds the vegas lines to the dataframe.
         '''
-        if self.season_type != 'Regular':
-            return None
-        elif self.year:
+        if self.load_lines:
+            if self.season_type != 'Regular':
+                return None
             if self.year == 2009:
                 df = pd.read_csv(dk_data_root + 'NFL_lines/lines_2009.csv')
-            elif self.year == 2010:
+            if self.year == 2010:
                 df = pd.read_csv(dk_data_root + 'NFL_lines/lines_2010.csv')
-            elif self.year == 2011:
+            if self.year == 2011:
                 df = pd.read_csv(dk_data_root + 'NFL_lines/lines_2011.csv')
-            elif self.year == 2012:
+            if self.year == 2012:
                 df = pd.read_csv(dk_data_root + 'NFL_lines/lines_2012.csv')
-            elif self.year == 2013:
+            if self.year == 2013:
                 df = pd.read_csv(dk_data_root + 'NFL_lines/lines_2013.csv')
-            elif self.year == 2014:
+            if self.year == 2014:
                 df = pd.read_csv(dk_data_root + 'NFL_lines/lines_2014.csv')
-            elif self.year == 2015:
+            if self.year == 2015:
                 df = pd.read_csv(dk_data_root + 'NFL_lines/lines_2015.csv')
+            else:
+                df = pd.read_csv(dk_data_root + 'NFL_lines/all_lines.csv')
+            if self.week:
+                df = df[df['week'] == self.week]
+            return df
         else:
-            df = pd.read_csv(dk_data_root + 'NFL_lines/all_lines.csv')
-        if self.week:
-            df = df[df['week'] == self.week]
-        return df
+            return None
 
     def _get_nfldb_df(self):
         '''
@@ -112,10 +115,13 @@ class FinalDF(object):
         '''
         Add the spreads and lines to the dataframe.
         '''
-        df1 = self._load_lines()
-        df2 = self._merge_df()
-        df = df1.merge(df2, on=['week', 'season_year', 'team'])
-        return df
+        if self.load_lines:
+            df1 = self._load_lines()
+            df2 = self._merge_df()
+            df = df1.merge(df2, on=['week', 'season_year', 'team'])
+            return df
+        else:
+            return self._merge_df()
 
 
     def get_df(self):

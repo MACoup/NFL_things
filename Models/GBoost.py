@@ -7,52 +7,16 @@ from sklearn.model_selection import train_test_split, GridSearchCV, cross_val_sc
 from sklearn.ensemble import GradientBoostingRegressor
 from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.metrics import mean_squared_error
+from sklearn.preprocessing import StandardScaler
 
-fin = FinalDF(season_type='Regular', position='QB')
-df = fin.get_df()
 
-df.fillna(0, axis=1, inplace=True)
-
-df = df[df['week'] <= 9]
-
-drop_cols = ['Unnamed: 0', 'season_type', 'team', 'full_name', 'position']
-
-df2 = df.drop(drop_cols, axis=1)
-
-collinear_drop_cols = ['passing_tds', 'passing_yds', 'total_points', 'DK points', 'total_points', 'receiving_tar']
-
-df2.drop(collinear_drop_cols, axis=1, inplace=True)
 
 def class_label(row):
     if row['points_per_dollar'] > 3.75:
         return 1
     else:
         return 0
-df['class_label'] = df.apply(lambda row: class_label(row), axis=1)
-df2['class_label'] = df2.apply(lambda row: class_label(row), axis=1)
 
-df_2014 = df2[df2['season_year'] == 2014]
-df_2015 = df2[df2['season_year'] == 2015]
-df_2016 = df2[df2['season_year'] == 2016]
-
-df_2016_2 = df[df['season_year'] == 2016]
-
-
-y_2014 = df_2014['points_per_dollar'].values
-x_2014 = df_2014.drop(['class_label', 'points_per_dollar'], axis=1).values
-
-y_2015 = df_2015['points_per_dollar'].values
-x_2015 = df_2015.drop(['class_label', 'points_per_dollar'], axis=1).values
-
-y_2014_c = df_2014['class_label']
-x_2014_c = df_2014.drop(['class_label', 'points_per_dollar'], axis=1)
-
-
-y_2015_c = df_2015['class_label']
-x_2015_c = df_2015.drop(['class_label', 'points_per_dollar'], axis=1)
-
-y_2016_c = df_2016['class_label']
-x_2016_c = df_2016.drop(['class_label', 'points_per_dollar'], axis=1)
 
 def RMSE(model):
     x = x_2014[:264]
@@ -74,10 +38,10 @@ def calc_GBR():
     print 'CV score: ', gs.best_score_
     return RMSE(gs)
 
-def calc_GBC():
+def calc_GBC(x, y):
     gbc = GradientBoostingClassifier()
 
-    gbc.fit(x_2014_c, y_2014_c)
+    gbc.fit(x, y)
 
     return gbc
 
@@ -87,6 +51,52 @@ def plot_y():
     ax.hist(y_2015, bins=20)
     plt.show()
 
-gbc = calc_GBC()
-df_2016_2['pred_class_label'] = gbc.predict(x_2016_c)
-df_16_names = df_2016_2[['full_name', 'week', 'DK salary', 'class_label', 'pred_class_label']]
+def load_df(drop_cols, collinear_drop_cols, season_type=None, position=None, year=None, week=None, load_lines=True):
+    fin = FinalDF(season_type=season_type, position=position, year=year, week=week, load_lines=load_lines)
+    df = fin.get_df()
+    df.drop(drop_cols, axis=1, inplace=True)
+    df.drop(collinear_drop_cols, axis=1, inplace=True)
+    df['class_label'] = df.apply(lambda row: class_label(row), axis=1)
+    df.fillna(0, axis=1, inplace=True)
+    return df
+
+def get_x_y(df, x_drop_cols, y_cols):
+    y = df[y_col].values
+    x = df.drop(x_drop_cols, axis=1).values
+    x = StandardScaler().fit_transform(x)
+    return x, y
+
+if __name__ == '__main__':
+
+    drop_cols = ['season_type', 'team', 'full_name', 'position', 'opp_team', 'season_year', 'week']
+    collinear_drop_cols = ['passing_tds', 'passing_yds', 'passing_twoptm', 'rushing_tds', 'total_points', 'DK points', 'total_points', 'receiving_tar']
+
+    # load dataframes
+    df_2014 = load_df(season_type='Regular', position='QB', year=2014, drop_cols=drop_cols, collinear_drop_cols=collinear_drop_cols)
+    df_2015 = load_df(season_type='Regular', position='QB', year=2015, drop_cols=drop_cols, collinear_drop_cols=collinear_drop_cols)
+    df_2016 = load_df(season_type='Regular', position='QB', year=2016, drop_cols=drop_cols, collinear_drop_cols=collinear_drop_cols, load_lines=False)
+
+    df_2016_2 = df_2016
+
+    y_col = 'points_per_dollar'
+    x_drop_cols = ['class_label', 'points_per_dollar']
+    y_col_c = 'class_label'
+
+
+
+
+    x_2014, y_2014 = get_x_y(df_2014, x_drop_cols=x_drop_cols, y_cols=y_col)
+
+    x_2015, y_2015 = get_x_y(df_2015, x_drop_cols=x_drop_cols, y_cols=y_col)
+
+    x_2014_c, y_2014_c = get_x_y(df_2014, x_drop_cols=x_drop_cols, y_cols=y_col_c)
+
+
+    x_2015_c, y_2015_c = get_x_y(df_2015, x_drop_cols=x_drop_cols, y_cols=y_col_c)
+
+    x_2016_c, y_2016_c = get_x_y(df_2016, x_drop_cols=x_drop_cols, y_cols=y_col_c)
+
+
+    gbc = calc_GBC(x_2014_c, y_2014_c)
+    df_2016_2['pred_class_label'] = gbc.predict(x_2016_c)
+    df_16_names = df_2016_2[['full_name', 'week', 'DK salary', 'class_label', 'pred_class_label']]

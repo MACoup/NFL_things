@@ -71,6 +71,7 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2016,Preseason,1,PHI,17,TB,9,PHI,Ryan Mathews,RB,0,0,0,0,0,0,0,0,0,0,0,0,2,15,1,0,0
 2016,Preseason,1,PHI,17,TB,9,TB,Doug Martin,RB,1,1,0,0,0,11,11,0,0,0,0,0,5,13,0,0,0
 2016,Preseason,1,PIT,17,DET,30,DET,Dwayne Washington,RB,1,1,0,0,0,17,15,0,0,0,1,0,2,12,0,0,0
+2016,Preseason,1,PIT,17,DET,30,DET,George Winn,RB,2,3,0,0,0,28,25,1,0,0,0,0,4,5,0,0,0
 2016,Preseason,1,PIT,17,DET,30,DET,Theo Riddick,RB,1,3,0,0,0,6,2,0,0,0,0,0,4,15,0,0,0
 2016,Preseason,1,PIT,17,DET,30,PIT,Daryl Richardson,RB,2,2,0,0,0,21,16,0,0,0,0,0,11,44,0,0,0
 2016,Preseason,1,PIT,17,DET,30,PIT,Fitzgerald Toussaint,RB,0,0,0,0,0,0,0,0,0,0,0,0,2,8,0,0,0
@@ -80,7 +81,6 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2016,Preseason,1,SF,13,HOU,24,HOU,Tyler Ervin,RB,1,1,0,0,0,1,5,1,0,0,0,0,4,1,0,0,0
 2016,Preseason,1,SF,13,HOU,24,SF,Carlos Hyde,RB,0,2,0,0,0,0,0,1,0,0,0,0,5,27,0,0,0
 2016,Preseason,1,SF,13,HOU,24,SF,DuJuan Harris,RB,0,0,0,0,0,0,0,0,0,0,0,0,6,29,0,0,0
-2016,Preseason,1,SF,13,HOU,24,SF,Kelvin Taylor,RB,1,2,0,0,0,0,2,0,0,0,0,0,2,4,0,0,0
 2016,Preseason,1,SF,13,HOU,24,SF,Mike Davis,RB,2,2,0,0,0,19,17,0,0,0,0,0,5,72,0,0,0
 2016,Preseason,1,SF,13,HOU,24,SF,Shaun Draughn,RB,2,2,0,0,0,9,9,0,0,0,0,0,2,12,0,0,0
 2016,Preseason,1,TEN,27,SD,10,SD,Branden Oliver,RB,0,0,0,0,0,0,0,0,0,0,0,0,3,19,0,0,0
@@ -95,6 +95,7 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2016,Preseason,1,UNK,28,DAL,24,UNK,Benny Cunningham,RB,1,1,0,0,0,25,20,0,0,0,0,0,4,23,1,0,0
 2016,Preseason,1,UNK,28,DAL,24,UNK,Chase Reynolds,RB,2,2,1,0,0,8,19,0,0,0,0,0,4,11,0,0,0
 2016,Preseason,1,UNK,28,DAL,24,UNK,Malcolm Brown,RB,1,1,0,0,0,1,3,0,0,0,0,0,8,66,0,0,0
+2016,Preseason,1,UNK,28,DAL,24,UNK,Terrence Magee,RB,0,0,0,0,0,0,0,0,0,0,0,0,1,5,0,0,0
 2016,Regular,1,ARI,21,NE,23,ARI,Chris Johnson,RB,0,0,0,0,0,0,0,0,0,0,0,0,1,2,0,0,0
 2016,Regular,1,ARI,21,NE,23,ARI,David Johnson,RB,4,6,0,0,0,38,43,0,0,0,0,0,16,89,1,0,0
 2016,Regular,1,ARI,21,NE,23,NE,Brandon Bolden,RB,0,0,0,0,0,0,0,0,0,0,0,0,1,4,0,0,0
@@ -186,7 +187,6 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2016,Preseason,2,DEN,24,SF,31,DEN,Ronnie Hillman,RB,0,1,0,0,0,0,0,0,0,0,0,0,3,21,0,0,0
 2016,Preseason,2,DEN,24,SF,31,SF,Carlos Hyde,RB,0,2,0,0,0,0,0,0,0,0,0,0,6,28,1,0,0
 2016,Preseason,2,DEN,24,SF,31,SF,DuJuan Harris,RB,1,1,0,0,0,6,1,1,0,0,0,0,7,46,0,0,0
-2016,Preseason,2,DEN,24,SF,31,SF,Kelvin Taylor,RB,1,1,0,0,0,0,2,0,0,0,0,0,10,47,0,0,0
 2016,Preseason,2,DEN,24,SF,31,SF,Mike Davis,RB,2,2,0,0,0,0,1,2,0,0,0,0,5,26,0,0,0
 2016,Preseason,2,DET,14,CIN,30,CIN,Bronson Hill,RB,0,0,0,0,0,0,0,0,0,0,0,0,4,12,0,0,0
 2016,Preseason,2,DET,14,CIN,30,CIN,Giovani Bernard,RB,1,1,0,0,0,10,6,0,0,0,0,0,2,2,0,0,0
@@ -250,6 +250,7 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2016,Preseason,2,UNK,21,KC,20,KC,Spencer Ware,RB,4,4,0,0,0,25,24,0,0,0,0,0,10,37,1,0,0
 2016,Preseason,2,UNK,21,KC,20,UNK,Benny Cunningham,RB,0,0,0,0,0,0,0,0,0,0,0,0,4,38,0,0,0
 2016,Preseason,2,UNK,21,KC,20,UNK,Malcolm Brown,RB,2,2,1,0,0,14,17,0,0,0,0,0,12,68,0,0,0
+2016,Preseason,2,UNK,21,KC,20,UNK,Terrence Magee,RB,0,1,0,0,0,0,0,0,0,0,0,0,6,16,0,0,0
 2016,Preseason,2,UNK,21,KC,20,UNK,Todd Gurley,RB,0,0,0,0,0,0,0,0,0,0,0,0,4,20,1,0,0
 2016,Preseason,2,WAS,22,NYJ,18,NYJ,Bilal Powell,RB,0,1,0,0,0,0,0,0,0,0,0,0,3,23,0,0,0
 2016,Preseason,2,WAS,22,NYJ,18,WAS,Chris Thompson,RB,0,0,0,0,0,0,0,0,0,0,0,0,4,18,0,0,0
@@ -339,6 +340,7 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2016,Preseason,3,BAL,30,DET,9,BAL,Terrance West,RB,0,0,0,0,0,0,0,0,0,0,0,0,7,43,0,0,0
 2016,Preseason,3,BAL,30,DET,9,DET,Ameer Abdullah,RB,0,1,0,0,0,0,0,0,0,0,0,0,4,16,0,0,0
 2016,Preseason,3,BAL,30,DET,9,DET,Dwayne Washington,RB,0,0,0,0,0,0,0,0,0,0,0,0,3,2,0,0,0
+2016,Preseason,3,BAL,30,DET,9,DET,George Winn,RB,0,0,0,0,0,0,0,0,0,0,0,0,2,6,0,0,0
 2016,Preseason,3,BAL,30,DET,9,DET,Theo Riddick,RB,1,2,0,0,0,10,7,0,0,0,0,0,3,35,0,0,0
 2016,Preseason,3,CAR,17,NE,19,CAR,Cameron Artis-Payne,RB,1,1,0,0,0,12,12,0,0,0,0,0,9,28,0,0,0
 2016,Preseason,3,CAR,17,NE,19,CAR,Fozzy Whittaker,RB,1,1,0,0,0,5,7,0,0,0,0,0,1,3,0,0,0
@@ -358,6 +360,7 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2016,Preseason,3,DEN,17,UNK,9,DEN,Ronnie Hillman,RB,0,0,0,0,0,0,0,0,0,0,0,0,5,45,1,0,0
 2016,Preseason,3,DEN,17,UNK,9,UNK,Benny Cunningham,RB,0,0,0,0,0,0,0,0,0,0,0,0,6,22,0,0,0
 2016,Preseason,3,DEN,17,UNK,9,UNK,Malcolm Brown,RB,0,2,0,0,0,0,0,0,0,0,0,0,7,21,0,0,0
+2016,Preseason,3,DEN,17,UNK,9,UNK,Terrence Magee,RB,0,1,0,0,0,0,0,0,0,0,0,0,3,78,0,0,0
 2016,Preseason,3,HOU,34,ARI,24,ARI,Andre Ellington,RB,3,6,0,0,0,13,20,0,0,0,0,0,3,25,0,0,0
 2016,Preseason,3,HOU,34,ARI,24,ARI,Chris Johnson,RB,0,0,0,0,0,0,0,0,0,0,0,0,7,24,0,0,0
 2016,Preseason,3,HOU,34,ARI,24,ARI,David Johnson,RB,1,2,0,0,0,5,0,0,0,0,0,0,6,28,1,0,0
@@ -489,6 +492,7 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2016,Regular,3,PHI,34,PIT,3,PIT,DeAngelo Williams,RB,4,7,0,0,0,26,23,0,0,0,0,0,8,21,0,0,0
 2016,Regular,3,SEA,37,SF,18,SEA,Alex Collins,RB,2,2,0,0,0,17,19,0,0,0,0,0,4,12,0,0,0
 2016,Regular,3,SEA,37,SF,18,SEA,Christine Michael,RB,2,3,0,0,0,8,5,0,0,0,0,0,20,106,2,0,0
+2016,Regular,3,SEA,37,SF,18,SEA,Terrence Magee,RB,0,0,0,0,0,0,0,0,0,0,0,0,3,12,0,0,0
 2016,Regular,3,SEA,37,SF,18,SF,Carlos Hyde,RB,1,1,0,0,0,6,2,0,0,0,0,0,21,103,2,0,1
 2016,Regular,3,SEA,37,SF,18,SF,Shaun Draughn,RB,1,2,0,0,0,0,2,0,0,0,0,0,5,10,0,0,0
 2016,Regular,3,TB,32,LA,37,LA,Benny Cunningham,RB,1,1,0,0,0,10,10,0,0,0,0,0,2,29,0,0,0
@@ -526,12 +530,14 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2016,Preseason,4,DAL,17,HOU,28,DAL,Darius Jackson,RB,3,4,1,0,0,30,32,0,0,0,0,0,9,21,0,0,0
 2016,Preseason,4,DAL,17,HOU,28,HOU,Akeem Hunt,RB,4,4,1,0,0,14,27,0,0,0,0,0,12,44,1,0,0
 2016,Preseason,4,DET,31,BUF,0,DET,Dwayne Washington,RB,0,1,0,0,0,0,0,0,0,0,0,0,7,68,1,0,0
+2016,Preseason,4,DET,31,BUF,0,DET,George Winn,RB,0,0,0,0,0,0,0,0,0,0,0,0,15,39,0,0,0
 2016,Preseason,4,KC,17,GB,7,KC,Knile Davis,RB,1,2,0,0,0,6,7,0,0,0,0,0,14,58,1,0,0
 2016,Preseason,4,MIA,10,TEN,21,MIA,Damien Williams,RB,1,1,0,0,0,4,5,0,0,0,0,0,4,3,0,0,0
 2016,Preseason,4,MIA,10,TEN,21,MIA,Jay Ajayi,RB,0,1,0,0,0,0,0,1,0,0,0,0,3,13,0,0,0
 2016,Preseason,4,MIA,10,TEN,21,MIA,Kenyan Drake,RB,1,1,0,0,0,13,33,0,0,0,0,0,4,6,0,0,0
 2016,Preseason,4,MIA,10,TEN,21,TEN,Antonio Andrews,RB,1,1,0,0,0,0,5,0,0,0,0,0,9,32,2,0,0
 2016,Preseason,4,MIA,10,TEN,21,TEN,Derrick Henry,RB,1,1,0,0,0,9,6,0,0,0,0,0,7,62,1,0,0
+2016,Preseason,4,MIN,27,UNK,25,UNK,Terrence Magee,RB,2,4,0,0,0,12,12,0,0,0,0,0,10,41,0,0,1
 2016,Preseason,4,NO,14,BAL,23,BAL,Javorius Allen,RB,4,4,0,0,0,20,29,0,0,0,0,0,3,8,0,0,0
 2016,Preseason,4,NO,14,BAL,23,NO,Daniel Lasco,RB,2,2,0,0,0,22,16,0,0,0,0,0,2,11,0,0,1
 2016,Preseason,4,NO,14,BAL,23,NO,Marcus Murphy,RB,3,3,0,0,0,21,28,0,0,0,0,0,6,31,0,0,0
@@ -553,7 +559,6 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2016,Preseason,4,PHI,14,NYJ,6,NYJ,Khiry Robinson,RB,3,4,0,0,0,16,18,0,0,0,0,0,13,25,0,0,0
 2016,Preseason,4,SD,21,SF,31,SD,Kenneth Farrow,RB,2,2,0,0,0,20,20,0,0,0,0,0,7,63,1,0,0
 2016,Preseason,4,SD,21,SF,31,SF,DuJuan Harris,RB,1,1,0,0,0,2,3,0,0,0,0,0,9,28,1,0,0
-2016,Preseason,4,SD,21,SF,31,SF,Kelvin Taylor,RB,2,2,0,0,0,4,17,0,0,0,0,0,9,56,1,0,1
 2016,Preseason,4,SD,21,SF,31,SF,Mike Davis,RB,1,1,0,0,0,14,12,0,0,0,0,0,5,37,0,0,0
 2016,Preseason,4,TB,13,WAS,20,TB,Peyton Barber,RB,3,4,0,0,0,6,12,1,0,0,0,0,16,44,0,0,0
 2016,Preseason,4,TB,13,WAS,20,WAS,Mack Brown,RB,1,1,0,0,0,4,7,0,0,0,0,0,19,149,1,0,0
@@ -1327,6 +1332,10 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2016,Regular,15,WAS,15,CAR,26,CAR,Jonathan Stewart,RB,1,2,0,0,0,13,8,1,0,0,0,0,25,132,0,0,0
 2016,Regular,15,WAS,15,CAR,26,WAS,Chris Thompson,RB,5,7,0,0,0,15,26,0,0,0,0,0,2,10,0,0,0
 2016,Regular,15,WAS,15,CAR,26,WAS,Rob Kelley,RB,4,4,0,0,0,46,47,0,0,0,0,0,9,8,1,0,0
+2016,Regular,16,PHI,24,NYG,19,NYG,Paul Perkins,RB,1,2,0,0,0,6,9,0,0,0,0,0,15,68,0,0,0
+2016,Regular,16,PHI,24,NYG,19,NYG,Rashad Jennings,RB,4,5,0,0,0,22,7,1,0,0,0,0,9,44,0,0,0
+2016,Regular,16,PHI,24,NYG,19,PHI,Darren Sproles,RB,2,2,0,0,0,31,23,0,0,0,0,0,7,40,1,0,0
+2016,Regular,16,PHI,24,NYG,19,PHI,Ryan Mathews,RB,1,1,0,0,0,11,16,0,0,0,0,0,18,46,0,0,0
 2015,Preseason,0,MIN,14,PIT,3,MIN,DuJuan Harris,RB,0,0,0,0,0,0,0,0,0,0,0,0,6,17,0,0,0
 2015,Preseason,0,MIN,14,PIT,3,MIN,Matt Asiata,RB,1,2,0,0,0,3,5,0,0,0,0,0,6,30,0,0,0
 2015,Preseason,1,ARI,19,KC,34,ARI,Andre Ellington,RB,2,2,0,0,0,49,59,0,0,0,0,0,3,3,1,0,0
@@ -1372,6 +1381,7 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2015,Preseason,1,CLE,17,WAS,20,WAS,Matt Jones,RB,1,1,0,0,0,9,11,0,0,0,0,0,5,38,0,0,0
 2015,Preseason,1,CLE,17,WAS,20,WAS,Silas Redd,RB,0,0,0,0,0,0,0,1,0,0,0,0,2,2,0,0,0
 2015,Preseason,1,DET,23,NYJ,3,DET,Ameer Abdullah,RB,0,0,0,0,0,0,0,0,0,0,0,0,7,67,0,0,0
+2015,Preseason,1,DET,23,NYJ,3,DET,George Winn,RB,0,0,0,0,0,0,0,0,0,0,0,0,5,3,0,0,0
 2015,Preseason,1,DET,23,NYJ,3,DET,Theo Riddick,RB,1,1,0,0,0,-5,-1,0,0,0,0,0,8,35,0,0,0
 2015,Preseason,1,DET,23,NYJ,3,NYJ,Bilal Powell,RB,0,0,0,0,0,0,0,0,0,0,0,0,8,35,0,0,0
 2015,Preseason,1,DET,23,NYJ,3,NYJ,Chris Ivory,RB,0,0,0,0,0,0,0,0,0,0,0,0,6,25,0,0,0
@@ -1549,6 +1559,7 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2015,Preseason,2,PHI,40,BAL,17,BAL,Javorius Allen,RB,2,3,0,0,0,25,25,0,0,0,0,0,6,19,0,0,0
 2015,Preseason,2,PHI,40,BAL,17,BAL,Justin Forsett,RB,1,1,0,0,0,8,4,0,0,0,0,0,5,29,0,0,0
 2015,Preseason,2,PHI,40,BAL,17,BAL,Lorenzo Taliaferro,RB,0,0,0,0,0,0,0,0,0,0,0,0,4,8,0,0,0
+2015,Preseason,2,PHI,40,BAL,17,BAL,Terrence Magee,RB,1,1,0,0,0,11,14,0,0,0,0,0,11,44,0,0,0
 2015,Preseason,2,PHI,40,BAL,17,PHI,Darren Sproles,RB,2,3,0,0,0,11,15,0,0,0,0,0,2,10,0,0,0
 2015,Preseason,2,PHI,40,BAL,17,PHI,DeMarco Murray,RB,1,1,0,0,0,10,14,0,0,0,0,0,5,17,1,0,0
 2015,Preseason,2,PHI,40,BAL,17,PHI,Kenjon Barner,RB,1,2,0,0,0,9,10,0,0,0,0,1,4,15,0,0,0
@@ -1572,6 +1583,7 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2015,Preseason,2,TEN,27,STL,14,STL,Malcolm Brown,RB,4,4,1,0,0,69,78,0,0,0,0,0,4,23,0,0,0
 2015,Preseason,2,TEN,27,STL,14,TEN,Antonio Andrews,RB,0,0,0,0,0,0,0,0,0,0,0,0,5,24,0,0,0
 2015,Preseason,2,WAS,21,DET,17,DET,Ameer Abdullah,RB,0,0,0,0,0,0,0,0,0,0,0,0,2,7,0,0,0
+2015,Preseason,2,WAS,21,DET,17,DET,George Winn,RB,0,0,0,0,0,0,0,0,0,0,0,0,3,10,0,0,0
 2015,Preseason,2,WAS,21,DET,17,DET,Theo Riddick,RB,1,1,0,0,0,5,9,0,0,0,0,0,3,4,0,0,0
 2015,Preseason,2,WAS,21,DET,17,WAS,Alfred Morris,RB,0,0,0,0,0,0,0,0,0,0,0,0,3,10,0,0,0
 2015,Preseason,2,WAS,21,DET,17,WAS,Chris Thompson,RB,0,0,0,0,0,0,0,0,0,0,0,0,5,37,0,0,0
@@ -1643,6 +1655,7 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2015,Regular,2,WAS,24,STL,10,WAS,Matt Jones,RB,3,3,0,0,0,24,23,1,0,0,0,0,19,123,2,0,0
 2015,Preseason,3,BAL,13,WAS,31,BAL,Javorius Allen,RB,1,3,0,0,0,4,5,1,0,0,0,0,12,24,0,0,0
 2015,Preseason,3,BAL,13,WAS,31,BAL,Justin Forsett,RB,0,0,0,0,0,0,0,0,0,0,0,0,8,19,0,0,0
+2015,Preseason,3,BAL,13,WAS,31,BAL,Terrence Magee,RB,0,0,0,0,0,0,0,0,0,0,0,0,4,13,0,0,0
 2015,Preseason,3,BAL,13,WAS,31,WAS,Alfred Morris,RB,2,2,0,0,0,1,6,0,0,0,0,0,7,4,0,0,0
 2015,Preseason,3,BAL,13,WAS,31,WAS,Chris Thompson,RB,3,3,0,0,0,21,18,0,0,0,0,0,2,3,1,0,0
 2015,Preseason,3,BAL,13,WAS,31,WAS,Mack Brown,RB,0,0,0,0,0,0,0,1,0,0,0,0,5,7,0,0,0
@@ -1681,6 +1694,7 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2015,Preseason,3,GB,26,PHI,39,PHI,Kenjon Barner,RB,2,3,0,0,0,59,59,0,0,0,0,0,2,4,0,0,0
 2015,Preseason,3,GB,26,PHI,39,PHI,Ryan Mathews,RB,2,2,0,0,0,21,12,0,0,0,0,0,7,22,0,0,0
 2015,Preseason,3,JAC,17,DET,22,DET,Ameer Abdullah,RB,1,2,0,0,0,24,21,0,0,0,0,0,3,8,0,0,0
+2015,Preseason,3,JAC,17,DET,22,DET,George Winn,RB,2,2,0,0,0,13,14,0,0,0,0,0,6,13,0,0,0
 2015,Preseason,3,JAC,17,DET,22,DET,Theo Riddick,RB,1,1,0,0,0,7,6,0,0,0,0,0,1,3,0,0,0
 2015,Preseason,3,JAC,17,DET,22,JAC,Denard Robinson,RB,2,3,0,0,0,31,29,0,0,0,0,0,3,7,0,0,0
 2015,Preseason,3,JAC,17,DET,22,JAC,T.J. Yeldon,RB,1,1,0,0,0,8,12,0,0,0,0,0,8,10,1,0,0
@@ -1789,6 +1803,7 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2015,Preseason,4,ATL,20,BAL,19,ATL,Tevin Coleman,RB,0,0,0,0,0,0,0,0,0,0,0,0,8,56,0,0,0
 2015,Preseason,4,ATL,20,BAL,19,BAL,Fitzgerald Toussaint,RB,3,4,0,0,0,15,20,0,0,0,0,0,6,20,0,0,0
 2015,Preseason,4,ATL,20,BAL,19,BAL,Javorius Allen,RB,0,0,0,0,0,0,0,0,0,0,0,0,6,10,0,0,0
+2015,Preseason,4,ATL,20,BAL,19,BAL,Terrence Magee,RB,0,0,0,0,0,0,0,0,0,0,0,0,9,37,0,0,0
 2015,Preseason,4,CHI,24,CLE,0,CHI,Jacquizz Rodgers,RB,1,2,0,0,0,1,7,0,0,0,0,0,5,10,0,0,0
 2015,Preseason,4,CHI,24,CLE,0,CHI,Jeremy Langford,RB,0,1,0,0,0,0,0,0,0,0,0,0,9,55,0,0,0
 2015,Preseason,4,CHI,24,CLE,0,CHI,Ka'Deem Carey,RB,0,1,0,0,0,0,0,0,0,0,0,0,12,68,0,0,0
@@ -1799,6 +1814,7 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2015,Preseason,4,DEN,20,ARI,22,ARI,Stepfan Taylor,RB,1,2,0,0,0,0,3,0,0,0,0,0,3,12,0,0,0
 2015,Preseason,4,DEN,20,ARI,22,DEN,Kapri Bibbs,RB,1,1,0,0,0,3,2,0,0,0,0,0,6,27,0,0,0
 2015,Preseason,4,DET,17,BUF,10,BUF,Bronson Hill,RB,0,0,0,0,0,0,0,0,0,0,0,0,5,16,0,0,0
+2015,Preseason,4,DET,17,BUF,10,DET,George Winn,RB,2,2,0,0,0,5,4,0,0,0,0,0,14,27,0,0,0
 2015,Preseason,4,GB,38,NO,10,GB,John Crockett,RB,4,4,0,0,0,47,49,0,0,0,0,0,8,42,1,0,0
 2015,Preseason,4,GB,38,NO,10,GB,Rajion Neal,RB,4,4,0,0,0,18,20,1,0,0,0,0,5,20,0,0,0
 2015,Preseason,4,GB,38,NO,10,NO,Marcus Murphy,RB,3,6,0,0,0,6,8,1,0,0,0,0,6,12,0,0,0
@@ -2276,6 +2292,7 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2015,Regular,12,DEN,30,NE,24,NE,James White,RB,2,5,0,0,0,2,5,0,0,0,0,0,3,1,0,0,0
 2015,Regular,12,DEN,30,NE,24,NE,LeGarrette Blount,RB,0,0,0,0,0,0,0,0,0,0,0,0,9,27,0,0,0
 2015,Regular,12,DET,45,PHI,14,DET,Ameer Abdullah,RB,1,2,0,0,0,13,12,0,0,0,0,0,16,63,0,0,0
+2015,Regular,12,DET,45,PHI,14,DET,George Winn,RB,0,0,0,0,0,0,0,0,0,0,0,0,3,1,0,0,0
 2015,Regular,12,DET,45,PHI,14,DET,Joique Bell,RB,2,3,0,0,0,66,57,0,0,0,0,0,7,25,1,0,0
 2015,Regular,12,DET,45,PHI,14,DET,Theo Riddick,RB,5,5,1,0,0,35,62,0,0,0,0,0,2,6,0,0,0
 2015,Regular,12,DET,45,PHI,14,PHI,Darren Sproles,RB,4,6,0,0,0,27,21,0,0,0,0,0,2,4,0,0,0
@@ -2455,6 +2472,7 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2015,Regular,14,TB,17,NO,24,TB,Doug Martin,RB,1,3,0,0,0,0,5,0,0,0,0,0,11,81,1,0,0
 2015,Regular,15,BAL,14,KC,34,BAL,Javorius Allen,RB,0,1,0,0,0,0,0,1,0,0,0,0,4,18,0,0,0
 2015,Regular,15,BAL,14,KC,34,BAL,Terrance West,RB,2,2,0,0,0,12,11,0,0,0,0,0,7,35,0,0,0
+2015,Regular,15,BAL,14,KC,34,BAL,Terrence Magee,RB,1,1,0,0,0,1,2,0,0,0,0,0,2,5,0,0,0
 2015,Regular,15,BAL,14,KC,34,KC,Charcandrick West,RB,2,2,0,0,0,14,9,0,0,0,0,0,16,76,1,0,0
 2015,Regular,15,BAL,14,KC,34,KC,Knile Davis,RB,0,0,0,0,0,0,0,0,0,0,0,0,5,14,0,0,0
 2015,Regular,15,DAL,16,NYJ,19,DAL,Darren McFadden,RB,2,3,0,0,0,0,13,0,0,0,0,0,16,100,0,0,0
@@ -2666,6 +2684,7 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2014,Preseason,1,DEN,21,SEA,16,SEA,Spencer Ware,RB,1,1,0,0,0,4,2,0,0,0,0,0,4,11,0,0,0
 2014,Preseason,1,DET,13,CLE,12,CLE,Dion Lewis,RB,1,1,0,0,0,2,2,1,0,0,0,0,3,6,0,0,0
 2014,Preseason,1,DET,13,CLE,12,CLE,Terrance West,RB,1,1,0,0,0,13,8,0,0,0,0,0,10,22,0,0,0
+2014,Preseason,1,DET,13,CLE,12,DET,George Winn,RB,3,3,0,0,0,24,23,1,0,0,0,0,6,39,0,0,0
 2014,Preseason,1,DET,13,CLE,12,DET,Joique Bell,RB,0,0,0,0,0,0,0,0,0,0,0,0,1,11,0,0,0
 2014,Preseason,1,DET,13,CLE,12,DET,Reggie Bush,RB,0,1,0,0,0,0,0,0,0,0,0,0,2,3,0,0,0
 2014,Preseason,1,JAC,16,TB,10,JAC,Denard Robinson,RB,0,0,0,0,0,0,0,0,0,0,0,0,7,36,1,0,0
@@ -2918,6 +2937,7 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2014,Preseason,3,DEN,17,HOU,18,DEN,Ronnie Hillman,RB,1,1,0,0,0,8,5,0,0,0,0,0,7,24,0,0,0
 2014,Preseason,3,DEN,17,HOU,18,HOU,Alfred Blue,RB,0,1,0,0,0,0,0,0,0,0,0,0,9,27,0,0,0
 2014,Preseason,3,DEN,17,HOU,18,HOU,Jonathan Grimes,RB,1,1,0,0,0,22,24,0,0,0,0,0,5,22,1,0,0
+2014,Preseason,3,DET,13,JAC,12,DET,George Winn,RB,3,3,0,0,0,22,20,1,0,0,0,0,7,13,1,0,0
 2014,Preseason,3,DET,13,JAC,12,DET,Joique Bell,RB,1,1,0,0,0,2,1,0,0,0,0,0,7,24,0,0,0
 2014,Preseason,3,DET,13,JAC,12,DET,Reggie Bush,RB,0,0,0,0,0,0,0,0,0,0,0,0,2,95,1,0,0
 2014,Preseason,3,DET,13,JAC,12,DET,Theo Riddick,RB,2,2,0,0,0,5,6,0,0,0,0,0,2,1,0,0,0
@@ -3022,6 +3042,7 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2014,Postseason,3,SEA,28,GB,22,GB,Eddie Lacy,RB,0,3,0,0,0,0,0,0,0,0,0,0,21,73,0,0,0
 2014,Postseason,3,SEA,28,GB,22,GB,James Starks,RB,1,3,0,0,0,1,0,0,0,0,0,0,5,44,0,0,0
 2014,Postseason,3,SEA,28,GB,22,SEA,Robert Turbin,RB,1,1,0,0,0,3,-2,0,0,0,0,0,2,8,0,0,0
+2014,Preseason,4,BUF,0,DET,23,DET,George Winn,RB,1,3,0,0,0,5,8,0,0,0,0,0,12,43,0,0,0
 2014,Preseason,4,CIN,35,IND,7,CIN,Jeremy Hill,RB,6,6,0,0,0,65,70,0,0,0,0,0,20,90,0,0,0
 2014,Preseason,4,CLE,33,CHI,13,CHI,Shaun Draughn,RB,3,4,0,0,0,13,14,0,0,0,0,0,10,29,0,0,0
 2014,Preseason,4,CLE,33,CHI,13,CLE,Dion Lewis,RB,0,1,0,0,0,0,0,0,0,0,0,0,2,9,0,0,0
@@ -3116,6 +3137,7 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2014,Regular,5,DEN,41,ARI,20,ARI,Stepfan Taylor,RB,0,0,0,0,0,0,0,0,0,0,0,0,1,6,0,0,0
 2014,Regular,5,DEN,41,ARI,20,DEN,Juwan Thompson,RB,0,0,0,0,0,0,0,0,0,0,0,0,3,15,1,0,0
 2014,Regular,5,DEN,41,ARI,20,DEN,Ronnie Hillman,RB,0,1,0,0,0,0,0,0,0,0,0,0,15,64,0,0,0
+2014,Regular,5,DET,14,BUF,17,DET,George Winn,RB,0,2,0,0,0,0,0,0,0,0,0,0,11,48,0,0,0
 2014,Regular,5,DET,14,BUF,17,DET,Reggie Bush,RB,2,5,0,0,0,34,30,0,0,0,0,0,6,13,0,0,0
 2014,Regular,5,GB,42,MIN,10,GB,Eddie Lacy,RB,3,3,0,0,0,23,27,0,0,0,0,0,13,105,2,0,0
 2014,Regular,5,GB,42,MIN,10,GB,James Starks,RB,2,2,0,0,0,6,2,0,0,0,0,0,12,46,0,0,0
@@ -3176,6 +3198,7 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2014,Regular,6,MIA,24,GB,27,GB,Eddie Lacy,RB,0,0,0,0,0,0,0,0,0,0,0,0,14,40,0,0,0
 2014,Regular,6,MIA,24,GB,27,GB,James Starks,RB,2,5,0,0,0,9,11,0,0,0,0,0,8,31,0,0,0
 2014,Regular,6,MIA,24,GB,27,MIA,Lamar Miller,RB,3,3,0,0,0,46,43,0,0,0,0,0,14,53,1,0,0
+2014,Regular,6,MIN,3,DET,17,DET,George Winn,RB,0,0,0,0,0,0,0,0,0,0,0,0,5,16,0,0,0
 2014,Regular,6,MIN,3,DET,17,DET,Joique Bell,RB,2,3,0,0,0,26,23,0,0,0,0,0,18,74,1,0,0
 2014,Regular,6,MIN,3,DET,17,DET,Theo Riddick,RB,5,6,1,0,0,81,75,0,0,0,0,0,3,6,0,0,0
 2014,Regular,6,MIN,3,DET,17,MIN,Jerick McKinnon,RB,6,6,0,0,0,55,42,0,0,0,0,0,11,40,0,0,0
@@ -3249,6 +3272,7 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2014,Regular,8,ATL,21,DET,22,ATL,Antone Smith,RB,0,0,0,0,0,0,0,0,0,0,0,0,3,5,0,0,0
 2014,Regular,8,ATL,21,DET,22,ATL,Devonta Freeman,RB,1,1,1,0,0,8,7,0,0,0,0,0,3,5,0,0,0
 2014,Regular,8,ATL,21,DET,22,ATL,Jacquizz Rodgers,RB,3,3,0,0,0,39,28,0,0,0,0,0,1,2,0,0,0
+2014,Regular,8,ATL,21,DET,22,DET,George Winn,RB,0,1,0,0,0,0,0,0,0,0,0,0,1,2,0,0,0
 2014,Regular,8,ATL,21,DET,22,DET,Joique Bell,RB,2,3,0,0,0,29,22,0,0,0,0,0,14,39,0,0,0
 2014,Regular,8,ATL,21,DET,22,DET,Theo Riddick,RB,8,12,1,0,0,63,74,0,0,0,0,0,3,5,0,0,0
 2014,Regular,8,CAR,9,SEA,13,CAR,Jonathan Stewart,RB,3,5,0,0,0,21,15,0,0,0,0,0,16,79,0,0,0
@@ -3531,6 +3555,7 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2014,Regular,14,CLE,24,IND,25,CLE,Terrance West,RB,0,0,0,0,0,0,0,0,0,0,0,0,15,54,0,0,0
 2014,Regular,14,DEN,24,BUF,17,DEN,C.J. Anderson,RB,0,0,0,0,0,0,0,0,0,0,0,0,21,58,3,0,0
 2014,Regular,14,DEN,24,BUF,17,DEN,Juwan Thompson,RB,1,2,0,0,0,10,14,0,0,0,0,0,4,63,0,0,0
+2014,Regular,14,DET,34,TB,17,DET,George Winn,RB,0,0,0,0,0,0,0,0,0,0,0,0,1,2,0,0,0
 2014,Regular,14,DET,34,TB,17,DET,Joique Bell,RB,5,5,1,0,0,57,50,0,0,0,0,0,18,83,1,0,0
 2014,Regular,14,DET,34,TB,17,DET,Reggie Bush,RB,4,6,0,0,0,26,8,0,0,0,0,0,8,26,0,0,0
 2014,Regular,14,DET,34,TB,17,TB,Doug Martin,RB,1,1,0,0,0,3,0,0,0,0,0,0,5,22,0,0,0
@@ -3628,6 +3653,7 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2014,Regular,16,CAR,17,CLE,13,CAR,Jonathan Stewart,RB,2,4,1,0,0,3,7,0,0,0,0,0,24,122,0,0,0
 2014,Regular,16,CAR,17,CLE,13,CLE,Isaiah Crowell,RB,0,0,0,0,0,0,0,0,0,0,0,0,16,55,0,0,0
 2014,Regular,16,CHI,14,DET,20,CHI,Matt Forte,RB,6,6,1,0,0,39,40,0,0,0,0,0,19,55,0,0,0
+2014,Regular,16,CHI,14,DET,20,DET,George Winn,RB,0,0,0,0,0,0,0,0,0,0,0,0,1,5,0,0,0
 2014,Regular,16,CHI,14,DET,20,DET,Joique Bell,RB,2,3,0,0,0,12,13,1,0,0,0,0,13,74,1,0,0
 2014,Regular,16,CHI,14,DET,20,DET,Reggie Bush,RB,6,7,0,0,0,43,44,0,0,0,0,0,7,54,1,0,0
 2014,Regular,16,CIN,37,DEN,28,CIN,Giovani Bernard,RB,5,5,1,0,0,54,45,0,0,0,0,0,8,36,0,0,0
@@ -4009,6 +4035,7 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2013,Preseason,4,MIA,24,NO,21,NO,Khiry Robinson,RB,6,9,0,0,0,40,50,2,0,0,0,0,22,115,0,0,0
 2013,Preseason,4,MIA,24,NO,21,NO,Mark Ingram,RB,0,0,0,0,0,0,0,1,0,0,0,0,9,49,1,0,0
 2013,Preseason,4,MIN,24,TEN,23,MIN,Matt Asiata,RB,1,1,0,0,0,1,1,0,0,0,0,0,8,32,1,0,0
+2013,Preseason,4,NE,28,NYG,20,NE,George Winn,RB,0,0,0,0,0,0,0,0,0,0,0,0,14,54,1,0,0
 2013,Preseason,4,SD,6,SF,41,SD,Fozzy Whittaker,RB,0,0,0,0,0,0,0,0,0,0,0,0,10,59,0,0,0
 2013,Preseason,4,SEA,22,OAK,6,OAK,Rashad Jennings,RB,0,0,0,0,0,0,0,0,0,0,0,0,6,53,0,0,0
 2013,Preseason,4,SEA,22,OAK,6,SEA,Christine Michael,RB,2,2,0,0,0,23,22,0,0,0,0,0,13,15,0,0,0

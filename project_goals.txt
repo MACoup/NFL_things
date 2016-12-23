@@ -11,6 +11,6 @@
 5. Other variables to consider:
     a. Time of possession
     b. Ranking of defensive/offensive line
-    c. could really be considering scraping data from other sources
-    
+    c. could be considering scraping data from other sources
+
 6. Just discovered the __init__.py package enabler for python

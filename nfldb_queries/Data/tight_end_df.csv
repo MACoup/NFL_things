@@ -287,6 +287,7 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2016,Preseason,3,TB,30,CLE,13,TB,Austin Seferian-Jenkins,TE,1,1,0,0,0,0,5,0,0,0,0,0,0,0,0,0,0
 2016,Preseason,3,WAS,21,BUF,16,BUF,Blake Annen,TE,1,2,0,0,0,1,23,0,0,0,0,0,0,0,0,0,0
 2016,Preseason,3,WAS,21,BUF,16,BUF,Chris Gragg,TE,2,2,0,0,0,0,26,0,0,0,0,0,0,0,0,0,0
+2016,Preseason,3,WAS,21,BUF,16,BUF,Jim Dray,TE,1,1,0,0,0,4,9,0,0,0,0,0,0,0,0,0,0
 2016,Preseason,3,WAS,21,BUF,16,BUF,Nick O'Leary,TE,2,3,0,0,0,10,19,1,0,0,0,0,0,0,0,0,0
 2016,Preseason,3,WAS,21,BUF,16,WAS,Jordan Reed,TE,2,4,1,0,0,9,28,0,0,0,0,0,0,0,0,0,0
 2016,Preseason,3,WAS,21,BUF,16,WAS,Logan Paulsen,TE,2,2,0,0,0,13,38,0,0,0,0,0,0,0,0,0,0
@@ -972,6 +973,11 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2016,Regular,15,WAS,15,CAR,26,CAR,Greg Olsen,TE,6,9,0,0,0,29,85,0,0,0,0,0,0,0,0,0,0
 2016,Regular,15,WAS,15,CAR,26,WAS,Jordan Reed,TE,1,1,0,0,0,1,6,0,0,0,0,0,0,0,0,0,0
 2016,Regular,15,WAS,15,CAR,26,WAS,Vernon Davis,TE,4,9,0,0,0,9,23,0,0,0,0,0,0,0,0,0,0
+2016,Regular,16,PHI,24,NYG,19,NYG,Jerell Adams,TE,1,1,0,0,0,4,9,0,0,0,0,0,0,0,0,0,0
+2016,Regular,16,PHI,24,NYG,19,NYG,Will Tye,TE,5,8,0,0,0,6,23,0,0,0,0,0,0,0,0,0,0
+2016,Regular,16,PHI,24,NYG,19,PHI,Brent Celek,TE,3,3,0,0,0,10,27,0,0,0,0,0,0,0,0,0,0
+2016,Regular,16,PHI,24,NYG,19,PHI,Trey Burton,TE,1,1,0,0,0,3,3,0,0,0,0,0,0,0,0,0,0
+2016,Regular,16,PHI,24,NYG,19,PHI,Zach Ertz,TE,2,2,0,0,0,16,33,0,0,0,0,0,0,0,0,0,0
 2015,Preseason,0,MIN,14,PIT,3,MIN,Kyle Rudolph,TE,1,1,0,0,0,5,11,0,0,0,0,0,0,0,0,0,0
 2015,Preseason,0,MIN,14,PIT,3,MIN,MyCole Pruitt,TE,4,4,1,0,0,27,51,0,0,0,0,0,0,0,0,0,0
 2015,Preseason,0,MIN,14,PIT,3,PIT,Jesse James,TE,2,4,0,0,0,5,9,1,0,0,0,0,0,0,0,0,0
@@ -1052,6 +1058,7 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2015,Regular,1,JAC,9,CAR,20,CAR,Greg Olsen,TE,1,3,0,0,0,0,11,0,0,0,0,0,0,0,0,0,0
 2015,Regular,1,NE,28,PIT,21,NE,Rob Gronkowski,TE,5,8,3,0,0,47,94,0,0,0,0,0,0,0,0,0,0
 2015,Regular,1,NYJ,31,CLE,10,CLE,Gary Barnidge,TE,3,5,0,0,0,17,38,0,0,0,0,0,0,0,0,0,0
+2015,Regular,1,NYJ,31,CLE,10,CLE,Jim Dray,TE,1,3,0,0,0,8,13,0,0,0,0,0,0,0,0,0,0
 2015,Regular,1,OAK,13,CIN,33,CIN,Tyler Eifert,TE,9,12,2,0,0,42,104,0,0,0,0,0,0,0,0,0,0
 2015,Regular,1,OAK,13,CIN,33,OAK,Clive Walford,TE,1,2,0,0,0,2,1,0,0,0,0,0,0,0,0,0,0
 2015,Regular,1,OAK,13,CIN,33,OAK,Mychal Rivera,TE,1,2,0,0,0,1,4,0,0,0,0,0,0,0,0,0,0
@@ -1087,6 +1094,7 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2015,Preseason,2,CLE,10,BUF,11,BUF,Charles Clay,TE,1,1,0,0,0,3,11,0,0,0,0,0,0,0,0,0,0
 2015,Preseason,2,CLE,10,BUF,11,BUF,Chris Gragg,TE,3,3,0,0,0,6,56,0,0,0,0,0,0,0,0,0,0
 2015,Preseason,2,CLE,10,BUF,11,CLE,Gary Barnidge,TE,1,2,0,0,0,1,2,0,0,0,0,0,0,0,0,0,0
+2015,Preseason,2,CLE,10,BUF,11,CLE,Jim Dray,TE,1,1,0,0,0,8,11,0,0,0,0,0,0,0,0,0,0
 2015,Preseason,2,HOU,10,DEN,14,DEN,Dominique Jones,TE,2,2,0,0,0,0,9,0,0,0,0,0,0,0,0,0,0
 2015,Preseason,2,HOU,10,DEN,14,DEN,Virgil Green,TE,1,2,0,0,0,6,14,0,0,0,0,0,0,0,0,0,0
 2015,Preseason,2,HOU,10,DEN,14,HOU,C.J. Fiedorowicz,TE,1,1,0,0,0,1,6,0,0,0,0,0,0,0,0,0,0
@@ -1105,6 +1113,7 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2015,Preseason,2,NO,24,NE,26,NO,Benjamin Watson,TE,2,4,1,0,0,5,12,0,0,0,0,0,0,0,0,0,0
 2015,Preseason,2,NO,24,NE,26,NO,Josh Hill,TE,2,4,1,0,0,9,14,0,0,0,0,0,0,0,0,0,0
 2015,Preseason,2,NYG,22,JAC,12,NYG,Larry Donnell,TE,3,5,0,0,0,18,29,0,0,0,0,0,0,0,0,0,0
+2015,Preseason,2,NYJ,30,ATL,22,ATL,D.J. Tialavea,TE,2,2,0,0,0,10,19,1,0,0,0,0,0,0,0,0,0
 2015,Preseason,2,NYJ,30,ATL,22,ATL,Levine Toilolo,TE,1,2,0,1,1,0,6,0,0,0,0,0,0,0,0,0,0
 2015,Preseason,2,NYJ,30,ATL,22,NYJ,Jeff Cumberland,TE,1,2,0,0,0,8,8,0,0,0,0,0,0,0,0,0,0
 2015,Preseason,2,PHI,40,BAL,17,BAL,Crockett Gillmore,TE,1,1,0,0,0,1,16,0,0,0,0,0,0,0,0,0,0
@@ -1217,6 +1226,7 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2015,Preseason,3,STL,14,IND,24,STL,Jared Cook,TE,1,1,0,0,0,0,5,0,0,0,0,0,0,0,0,0,0
 2015,Preseason,3,STL,14,IND,24,STL,Lance Kendricks,TE,1,1,0,0,0,3,4,0,0,0,0,0,0,0,0,0,0
 2015,Preseason,3,TB,7,CLE,31,CLE,Gary Barnidge,TE,1,1,1,0,0,0,7,0,0,0,0,0,0,0,0,0,0
+2015,Preseason,3,TB,7,CLE,31,CLE,Jim Dray,TE,2,2,0,0,0,9,12,0,0,0,0,0,0,0,0,0,0
 2015,Preseason,3,TB,7,CLE,31,TB,Austin Seferian-Jenkins,TE,1,2,0,0,0,1,14,0,0,0,0,0,0,0,0,0,0
 2015,Regular,3,ARI,47,SF,7,ARI,Darren Fells,TE,1,2,0,0,0,3,13,0,0,0,0,0,0,0,0,0,0
 2015,Regular,3,ARI,47,SF,7,ARI,Jermaine Gresham,TE,2,3,0,0,0,5,34,0,0,0,0,0,0,0,0,0,0
@@ -1339,6 +1349,7 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2015,Regular,5,BAL,30,CLE,33,BAL,Maxx Williams,TE,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
 2015,Regular,5,BAL,30,CLE,33,BAL,Nick Boyle,TE,3,3,0,0,0,20,27,0,0,0,0,0,0,0,0,0,0
 2015,Regular,5,BAL,30,CLE,33,CLE,Gary Barnidge,TE,8,10,1,0,0,48,139,0,0,0,0,0,0,0,0,0,0
+2015,Regular,5,BAL,30,CLE,33,CLE,Jim Dray,TE,1,1,0,0,0,2,7,0,0,0,0,0,0,0,0,0,0
 2015,Regular,5,CIN,27,SEA,24,CIN,Tyler Eifert,TE,8,12,2,0,0,23,90,0,0,0,0,0,0,0,0,0,0
 2015,Regular,5,CIN,27,SEA,24,SEA,Jimmy Graham,TE,3,5,0,0,0,11,30,0,0,0,0,0,0,0,0,0,0
 2015,Regular,5,CIN,27,SEA,24,SEA,Luke Willson,TE,2,3,0,0,0,5,17,0,0,0,0,0,0,0,0,0,0
@@ -1454,6 +1465,7 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2015,Regular,7,SF,3,SEA,20,SF,Vance McDonald,TE,1,1,0,0,0,5,1,0,0,0,0,0,0,0,0,0,0
 2015,Regular,7,SF,3,SEA,20,SF,Vernon Davis,TE,4,6,0,0,0,15,61,0,0,0,0,0,0,0,0,0,0
 2015,Regular,7,STL,24,CLE,6,CLE,Gary Barnidge,TE,6,7,0,0,0,46,101,0,0,0,0,0,0,0,0,0,0
+2015,Regular,7,STL,24,CLE,6,CLE,Jim Dray,TE,2,2,0,0,0,7,10,0,0,0,0,0,0,0,0,0,0
 2015,Regular,7,STL,24,CLE,6,STL,Cory Harkey,TE,1,1,0,0,0,8,4,0,0,0,0,0,0,0,0,0,0
 2015,Regular,7,STL,24,CLE,6,STL,Jared Cook,TE,2,4,0,0,0,3,19,1,0,0,0,0,0,0,0,0,0
 2015,Regular,7,TEN,7,ATL,10,ATL,Jacob Tamme,TE,3,6,0,0,0,16,36,0,0,0,0,0,0,0,0,0,0
@@ -1517,6 +1529,7 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2015,Regular,9,CAR,37,GB,29,GB,Richard Rodgers,TE,5,9,2,0,0,12,19,0,0,0,0,0,0,0,0,0,0
 2015,Regular,9,CIN,31,CLE,10,CIN,Tyler Eifert,TE,5,6,3,0,0,7,53,0,0,0,0,0,0,0,0,0,0
 2015,Regular,9,CIN,31,CLE,10,CLE,Gary Barnidge,TE,2,7,0,0,0,9,35,0,0,0,0,0,0,0,0,0,0
+2015,Regular,9,CIN,31,CLE,10,CLE,Jim Dray,TE,1,1,0,0,0,8,13,0,0,0,0,0,0,0,0,0,0
 2015,Regular,9,DAL,27,PHI,33,DAL,Jason Witten,TE,6,8,0,0,0,18,43,0,0,0,0,0,0,0,0,0,0
 2015,Regular,9,DAL,27,PHI,33,PHI,Zach Ertz,TE,5,6,0,0,0,18,44,0,0,0,0,0,0,0,0,0,0
 2015,Regular,9,IND,27,DEN,24,DEN,Virgil Green,TE,1,1,0,0,0,9,13,0,0,0,0,0,0,0,0,0,0
@@ -1857,6 +1870,7 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2015,Regular,16,DET,32,SF,17,DET,Eric Ebron,TE,4,5,0,0,0,42,49,0,0,0,0,0,0,0,0,0,0
 2015,Regular,16,DET,32,SF,17,SF,Vance McDonald,TE,5,7,1,0,0,40,61,0,0,0,0,0,0,0,0,0,0
 2015,Regular,16,KC,17,CLE,13,CLE,Gary Barnidge,TE,3,8,0,0,0,23,47,0,0,0,0,0,0,0,0,0,0
+2015,Regular,16,KC,17,CLE,13,CLE,Jim Dray,TE,1,3,0,0,0,9,18,0,0,0,0,0,0,0,0,0,0
 2015,Regular,16,KC,17,CLE,13,KC,Travis Kelce,TE,6,8,1,0,0,19,43,0,0,0,0,0,0,0,0,0,0
 2015,Regular,16,MIA,12,IND,18,IND,Coby Fleener,TE,2,4,0,0,0,9,13,0,0,0,0,0,0,0,0,0,0
 2015,Regular,16,MIA,12,IND,18,IND,Jack Doyle,TE,2,3,0,0,0,8,7,0,0,0,0,0,0,0,0,0,0
@@ -1951,8 +1965,10 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2014,Preseason,1,CHI,34,PHI,28,CHI,Zach Miller,TE,6,6,2,0,0,29,68,0,0,0,0,0,0,0,0,0,0
 2014,Preseason,1,CHI,34,PHI,28,PHI,Ifeanyi Momah,TE,2,3,0,0,0,15,15,0,0,0,0,0,0,0,0,0,0
 2014,Preseason,1,CHI,34,PHI,28,PHI,Zach Ertz,TE,4,5,0,0,0,37,60,0,0,0,0,0,0,0,0,0,0
+2014,Preseason,1,DET,13,CLE,12,CLE,Jim Dray,TE,1,1,0,0,0,3,4,0,0,0,0,0,0,0,0,0,0
 2014,Preseason,1,DET,13,CLE,12,CLE,MarQueis Gray,TE,2,5,0,0,0,30,51,0,0,0,0,0,0,0,0,0,0
 2014,Preseason,1,DET,13,CLE,12,DET,Eric Ebron,TE,1,4,0,0,0,2,2,0,0,0,0,0,0,0,0,0,0
+2014,Preseason,1,JAC,16,TB,10,JAC,D.J. Tialavea,TE,2,2,0,0,0,8,15,0,0,0,0,0,0,0,0,0,0
 2014,Preseason,1,JAC,16,TB,10,JAC,Marcedes Lewis,TE,1,1,0,0,0,19,9,0,0,0,0,0,0,0,0,0,0
 2014,Preseason,1,JAC,16,TB,10,TB,Austin Seferian-Jenkins,TE,2,3,0,0,0,14,29,0,0,0,0,0,0,0,0,0,0
 2014,Preseason,1,JAC,16,TB,10,TB,Timothy Wright,TE,1,4,0,0,0,0,6,0,0,0,0,0,0,0,0,0,0
@@ -2014,6 +2030,7 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2014,Regular,1,PHI,34,JAC,17,PHI,Brent Celek,TE,3,4,0,0,0,10,15,0,0,0,0,0,0,0,0,0,0
 2014,Regular,1,PHI,34,JAC,17,PHI,Zach Ertz,TE,3,5,1,0,0,16,77,0,0,0,0,0,0,0,0,0,0
 2014,Regular,1,PIT,30,CLE,27,CLE,Gary Barnidge,TE,1,2,0,0,0,4,13,0,0,0,0,0,0,0,0,0,0
+2014,Regular,1,PIT,30,CLE,27,CLE,Jim Dray,TE,2,2,0,0,0,5,30,0,0,0,0,0,0,0,0,0,0
 2014,Regular,1,PIT,30,CLE,27,CLE,Jordan Cameron,TE,2,5,0,0,0,16,47,0,0,0,0,0,0,0,0,0,0
 2014,Regular,1,SEA,36,GB,16,SEA,Luke Willson,TE,1,1,0,0,0,3,1,0,0,0,0,0,0,0,0,0,0
 2014,Regular,1,STL,6,MIN,34,MIN,Kyle Rudolph,TE,2,4,1,0,0,0,16,0,0,0,0,0,0,0,0,0,0
@@ -2088,6 +2105,7 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2014,Regular,2,CIN,24,ATL,10,ATL,Levine Toilolo,TE,2,3,0,0,0,7,13,0,0,0,0,0,0,0,0,0,0
 2014,Regular,2,CIN,24,ATL,10,CIN,Jermaine Gresham,TE,3,3,0,0,0,16,25,0,0,0,0,0,0,0,0,0,0
 2014,Regular,2,CLE,26,NO,24,CLE,Gary Barnidge,TE,4,4,0,0,0,10,41,0,0,0,0,0,0,0,0,0,0
+2014,Regular,2,CLE,26,NO,24,CLE,Jim Dray,TE,1,2,0,0,0,5,5,0,0,0,0,0,0,0,0,0,0
 2014,Regular,2,CLE,26,NO,24,NO,Benjamin Watson,TE,1,2,0,0,0,2,4,0,0,0,0,0,0,0,0,0,0
 2014,Regular,2,CLE,26,NO,24,NO,Jimmy Graham,TE,10,13,2,0,0,39,118,0,0,0,0,0,0,0,0,0,0
 2014,Regular,2,CLE,26,NO,24,NO,Josh Hill,TE,1,2,0,0,0,1,-1,0,0,0,0,0,0,0,0,0,0
@@ -2231,6 +2249,7 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2014,Preseason,4,CIN,35,IND,7,CIN,Ryan Hewitt,TE,2,3,1,0,0,14,12,0,0,0,0,0,0,0,0,0,0
 2014,Preseason,4,CIN,35,IND,7,IND,Erik Swoope,TE,1,1,0,0,0,7,9,0,0,0,0,0,0,0,0,0,0
 2014,Preseason,4,CLE,33,CHI,13,CLE,Gary Barnidge,TE,1,1,0,0,0,13,22,0,0,0,0,0,0,0,0,0,0
+2014,Preseason,4,CLE,33,CHI,13,CLE,Jim Dray,TE,1,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0
 2014,Preseason,4,CLE,33,CHI,13,CLE,Jordan Cameron,TE,1,2,0,0,0,3,8,0,0,0,0,0,0,0,0,0,0
 2014,Preseason,4,DAL,3,DEN,27,DAL,James Hanna,TE,3,3,0,0,0,8,20,0,0,0,0,0,0,0,0,0,0
 2014,Preseason,4,DAL,3,DEN,27,DEN,Jacob Tamme,TE,1,1,0,0,0,0,12,0,0,0,0,0,0,0,0,0,0
@@ -2241,6 +2260,7 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2014,Preseason,4,HOU,13,SF,40,HOU,Ryan Griffin,TE,1,3,0,0,0,2,4,0,0,0,0,0,0,0,0,0,0
 2014,Preseason,4,HOU,13,SF,40,SF,Asante Cleveland,TE,1,2,1,0,0,3,14,0,0,0,0,0,0,0,0,0,0
 2014,Preseason,4,HOU,13,SF,40,SF,Derek Carrier,TE,1,1,0,0,0,3,32,0,0,0,0,0,0,0,0,0,0
+2014,Preseason,4,JAC,14,ATL,24,JAC,D.J. Tialavea,TE,2,2,0,0,0,6,8,0,0,0,0,0,0,0,0,0,0
 2014,Preseason,4,NO,13,BAL,22,BAL,Crockett Gillmore,TE,1,3,0,0,0,19,23,0,0,0,0,0,0,0,0,0,0
 2014,Preseason,4,NYG,16,NE,13,NE,Timothy Wright,TE,4,6,0,0,0,28,43,0,0,0,0,0,0,0,0,0,0
 2014,Preseason,4,NYG,16,NE,13,NYG,Kellen Davis,TE,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
@@ -2318,6 +2338,7 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2014,Regular,5,SF,22,KC,17,KC,Anthony Fasano,TE,4,7,0,0,0,6,32,0,0,0,0,0,0,0,0,0,0
 2014,Regular,5,SF,22,KC,17,KC,Travis Kelce,TE,2,3,1,0,0,9,15,0,0,0,0,0,0,0,0,0,0
 2014,Regular,5,SF,22,KC,17,SF,Derek Carrier,TE,2,2,0,0,0,14,16,1,0,0,0,0,0,0,0,0,0
+2014,Regular,5,TEN,28,CLE,29,CLE,Jim Dray,TE,3,4,1,0,0,10,25,0,0,0,0,0,0,0,0,0,0
 2014,Regular,5,TEN,28,CLE,29,CLE,Jordan Cameron,TE,3,7,0,0,0,1,33,0,0,0,0,0,0,0,0,0,0
 2014,Regular,5,TEN,28,CLE,29,TEN,Delanie Walker,TE,4,4,0,0,0,16,47,0,0,0,0,0,0,0,0,0,0
 2014,Regular,5,WAS,17,SEA,27,SEA,Luke Willson,TE,3,4,0,0,0,18,28,0,0,0,0,0,0,0,0,0,0
@@ -2335,6 +2356,7 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2014,Regular,6,CIN,37,CAR,37,CAR,Brandon Williams,TE,1,1,0,0,0,0,16,0,0,0,0,0,0,0,0,0,0
 2014,Regular,6,CIN,37,CAR,37,CAR,Greg Olsen,TE,6,11,1,0,0,22,62,0,0,0,0,0,0,0,0,0,0
 2014,Regular,6,CIN,37,CAR,37,CIN,Jermaine Gresham,TE,6,7,0,0,0,45,68,0,0,0,0,0,0,0,0,0,0
+2014,Regular,6,CLE,31,PIT,10,CLE,Jim Dray,TE,1,1,0,0,0,44,31,0,0,0,0,0,0,0,0,0,0
 2014,Regular,6,CLE,31,PIT,10,CLE,Jordan Cameron,TE,3,5,1,0,0,43,102,0,0,0,0,0,0,0,0,0,0
 2014,Regular,6,HOU,28,IND,33,HOU,C.J. Fiedorowicz,TE,1,1,0,0,0,2,7,0,0,0,0,0,0,0,0,0,0
 2014,Regular,6,HOU,28,IND,33,IND,Coby Fleener,TE,2,4,1,0,0,2,11,0,0,0,0,0,0,0,0,0,0
@@ -2411,6 +2433,7 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2014,Regular,8,CIN,27,BAL,24,BAL,Crockett Gillmore,TE,2,2,0,0,0,10,23,0,0,0,0,0,0,0,0,0,0
 2014,Regular,8,CIN,27,BAL,24,CIN,Jermaine Gresham,TE,4,4,0,0,0,14,34,1,0,0,0,0,0,0,0,0,0
 2014,Regular,8,CIN,27,BAL,24,CIN,Ryan Hewitt,TE,1,1,0,0,0,0,5,0,0,0,0,0,0,0,0,0,0
+2014,Regular,8,CLE,23,OAK,13,CLE,Jim Dray,TE,2,2,0,0,0,18,27,0,0,0,0,0,0,0,0,0,0
 2014,Regular,8,CLE,23,OAK,13,CLE,Jordan Cameron,TE,3,5,0,0,0,5,40,0,0,0,0,0,0,0,0,0,0
 2014,Regular,8,CLE,23,OAK,13,OAK,Mychal Rivera,TE,7,9,0,0,0,17,83,0,0,0,0,0,0,0,0,0,0
 2014,Regular,8,DAL,17,WAS,20,DAL,James Hanna,TE,1,1,0,0,0,1,7,0,0,0,0,0,0,0,0,0,0
@@ -2449,6 +2472,7 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2014,Regular,9,CIN,33,JAC,23,CIN,Jermaine Gresham,TE,5,6,0,0,0,36,36,0,0,0,0,0,0,0,0,0,0
 2014,Regular,9,CIN,33,JAC,23,CIN,Ryan Hewitt,TE,1,2,0,0,0,6,7,0,0,0,0,0,0,0,0,0,0
 2014,Regular,9,CLE,22,TB,17,CLE,Gary Barnidge,TE,2,4,0,0,0,5,16,0,0,0,0,0,0,0,0,0,0
+2014,Regular,9,CLE,22,TB,17,CLE,Jim Dray,TE,1,1,0,0,0,3,26,0,0,0,0,0,0,0,0,0,0
 2014,Regular,9,CLE,22,TB,17,TB,Austin Seferian-Jenkins,TE,1,3,0,0,0,1,3,0,0,0,0,0,0,0,0,0,0
 2014,Regular,9,DAL,17,ARI,28,DAL,Jason Witten,TE,6,7,0,0,0,26,62,0,0,0,0,0,0,0,0,0,0
 2014,Regular,9,HOU,21,PHI,31,PHI,Brent Celek,TE,2,2,0,0,0,3,7,0,0,0,0,0,0,0,0,0,0
@@ -2510,6 +2534,7 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2014,Regular,11,CHI,21,MIN,13,CHI,Martellus Bennett,TE,4,4,0,0,0,26,29,0,0,0,0,0,0,0,0,0,0
 2014,Regular,11,CHI,21,MIN,13,MIN,Rhett Ellison,TE,1,1,1,0,0,7,7,0,0,0,0,0,0,0,0,0,0
 2014,Regular,11,CLE,7,HOU,23,CLE,Gary Barnidge,TE,1,5,0,0,0,11,11,0,0,0,0,0,0,0,0,0,0
+2014,Regular,11,CLE,7,HOU,23,CLE,Jim Dray,TE,2,2,0,0,0,26,46,0,0,0,0,0,0,0,0,0,0
 2014,Regular,11,GB,53,PHI,20,GB,Richard Rodgers,TE,1,2,0,0,0,9,19,0,0,0,0,0,0,0,0,0,0
 2014,Regular,11,GB,53,PHI,20,PHI,Brent Celek,TE,1,3,0,0,0,1,11,0,0,0,0,0,0,0,0,0,0
 2014,Regular,11,GB,53,PHI,20,PHI,Zach Ertz,TE,4,6,0,0,0,20,55,0,0,0,0,0,0,0,0,0,0
@@ -2584,6 +2609,7 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2014,Regular,13,BAL,33,SD,34,SD,Ladarius Green,TE,2,2,0,0,0,5,1,0,0,0,0,0,0,0,0,0,0
 2014,Regular,13,BUF,26,CLE,10,BUF,MarQueis Gray,TE,2,2,0,0,0,63,71,0,0,0,0,0,0,0,0,0,0
 2014,Regular,13,BUF,26,CLE,10,CLE,Gary Barnidge,TE,1,1,0,0,0,1,6,0,0,0,0,0,0,0,0,0,0
+2014,Regular,13,BUF,26,CLE,10,CLE,Jim Dray,TE,3,4,0,0,0,23,45,0,0,0,0,0,0,0,0,0,0
 2014,Regular,13,DAL,10,PHI,33,DAL,Jason Witten,TE,1,2,0,0,0,9,8,0,0,0,0,0,0,0,0,0,0
 2014,Regular,13,DAL,10,PHI,33,PHI,Brent Celek,TE,1,2,0,0,0,1,7,0,0,0,0,0,0,0,0,0,0
 2014,Regular,13,DET,34,CHI,17,CHI,Martellus Bennett,TE,8,12,0,0,0,64,109,0,0,0,0,0,0,0,0,0,0
@@ -2623,6 +2649,7 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2014,Regular,14,CHI,28,DAL,41,DAL,Gavin Escobar,TE,1,1,1,0,0,0,6,0,0,0,0,0,0,0,0,0,0
 2014,Regular,14,CHI,28,DAL,41,DAL,Jason Witten,TE,2,3,0,0,0,3,26,0,0,0,0,0,0,0,0,0,0
 2014,Regular,14,CIN,21,PIT,42,CIN,Jermaine Gresham,TE,3,4,1,0,0,2,23,0,0,0,0,0,0,0,0,0,0
+2014,Regular,14,CLE,24,IND,25,CLE,Jim Dray,TE,1,3,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0
 2014,Regular,14,CLE,24,IND,25,CLE,Jordan Cameron,TE,4,5,0,0,0,7,41,0,0,0,0,0,0,0,0,0,0
 2014,Regular,14,CLE,24,IND,25,IND,Coby Fleener,TE,5,10,0,0,0,17,56,0,0,0,0,0,0,0,0,0,0
 2014,Regular,14,CLE,24,IND,25,IND,Dwayne Allen,TE,1,3,0,0,0,2,5,0,0,0,0,0,0,0,0,0,0
@@ -2700,6 +2727,7 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2014,Regular,16,ARI,6,SEA,35,SEA,Luke Willson,TE,3,3,2,0,0,75,139,0,0,0,0,0,0,0,0,0,0
 2014,Regular,16,CAR,17,CLE,13,CAR,Ed Dickson,TE,2,2,0,0,0,19,44,0,0,0,0,0,0,0,0,0,0
 2014,Regular,16,CAR,17,CLE,13,CAR,Greg Olsen,TE,1,3,0,0,0,20,21,0,0,0,0,0,0,0,0,0,0
+2014,Regular,16,CAR,17,CLE,13,CLE,Jim Dray,TE,1,1,0,0,0,1,4,0,0,0,0,0,0,0,0,0,0
 2014,Regular,16,CAR,17,CLE,13,CLE,Jordan Cameron,TE,3,5,1,0,0,69,88,0,0,0,0,0,0,0,0,0,0
 2014,Regular,16,CHI,14,DET,20,CHI,Martellus Bennett,TE,1,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 2014,Regular,16,CIN,37,DEN,28,CIN,Jermaine Gresham,TE,9,11,1,0,0,51,62,1,0,0,0,0,0,0,0,0,0
@@ -2837,6 +2865,7 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2013,Regular,1,SD,28,HOU,31,SD,Antonio Gates,TE,2,4,0,0,0,28,49,0,0,0,0,0,0,0,0,0,0
 2013,Regular,1,SF,34,GB,28,SF,Vance McDonald,TE,1,2,0,0,0,15,25,0,0,0,0,0,0,0,0,0,0
 2013,Regular,1,SF,34,GB,28,SF,Vernon Davis,TE,6,9,2,0,0,23,98,0,0,0,0,0,0,0,0,0,0
+2013,Regular,1,STL,27,ARI,24,ARI,Jim Dray,TE,2,2,0,0,0,11,21,0,0,0,0,0,0,0,0,0,0
 2013,Regular,1,STL,27,ARI,24,STL,Jared Cook,TE,7,10,2,0,0,74,141,1,0,0,0,0,0,0,0,0,0
 2013,Regular,1,STL,27,ARI,24,STL,Lance Kendricks,TE,3,4,0,0,0,17,25,0,0,0,0,0,0,0,0,0,0
 2013,Regular,1,WAS,27,PHI,33,PHI,Brent Celek,TE,2,3,1,0,0,28,56,0,0,0,0,0,0,0,0,0,0
@@ -2854,6 +2883,7 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2013,Postseason,1,PHI,24,NO,26,NO,Josh Hill,TE,1,1,0,0,0,5,9,0,0,0,0,0,0,0,0,0,0
 2013,Postseason,1,PHI,24,NO,26,PHI,Brent Celek,TE,2,3,0,0,0,5,16,0,0,0,0,0,0,0,0,0,0
 2013,Postseason,1,PHI,24,NO,26,PHI,Zach Ertz,TE,3,4,1,0,0,2,22,0,0,0,0,0,0,0,0,0,0
+2013,Preseason,2,ARI,12,DAL,7,ARI,Jim Dray,TE,2,2,0,0,0,11,20,0,0,0,0,0,0,0,0,0,0
 2013,Preseason,2,ARI,12,DAL,7,DAL,Gavin Escobar,TE,5,5,1,0,0,11,32,0,0,0,0,0,0,0,0,0,0
 2013,Preseason,2,BUF,20,MIN,16,BUF,Chris Gragg,TE,1,1,0,0,0,5,11,0,0,0,0,0,0,0,0,0,0
 2013,Preseason,2,BUF,20,MIN,16,BUF,Lee Smith,TE,1,2,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0
@@ -2886,6 +2916,7 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2013,Preseason,2,STL,7,GB,19,STL,Jared Cook,TE,1,1,0,0,0,32,37,0,0,0,0,0,0,0,0,0,0
 2013,Preseason,2,WAS,24,PIT,13,WAS,Jordan Reed,TE,1,4,0,0,0,4,8,0,0,0,0,0,0,0,0,0,0
 2013,Preseason,2,WAS,24,PIT,13,WAS,Niles Paul,TE,1,1,0,0,0,2,7,0,0,0,0,0,0,0,0,0,0
+2013,Regular,2,ARI,25,DET,21,ARI,Jim Dray,TE,5,7,0,0,0,13,31,0,0,0,0,0,0,0,0,0,0
 2013,Regular,2,ATL,31,STL,24,ATL,Levine Toilolo,TE,1,1,0,0,0,3,4,0,0,0,0,0,0,0,0,0,0
 2013,Regular,2,ATL,31,STL,24,STL,Cory Harkey,TE,1,1,0,0,0,5,6,0,0,0,0,0,0,0,0,0,0
 2013,Regular,2,ATL,31,STL,24,STL,Jared Cook,TE,1,6,0,0,0,9,10,0,0,0,0,0,0,0,0,0,0
@@ -3065,12 +3096,14 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2013,Regular,4,STL,11,SF,35,SF,Vernon Davis,TE,2,4,1,0,0,1,18,0,0,0,0,0,0,0,0,0,0
 2013,Regular,4,STL,11,SF,35,STL,Jared Cook,TE,4,9,0,0,0,9,45,0,0,0,0,0,0,0,0,0,0
 2013,Regular,4,STL,11,SF,35,STL,Lance Kendricks,TE,1,1,1,0,0,0,6,0,0,0,0,0,0,0,0,0,0
+2013,Regular,4,TB,10,ARI,13,ARI,Jim Dray,TE,1,1,0,0,0,4,10,0,0,0,0,0,0,0,0,0,0
 2013,Regular,4,TB,10,ARI,13,TB,Timothy Wright,TE,5,6,0,0,0,8,41,0,0,0,0,0,0,0,0,0,0
 2013,Regular,4,TEN,38,NYJ,13,NYJ,Jeff Cumberland,TE,1,1,1,0,0,19,34,0,0,0,0,0,0,0,0,0,0
 2013,Regular,4,TEN,38,NYJ,13,TEN,Delanie Walker,TE,3,4,1,0,0,1,14,0,0,0,0,0,0,0,0,0,0
 2013,Postseason,4,DEN,8,SEA,43,DEN,Jacob Tamme,TE,2,2,0,0,0,8,9,0,0,0,0,0,0,0,0,0,0
 2013,Postseason,4,DEN,8,SEA,43,DEN,Julius Thomas,TE,4,6,0,0,0,10,27,0,0,0,0,0,0,0,0,0,0
 2013,Postseason,4,DEN,8,SEA,43,SEA,Luke Willson,TE,2,4,0,0,0,14,17,0,0,0,0,0,0,0,0,0,0
+2013,Regular,5,ARI,22,CAR,6,ARI,Jim Dray,TE,2,2,1,0,0,3,13,0,0,0,0,0,0,0,0,0,0
 2013,Regular,5,ARI,22,CAR,6,CAR,Greg Olsen,TE,5,6,0,0,0,36,79,0,0,0,0,0,0,0,0,0,0
 2013,Regular,5,ATL,28,NYJ,30,ATL,Levine Toilolo,TE,2,2,1,0,0,12,15,0,0,0,0,0,0,0,0,0,0
 2013,Regular,5,ATL,28,NYJ,30,NYJ,Jeff Cumberland,TE,3,4,1,0,0,24,79,0,0,0,0,0,0,0,0,0,0
@@ -3125,11 +3158,13 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2013,Regular,6,SD,19,IND,9,SD,Ladarius Green,TE,1,1,0,0,0,4,25,0,0,0,0,0,0,0,0,0,0
 2013,Regular,6,SEA,20,TEN,13,SEA,Luke Willson,TE,2,3,0,0,0,11,17,0,0,0,0,0,0,0,0,0,0
 2013,Regular,6,SEA,20,TEN,13,TEN,Delanie Walker,TE,4,5,0,0,0,7,29,0,0,0,0,0,0,0,0,0,0
+2013,Regular,6,SF,32,ARI,20,ARI,Jim Dray,TE,1,2,0,0,0,4,4,0,0,0,0,0,0,0,0,0,0
 2013,Regular,6,SF,32,ARI,20,SF,Vance McDonald,TE,1,1,0,0,0,6,7,0,0,0,0,0,0,0,0,0,0
 2013,Regular,6,SF,32,ARI,20,SF,Vernon Davis,TE,8,11,2,0,0,49,180,0,0,0,0,0,0,0,0,0,0
 2013,Regular,6,TB,20,PHI,31,PHI,Brent Celek,TE,1,1,0,0,0,15,10,0,0,0,0,0,0,0,0,0,0
 2013,Regular,6,TB,20,PHI,31,PHI,Zach Ertz,TE,3,6,0,0,0,10,13,0,0,0,0,0,0,0,0,0,0
 2013,Regular,6,TB,20,PHI,31,TB,Timothy Wright,TE,7,9,0,0,0,27,91,0,0,0,0,0,0,0,0,0,0
+2013,Regular,7,ARI,22,SEA,34,ARI,Jim Dray,TE,1,2,0,0,0,3,8,0,0,0,0,0,0,0,0,0,0
 2013,Regular,7,ARI,22,SEA,34,SEA,Kellen Davis,TE,1,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0
 2013,Regular,7,ARI,22,SEA,34,SEA,Luke Willson,TE,1,2,0,0,0,22,23,0,0,0,0,0,0,0,0,0,0
 2013,Regular,7,ATL,31,TB,23,TB,Timothy Wright,TE,2,3,0,0,0,0,15,0,0,0,0,0,0,0,0,0,0
@@ -3224,6 +3259,7 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2013,Regular,9,WAS,30,SD,24,WAS,Jordan Reed,TE,4,5,0,0,0,15,37,0,0,0,0,0,1,18,0,0,0
 2013,Regular,9,WAS,30,SD,24,WAS,Logan Paulsen,TE,3,3,0,0,0,1,9,0,0,0,0,0,0,0,0,0,0
 2013,Regular,9,WAS,30,SD,24,WAS,Niles Paul,TE,1,2,0,0,0,7,6,0,0,0,0,0,0,0,0,0,0
+2013,Regular,10,ARI,27,HOU,24,ARI,Jim Dray,TE,1,2,0,0,0,8,9,0,0,0,0,0,0,0,0,0,0
 2013,Regular,10,ARI,27,HOU,24,HOU,Ryan Griffin,TE,1,1,1,0,0,0,2,0,0,0,0,0,0,0,0,0,0
 2013,Regular,10,ATL,10,SEA,33,SEA,Luke Willson,TE,1,2,0,0,0,18,19,0,0,0,0,0,0,0,0,0,0
 2013,Regular,10,BAL,20,CIN,17,BAL,Ed Dickson,TE,3,4,0,0,0,4,28,0,0,0,0,0,0,0,0,0,0
@@ -3268,6 +3304,7 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2013,Regular,11,DEN,27,KC,17,KC,Anthony Fasano,TE,4,4,1,0,0,15,37,0,0,0,0,0,0,0,0,0,0
 2013,Regular,11,DEN,27,KC,17,KC,Sean McGrath,TE,2,3,0,0,0,25,40,0,0,0,0,0,0,0,0,0,0
 2013,Regular,11,HOU,23,OAK,28,OAK,Mychal Rivera,TE,5,6,1,0,0,9,54,0,0,0,0,0,0,0,0,0,0
+2013,Regular,11,JAC,14,ARI,27,ARI,Jim Dray,TE,2,2,0,0,0,8,18,0,0,0,0,0,0,0,0,0,0
 2013,Regular,11,JAC,14,ARI,27,JAC,Clay Harbor,TE,3,5,0,0,0,19,32,0,0,0,0,0,0,0,0,0,0
 2013,Regular,11,JAC,14,ARI,27,JAC,Marcedes Lewis,TE,3,7,0,0,0,25,23,0,0,0,0,0,0,0,0,0,0
 2013,Regular,11,MIA,20,SD,16,MIA,Charles Clay,TE,6,7,1,0,0,76,90,0,0,0,0,0,0,0,0,0,0
@@ -3340,6 +3377,7 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2013,Regular,13,NYJ,3,MIA,23,MIA,Charles Clay,TE,7,10,0,0,0,42,80,0,0,0,0,0,1,0,0,0,0
 2013,Regular,13,NYJ,3,MIA,23,MIA,Dion Sims,TE,1,2,0,0,0,2,8,0,0,0,0,0,0,0,0,0,0
 2013,Regular,13,NYJ,3,MIA,23,NYJ,Jeff Cumberland,TE,1,3,0,0,0,6,6,0,0,0,0,0,0,0,0,0,0
+2013,Regular,13,PHI,24,ARI,21,ARI,Jim Dray,TE,3,3,1,0,0,18,26,0,0,0,0,0,0,0,0,0,0
 2013,Regular,13,PHI,24,ARI,21,PHI,Brent Celek,TE,4,6,1,0,0,17,29,0,0,0,0,0,0,0,0,0,0
 2013,Regular,13,PHI,24,ARI,21,PHI,Zach Ertz,TE,5,6,2,0,0,14,68,0,0,0,0,0,0,0,0,0,0
 2013,Regular,13,SD,10,CIN,17,CIN,Tyler Eifert,TE,1,2,0,0,0,7,9,0,0,0,0,0,0,0,0,0,0
@@ -3351,6 +3389,7 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2013,Regular,13,SF,23,STL,13,STL,Jared Cook,TE,3,6,0,0,0,15,49,0,0,0,0,0,0,0,0,0,0
 2013,Regular,13,WAS,17,NYG,24,NYG,Brandon Myers,TE,5,6,1,0,0,14,61,0,0,0,0,0,0,0,0,0,0
 2013,Regular,13,WAS,17,NYG,24,WAS,Logan Paulsen,TE,3,4,1,0,0,22,41,0,0,0,0,0,0,0,0,0,0
+2013,Regular,14,ARI,30,STL,10,ARI,Jim Dray,TE,3,3,0,0,0,16,32,1,0,0,0,0,0,0,0,0,0
 2013,Regular,14,ARI,30,STL,10,STL,Cory Harkey,TE,1,1,0,0,0,7,9,0,0,0,0,0,0,0,0,0,0
 2013,Regular,14,ARI,30,STL,10,STL,Jared Cook,TE,3,6,0,0,0,15,49,0,0,0,0,0,0,0,0,0,0
 2013,Regular,14,ARI,30,STL,10,STL,Lance Kendricks,TE,1,2,0,0,0,3,15,0,0,0,0,0,0,0,0,0,0
@@ -3427,6 +3466,7 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2013,Regular,15,TB,14,SF,33,SF,Garrett Celek,TE,1,1,0,0,0,5,8,1,0,0,0,0,0,0,0,0,0
 2013,Regular,15,TB,14,SF,33,SF,Vernon Davis,TE,5,7,1,0,0,7,79,0,0,0,0,0,0,0,0,0,0
 2013,Regular,15,TB,14,SF,33,TB,Timothy Wright,TE,7,9,1,0,0,14,82,0,0,0,0,0,0,0,0,0,0
+2013,Regular,15,TEN,34,ARI,37,ARI,Jim Dray,TE,1,1,0,0,0,3,9,0,0,0,0,0,0,0,0,0,0
 2013,Regular,15,TEN,34,ARI,37,TEN,Delanie Walker,TE,8,11,1,0,0,28,53,0,0,0,0,0,0,0,0,0,0
 2013,Regular,16,BAL,7,NE,41,BAL,Dennis Pitta,TE,4,7,0,0,0,3,34,0,0,0,0,0,0,0,0,0,0
 2013,Regular,16,BAL,7,NE,41,BAL,Ed Dickson,TE,4,5,0,0,0,7,44,0,0,0,0,0,0,0,0,0,0
@@ -3457,6 +3497,7 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2013,Regular,16,SD,26,OAK,13,OAK,Mychal Rivera,TE,2,3,0,0,0,0,43,0,0,0,0,0,0,0,0,0,0
 2013,Regular,16,SD,26,OAK,13,SD,Antonio Gates,TE,3,3,0,0,0,30,42,0,0,0,0,0,0,0,0,0,0
 2013,Regular,16,SD,26,OAK,13,SD,John Phillips,TE,1,1,0,0,0,0,5,0,0,0,0,0,0,0,0,0,0
+2013,Regular,16,SEA,10,ARI,17,ARI,Jim Dray,TE,3,3,0,0,0,10,16,0,0,0,0,0,0,0,0,0,0
 2013,Regular,16,SEA,10,ARI,17,SEA,Luke Willson,TE,1,1,0,0,0,1,3,0,0,0,0,0,0,0,0,0,0
 2013,Regular,16,STL,23,TB,13,STL,Cory Harkey,TE,3,3,0,0,0,20,22,0,0,0,0,0,0,0,0,0,0
 2013,Regular,16,STL,23,TB,13,STL,Jared Cook,TE,2,2,0,0,0,15,27,0,0,0,0,0,0,0,0,0,0
@@ -3464,6 +3505,7 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2013,Regular,16,STL,23,TB,13,TB,Timothy Wright,TE,4,6,0,0,0,14,27,0,0,0,0,0,0,0,0,0,0
 2013,Regular,16,WAS,23,DAL,24,DAL,Jason Witten,TE,2,2,0,0,0,5,13,0,0,0,0,0,0,0,0,0,0
 2013,Regular,16,WAS,23,DAL,24,WAS,Logan Paulsen,TE,2,2,0,0,0,3,7,0,0,0,0,0,0,0,0,0,0
+2013,Regular,17,ARI,20,SF,23,ARI,Jim Dray,TE,1,1,0,0,0,4,18,0,0,0,0,0,0,0,0,0,0
 2013,Regular,17,ARI,20,SF,23,SF,Vernon Davis,TE,3,5,1,0,0,23,45,0,0,0,0,0,0,0,0,0,0
 2013,Regular,17,ATL,20,CAR,21,CAR,Greg Olsen,TE,6,8,1,0,0,13,42,0,0,0,0,0,0,0,0,0,0
 2013,Regular,17,CHI,28,GB,33,CHI,Martellus Bennett,TE,1,1,0,0,0,0,15,0,0,0,0,0,0,0,0,0,0
@@ -3510,6 +3552,7 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2012,Preseason,1,IND,38,STL,3,STL,Lance Kendricks,TE,2,2,0,0,0,10,18,0,0,0,0,0,0,0,0,0,0
 2012,Preseason,1,JAC,32,NYG,31,JAC,Marcedes Lewis,TE,1,2,0,0,0,15,11,0,0,0,0,0,0,0,0,0,0
 2012,Preseason,1,JAC,32,NYG,31,NYG,Martellus Bennett,TE,3,3,1,0,0,5,27,0,0,0,0,0,0,0,0,0,0
+2012,Preseason,1,KC,27,ARI,17,ARI,Jim Dray,TE,1,1,0,0,0,4,6,0,0,0,0,0,0,0,0,0,0
 2012,Preseason,1,MIA,7,TB,20,MIA,Anthony Fasano,TE,3,3,0,0,0,7,29,0,0,0,0,0,0,0,0,0,0
 2012,Preseason,1,MIA,7,TB,20,MIA,Charles Clay,TE,3,6,1,0,0,34,49,0,0,0,0,0,0,0,0,0,0
 2012,Preseason,1,MIA,7,TB,20,TB,Luke Stocker,TE,1,1,0,0,0,1,14,0,0,0,0,0,0,0,0,0,0
@@ -3994,6 +4037,7 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2012,Regular,15,STL,22,MIN,36,STL,Cory Harkey,TE,1,1,0,0,0,7,21,0,0,0,0,0,0,0,0,0,0
 2012,Regular,15,STL,22,MIN,36,STL,Lance Kendricks,TE,3,5,1,0,0,22,35,0,0,0,0,0,0,0,0,0,0
 2012,Regular,15,TEN,14,NYJ,10,NYJ,Jeff Cumberland,TE,4,9,1,0,0,11,53,0,0,0,0,0,0,0,0,0,0
+2012,Regular,16,ARI,13,CHI,28,ARI,Jim Dray,TE,1,1,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0
 2012,Regular,16,ARI,13,CHI,28,CHI,Kellen Davis,TE,2,2,0,0,0,12,19,0,0,0,0,0,0,0,0,0,0
 2012,Regular,16,BAL,33,NYG,14,BAL,Dennis Pitta,TE,4,5,0,0,0,15,56,0,0,0,0,0,0,0,0,0,0
 2012,Regular,16,BAL,33,NYG,14,BAL,Ed Dickson,TE,1,1,0,0,0,6,9,0,0,0,0,0,0,0,0,0,0
@@ -4041,6 +4085,7 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2012,Regular,17,SD,24,OAK,21,SD,Antonio Gates,TE,2,2,1,0,0,0,15,0,0,0,0,0,0,0,0,0,0
 2012,Regular,17,SEA,20,STL,13,STL,Lance Kendricks,TE,3,4,0,0,0,15,33,0,0,0,0,0,0,0,0,0,0
 2012,Regular,17,SEA,20,STL,13,STL,Matthew Mulligan,TE,1,2,0,0,0,7,10,0,0,0,0,0,0,0,0,0,0
+2012,Regular,17,SF,27,ARI,13,ARI,Jim Dray,TE,1,1,0,0,0,1,12,0,0,0,0,0,0,0,0,0,0
 2012,Regular,17,SF,27,ARI,13,SF,Delanie Walker,TE,2,4,0,0,0,3,50,0,0,0,0,0,0,0,0,0,0
 2012,Regular,17,SF,27,ARI,13,SF,Vernon Davis,TE,1,2,0,0,0,1,5,0,0,0,0,0,0,0,0,0,0
 2012,Regular,17,TEN,38,JAC,20,JAC,Marcedes Lewis,TE,7,10,0,0,0,22,103,0,0,0,0,0,0,0,0,0,0
@@ -4134,6 +4179,7 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2011,Postseason,2,NE,45,DEN,10,NE,Rob Gronkowski,TE,10,12,3,0,0,53,145,0,0,0,0,0,0,0,0,0,0
 2011,Postseason,2,SF,36,NO,32,NO,Jimmy Graham,TE,5,8,2,0,0,50,103,0,0,0,0,0,0,0,0,0,0
 2011,Postseason,2,SF,36,NO,32,SF,Vernon Davis,TE,7,10,2,0,0,67,180,0,0,0,0,0,0,0,0,0,0
+2011,Preseason,3,ARI,31,SD,34,ARI,Jim Dray,TE,1,1,0,0,0,0,13,0,0,0,0,0,0,0,0,0,0
 2011,Preseason,3,ARI,31,SD,34,SD,Antonio Gates,TE,2,4,1,0,0,0,18,0,0,0,0,0,0,0,0,0,0
 2011,Preseason,3,BAL,34,WAS,31,BAL,Dennis Pitta,TE,2,2,0,0,0,10,16,0,0,0,0,0,0,0,0,0,0
 2011,Preseason,3,BAL,34,WAS,31,BAL,Ed Dickson,TE,3,4,0,0,0,25,57,0,0,0,0,0,0,0,0,0,0
@@ -4289,6 +4335,7 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2011,Regular,8,STL,31,NO,21,NO,Jimmy Graham,TE,4,8,0,0,0,3,39,0,0,0,0,0,0,0,0,0,0
 2011,Regular,8,STL,31,NO,21,STL,Lance Kendricks,TE,1,3,0,0,0,1,2,0,0,0,0,0,0,0,0,0,0
 2011,Regular,8,TEN,27,IND,10,TEN,Jared Cook,TE,2,2,0,0,0,23,40,0,0,0,0,0,0,0,0,0,0
+2011,Regular,9,ARI,19,STL,13,ARI,Jim Dray,TE,2,3,0,0,0,3,25,0,0,0,0,0,0,0,0,0,0
 2011,Regular,9,ARI,19,STL,13,STL,Lance Kendricks,TE,1,1,0,0,0,2,7,0,0,0,0,0,0,0,0,0,0
 2011,Regular,9,DAL,23,SEA,13,DAL,Jason Witten,TE,4,7,1,0,0,18,71,0,0,0,0,0,0,0,0,0,0
 2011,Regular,9,HOU,30,CLE,12,CLE,Benjamin Watson,TE,2,2,0,0,0,18,26,0,0,0,0,0,0,0,0,0,0
@@ -4485,6 +4532,7 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2011,Regular,17,STL,27,SF,34,SF,Vernon Davis,TE,8,9,0,0,0,54,118,0,0,0,0,0,0,0,0,0,0
 2011,Regular,17,STL,27,SF,34,STL,Lance Kendricks,TE,3,8,0,0,0,4,54,0,0,0,0,0,0,0,0,0,0
 2010,Preseason,0,CIN,7,DAL,16,DAL,John Phillips,TE,4,6,0,0,0,12,60,0,0,0,0,0,0,0,0,0,0
+2010,Preseason,1,ARI,19,HOU,16,ARI,Jim Dray,TE,2,3,0,0,0,9,26,0,0,0,0,0,0,0,0,0,0
 2010,Preseason,1,BAL,17,CAR,12,BAL,Ed Dickson,TE,2,4,0,0,0,11,26,0,0,0,0,0,0,0,0,0,0
 2010,Preseason,1,BAL,17,CAR,12,CAR,Gary Barnidge,TE,2,2,0,0,0,2,13,0,0,0,0,0,0,0,0,0,0
 2010,Preseason,1,CIN,33,DEN,24,CIN,Jermaine Gresham,TE,3,3,0,0,0,13,37,0,0,0,0,0,0,0,0,0,0
@@ -4534,6 +4582,7 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2010,Preseason,2,SD,14,DAL,16,DAL,Martellus Bennett,TE,4,5,1,0,0,8,40,0,0,0,0,0,0,0,0,0,0
 2010,Preseason,2,SD,14,DAL,16,SD,Antonio Gates,TE,1,2,0,0,0,4,7,0,0,0,0,0,0,0,0,0,0
 2010,Preseason,2,SF,15,MIN,10,SF,Delanie Walker,TE,3,4,0,0,0,19,47,0,0,0,0,0,1,-1,0,0,0
+2010,Preseason,2,TEN,24,ARI,10,ARI,Jim Dray,TE,1,2,0,0,0,0,11,0,0,0,0,0,0,0,0,0,0
 2010,Preseason,2,TEN,24,ARI,10,TEN,Jared Cook,TE,2,4,0,0,0,17,34,0,0,0,0,0,0,0,0,0,0
 2010,Preseason,2,WAS,3,BAL,23,BAL,Dennis Pitta,TE,4,4,0,0,0,30,65,0,0,0,0,0,0,0,0,0,0
 2010,Preseason,2,WAS,3,BAL,23,BAL,Ed Dickson,TE,1,2,0,0,0,1,4,0,0,0,0,0,0,0,0,0,0
@@ -4559,6 +4608,7 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2010,Preseason,3,BUF,35,CIN,20,CIN,Jermaine Gresham,TE,4,4,1,0,0,19,45,0,0,0,0,0,0,0,0,0,0
 2010,Preseason,3,CAR,15,TEN,7,CAR,Gary Barnidge,TE,1,2,0,0,0,47,50,0,0,0,0,0,0,0,0,0,0
 2010,Preseason,3,CAR,15,TEN,7,TEN,Jared Cook,TE,1,2,1,0,0,14,35,0,0,0,0,0,0,0,0,0,0
+2010,Preseason,3,CHI,9,ARI,14,ARI,Jim Dray,TE,1,1,0,0,0,9,18,0,0,0,0,0,0,0,0,0,0
 2010,Preseason,3,CHI,9,ARI,14,CHI,Kellen Davis,TE,2,2,0,0,0,1,29,0,0,0,0,0,0,0,0,0,0
 2010,Preseason,3,DEN,34,PIT,17,PIT,David Johnson,TE,1,2,0,0,0,14,16,0,0,0,0,0,0,0,0,0,0
 2010,Preseason,3,DET,35,CLE,27,CLE,Benjamin Watson,TE,2,4,0,0,0,5,14,0,0,0,0,0,0,0,0,0,0
@@ -4617,6 +4667,7 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2010,Regular,4,MIA,14,NE,41,NE,Rob Gronkowski,TE,1,1,0,0,0,6,4,0,0,0,0,0,0,0,0,0,0
 2010,Regular,4,NYG,17,CHI,3,CHI,Greg Olsen,TE,5,8,0,0,0,14,39,0,0,0,0,0,0,0,0,0,0
 2010,Regular,4,PHI,12,WAS,17,PHI,Brent Celek,TE,3,7,1,0,0,22,27,0,0,0,0,0,0,0,0,0,0
+2010,Regular,4,SD,41,ARI,10,ARI,Jim Dray,TE,1,1,0,0,0,9,24,0,0,0,0,0,0,0,0,0,0
 2010,Regular,4,SD,41,ARI,10,SD,Antonio Gates,TE,7,7,2,0,0,47,144,0,0,0,0,0,0,0,0,0,0
 2010,Regular,4,TEN,20,DEN,26,TEN,Jared Cook,TE,1,2,0,0,0,10,17,0,0,0,0,0,0,0,0,0,0
 2010,Regular,5,BAL,31,DEN,17,BAL,Ed Dickson,TE,1,2,0,0,0,14,58,0,0,0,0,0,0,0,0,0,0
@@ -4677,6 +4728,7 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2010,Regular,9,CLE,34,NE,14,NE,Rob Gronkowski,TE,4,8,0,0,0,25,47,1,0,0,0,0,0,0,0,0,0
 2010,Regular,9,GB,45,DAL,7,DAL,Jason Witten,TE,3,4,0,0,0,32,44,0,0,0,0,0,0,0,0,0,0
 2010,Regular,9,GB,45,DAL,7,DAL,Martellus Bennett,TE,3,3,0,0,0,21,20,0,0,0,0,0,0,0,0,0,0
+2010,Regular,9,MIN,27,ARI,24,ARI,Jim Dray,TE,1,1,0,0,0,6,17,0,0,0,0,0,0,0,0,0,0
 2010,Regular,9,OAK,23,KC,20,OAK,Brandon Myers,TE,3,4,0,0,0,3,20,0,0,0,0,0,0,0,0,0,0
 2010,Regular,9,PHI,26,IND,24,IND,Jacob Tamme,TE,11,17,1,0,0,82,108,0,0,0,0,0,0,0,0,0,0
 2010,Regular,10,ATL,26,BAL,21,BAL,Ed Dickson,TE,1,1,0,0,0,2,4,0,0,0,0,0,0,0,0,0,0
@@ -4726,6 +4778,7 @@ season_year,season_type,week,home_team,home_score,away_team,away_score,team,full
 2010,Regular,12,NYG,24,JAC,20,JAC,Marcedes Lewis,TE,3,5,0,0,0,6,36,0,0,0,0,0,0,0,0,0,0
 2010,Regular,12,NYJ,26,CIN,10,CIN,Jermaine Gresham,TE,2,7,0,0,0,39,36,0,0,0,0,0,0,0,0,0,0
 2010,Regular,12,OAK,17,MIA,33,MIA,Anthony Fasano,TE,2,2,0,0,0,3,10,0,0,0,0,0,0,0,0,0,0
+2010,Regular,13,ARI,6,STL,19,ARI,Jim Dray,TE,1,1,0,0,0,5,6,0,0,0,0,0,0,0,0,0,0
 2010,Regular,13,BAL,10,PIT,13,BAL,Ed Dickson,TE,3,7,0,0,0,12,21,0,0,0,0,0,0,0,0,0,0
 2010,Regular,13,BAL,10,PIT,13,PIT,David Johnson,TE,3,3,0,0,0,21,37,0,0,0,0,0,0,0,0,0,0
 2010,Regular,13,CIN,30,NO,34,CIN,Jermaine Gresham,TE,3,4,0,1,1,20,43,0,0,0,0,0,0,0,0,0,0

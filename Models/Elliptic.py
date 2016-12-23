@@ -7,20 +7,6 @@ from Final_DF import FinalDF
 from scipy.stats import scoreatpercentile
 from sklearn import preprocessing
 
-fin = FinalDF(season_type='Regular', position='QB')
-df = fin.get_df()
-df = df.replace([np.inf, -np.inf], 0)
-
-
-X = df[['DK salary', 'points_per_dollar']]
-x = df['DK salary'].values.reshape(-1, 1)
-y = df['points_per_dollar'].values.reshape(-1, 1)
-c_x = df['DK points']
-
-
-fit1 = EllipticEnvelope(contamination=0.25).fit(X)
-
-fit2 = EllipticEnvelope(contamination=0.25).fit(x, y)
 
 
 
@@ -104,6 +90,19 @@ def make_subplot_again(X, c, ax,pcX=0,pcY=1,fontSize=24,fontName='sans serif',ms
         ax.set_title(title,fontsize=fontSize+2,fontname=fontName)
 
 if __name__ == '__main__':
+
+    fin = FinalDF(season_type='Regular', position='QB')
+    df = fin.get_df()
+    df = df.replace([np.inf, -np.inf], 0)
+
+
+    X = df[['DK salary', 'points_per_dollar']]
+    x = df['DK salary'].values.reshape(-1, 1)
+    y = df['points_per_dollar'].values.reshape(-1, 1)
+    c_x = df['DK points']
+
+
+    fit1 = EllipticEnvelope(contamination=0.25).fit(X)
     fig = plt.figure(figsize=(12, 8))
     ax1 = fig.add_subplot(111)
     make_subplot_again(X, c_x, ax1, leg=False, title='Quarterback Points')
