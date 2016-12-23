@@ -51,19 +51,20 @@ def plot_y():
     ax.hist(y_2015, bins=20)
     plt.show()
 
-def load_df(drop_cols, collinear_drop_cols, season_type=None, position=None, year=None, week=None, load_lines=True):
+def load_df(season_type=None, position=None, year=None, week=None, drop_cols=None, collinear_drop_cols=None, load_lines=True):
     fin = FinalDF(season_type=season_type, position=position, year=year, week=week, load_lines=load_lines)
     df = fin.get_df()
-    df.drop(drop_cols, axis=1, inplace=True)
-    df.drop(collinear_drop_cols, axis=1, inplace=True)
+    if drop_cols:
+        df.drop(drop_cols, axis=1, inplace=True)
+    if collinear_drop_cols:
+        df.drop(collinear_drop_cols, axis=1, inplace=True)
     df['class_label'] = df.apply(lambda row: class_label(row), axis=1)
     df.fillna(0, axis=1, inplace=True)
     return df
 
-def get_x_y(df, x_drop_cols, y_cols):
-    y = df[y_col].values
+def get_x_y(df, x_drop_cols=None, y_cols=None):
+    y = df[y_cols].values
     x = df.drop(x_drop_cols, axis=1).values
-    x = StandardScaler().fit_transform(x)
     return x, y
 
 if __name__ == '__main__':
@@ -72,11 +73,11 @@ if __name__ == '__main__':
     collinear_drop_cols = ['passing_tds', 'passing_yds', 'passing_twoptm', 'rushing_tds', 'total_points', 'DK points', 'total_points', 'receiving_tar']
 
     # load dataframes
-    df_2014 = load_df(season_type='Regular', position='QB', year=2014, drop_cols=drop_cols, collinear_drop_cols=collinear_drop_cols)
-    df_2015 = load_df(season_type='Regular', position='QB', year=2015, drop_cols=drop_cols, collinear_drop_cols=collinear_drop_cols)
+    df_2014 = load_df(season_type='Regular', position='QB', year=2014, drop_cols=drop_cols, collinear_drop_cols=collinear_drop_cols, load_lines=False)
+    df_2015 = load_df(season_type='Regular', position='QB', year=2015, drop_cols=drop_cols, collinear_drop_cols=collinear_drop_cols, load_lines=False)
     df_2016 = load_df(season_type='Regular', position='QB', year=2016, drop_cols=drop_cols, collinear_drop_cols=collinear_drop_cols, load_lines=False)
 
-    df_2016_2 = df_2016
+    df_2016_2 = load_df(season_type='Regular', position='QB', year=2016, load_lines=False)
 
     y_col = 'points_per_dollar'
     x_drop_cols = ['class_label', 'points_per_dollar']
