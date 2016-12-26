@@ -9,7 +9,6 @@ def get_lines_2016():
     df = pd.DataFrame()
     for w in range(1, 15):
         new_df = pd.read_csv('Data/NFL_lines/nfl_lines_2016_week{}.csv'.format(w))
-        new_df['week'] = w
         df = df.append(new_df, ignore_index=True)
     return df
 
@@ -31,6 +30,10 @@ def strip(df):
 def change_team_2015(df):
     df['Vis Team'].replace(to_replace=team_dict_2015, inplace=True)
     df['Home Team'].replace(to_replace=team_dict_2015, inplace=True)
+
+def change_team_2016(df):
+    df['Vis Team'].replace(to_replace=team_dict_2016, inplace=True)
+    df['Home Team'].replace(to_replace=team_dict_2016, inplace=True)
 
 def get_season_yrs_wks(df):
     df['Year'] = get_year(df)
@@ -75,6 +78,15 @@ def form(df):
     get_season_yrs_wks(df)
     df = append_dfs(df)
     return df
+
+def form_2016(df):
+    to_datetime(df)
+    strip(df)
+    change_team_2016(df)
+    get_season_yrs_wks(df)
+    df = append_dfs(df)
+    return df
+
 
 if __name__ == '__main__':
 
