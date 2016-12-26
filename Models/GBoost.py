@@ -73,11 +73,12 @@ if __name__ == '__main__':
     collinear_drop_cols = ['passing_tds', 'passing_yds', 'passing_twoptm', 'rushing_tds', 'total_points', 'DK points', 'total_points', 'receiving_tar']
 
     # load dataframes
-    df_2014 = load_df(season_type='Regular', position='QB', year=2014, drop_cols=drop_cols, collinear_drop_cols=collinear_drop_cols, load_lines=False)
-    df_2015 = load_df(season_type='Regular', position='QB', year=2015, drop_cols=drop_cols, collinear_drop_cols=collinear_drop_cols, load_lines=False)
-    df_2016 = load_df(season_type='Regular', position='QB', year=2016, drop_cols=drop_cols, collinear_drop_cols=collinear_drop_cols, load_lines=False)
+    df_2014 = load_df(season_type='Regular', position='QB', year=2014, drop_cols=drop_cols, collinear_drop_cols=collinear_drop_cols, load_lines=True)
+    df_2015 = load_df(season_type='Regular', position='QB', year=2015, drop_cols=drop_cols, collinear_drop_cols=collinear_drop_cols, load_lines=True)
+    # having issues with loading this one. Need to check if the dataframe is correct
+    df_2016 = load_df(season_type='Regular', position='QB', year=2016, drop_cols=drop_cols, collinear_drop_cols=collinear_drop_cols, load_lines=True)
 
-    df_2016_2 = load_df(season_type='Regular', position='QB', year=2016, load_lines=False)
+    df_2016_2 = load_df(season_type='Regular', position='QB', year=2016, load_lines=True)
 
     y_col = 'points_per_dollar'
     x_drop_cols = ['class_label', 'points_per_dollar']
@@ -101,3 +102,4 @@ if __name__ == '__main__':
     gbc = calc_GBC(x_2014_c, y_2014_c)
     df_2016_2['pred_class_label'] = gbc.predict(x_2016_c)
     df_16_names = df_2016_2[['full_name', 'week', 'DK salary', 'DK points', 'class_label', 'pred_class_label']]
+    print df_16_names[df_16_names['pred_class_label'] == 1]
