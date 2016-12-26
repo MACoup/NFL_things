@@ -57,7 +57,7 @@ Week;Year;GID;Name;Pos;Team;h/a;Oppt;DK points;DK salary
 8;2016;2604;Hightower, Tim;RB;nor;h;sea;14.2;3000
 8;2016;2889;Bernard, Giovani;RB;cin;h;was;13.6;5200
 8;2016;2899;Murray, Latavius;RB;oak;a;tam;12.1;4500
-8;2016;2898;Michael, Christine;RB;sea;a;nor;11.2;7300
+8;2016;2898;Michael, Christine;RB;gnb;a;atl;11.2;7300
 8;2016;2721;Blount, LeGarrette;RB;nwe;a;buf;10.3;5300
 8;2016;2873;Asiata, Matt;RB;min;a;chi;9.8;3500
 8;2016;2993;Yeldon, T.J.;RB;jac;a;ten;9.6;3800
@@ -75,7 +75,7 @@ Week;Year;GID;Name;Pos;Team;h/a;Oppt;DK points;DK salary
 8;2016;2954;White, James;RB;nwe;a;buf;4.9;4800
 8;2016;2495;Bush, Reggie;RB;buf;h;nwe;4.6;3300
 8;2016;2624;Felton, Jerome;RB;buf;h;nwe;4.6;3000
-8;2016;2856;Hillman, Ronnie;RB;min;a;chi;4.4;3000
+8;2016;2856;Hillman, Ronnie;RB;sdg;a;den;4.4;3000
 8;2016;5406;Ripkowski, Aaron;RB;gnb;a;atl;4.3;3000
 8;2016;2960;Blue, Alfred;RB;hou;h;det;4.1;3000
 8;2016;2774;Smith, Antone;RB;tam;h;oak;3.5;3000
@@ -207,7 +207,7 @@ Week;Year;GID;Name;Pos;Team;h/a;Oppt;DK points;DK salary
 8;2016;5461;Sharpe, Tajae;WR;ten;h;jac;2.1;3200
 8;2016;5256;Lee, Marqise;WR;jac;a;ten;2.1;3300
 8;2016;5475;Higgins, Rashard;WR;cle;h;nyj;2;3000
-8;2016;5261;Huff, Josh;WR;phi;a;dal;1.9;3000
+8;2016;5261;Huff, Josh;WR;tam;h;oak;1.9;3000
 8;2016;3828;Norwood, Jordan;WR;den;h;sdg;1.9;3000
 8;2016;5505;McEvoy, Tanner;WR;sea;a;nor;1.72;3000
 8;2016;5400;Whitehead, Lucky;WR;dal;h;phi;1.7;3000
@@ -225,12 +225,12 @@ Week;Year;GID;Name;Pos;Team;h/a;Oppt;DK points;DK salary
 8;2016;5290;Wright, James;WR;cin;h;was;0;3000
 8;2016;5103;Shorts, Cecil;WR;tam;h;oak;0;3000
 8;2016;5160;Thompson, Deonte;WR;chi;h;min;0;3000
-8;2016;5148;Floyd, Michael;WR;ari;a;car;0;4100
+8;2016;5148;Floyd, Michael;WR;nwe;a;buf;0;4100
 8;2016;5353;Fowler, Bennie;WR;den;h;sdg;0;3000
 8;2016;5480;Erickson, Alex;WR;cin;h;was;0;3000
 8;2016;5339;Wilson, Albert;WR;kan;a;ind;0;3000
 8;2016;3732;Weems, Eric;WR;atl;h;gnb;0;3000
-8;2016;5234;Whalen, Griff;WR;sdg;a;den;0;3000
+8;2016;5234;Whalen, Griff;WR;nwe;a;buf;0;3000
 8;2016;5383;Strong, Jaelen;WR;hou;h;det;0;3000
 8;2016;3885;Benn, Arrelious;WR;jac;a;ten;0;3000
 8;2016;5512;Harris, Maurice;WR;was;a;cin;0;3000

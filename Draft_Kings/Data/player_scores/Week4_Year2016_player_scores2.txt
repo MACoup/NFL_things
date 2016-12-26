@@ -45,7 +45,7 @@ Week;Year;GID;Name;Pos;Team;h/a;Oppt;DK points;DK salary
 4;2016;2549;Kuhn, John;RB;nor;a;sdg;21.2;3000
 4;2016;2467;Gore, Frank;RB;ind;a;jac;20.5;5200
 4;2016;2929;West, Terrance;RB;bal;h;oak;20.3;3500
-4;2016;2898;Michael, Christine;RB;sea;a;nyj;20;6000
+4;2016;2898;Michael, Christine;RB;gnb;h;-;20;6000
 4;2016;5447;Howard, Jordan;RB;chi;h;det;19.2;3700
 4;2016;2935;McKinnon, Jerick;RB;min;h;nyg;18.5;3900
 4;2016;2916;Whittaker, Fozzy;RB;car;a;atl;18.2;3900
@@ -113,7 +113,7 @@ Week;Year;GID;Name;Pos;Team;h/a;Oppt;DK points;DK salary
 4;2016;5445;Henry, Derrick;RB;ten;a;hou;0.9;3500
 4;2016;2629;Charles, Jamaal;RB;kan;a;pit;0.7;5400
 4;2016;2912;Line, Zach;RB;min;h;nyg;0.6;3000
-4;2016;2719;Bell, Joique;RB;chi;h;det;0.6;0
+4;2016;2719;Bell, Joique;RB;det;a;chi;0.6;0
 4;2016;5493;Kelley, Rob;RB;was;h;cle;0.4;3400
 4;2016;5450;Collins, Alex;RB;sea;a;nyj;0.1;3000
 4;2016;5414;Mostert, Raheem;RB;chi;h;det;0;3000
@@ -172,7 +172,7 @@ Week;Year;GID;Name;Pos;Team;h/a;Oppt;DK points;DK salary
 4;2016;3830;Maclin, Jeremy;WR;kan;a;pit;12.8;6000
 4;2016;5134;Robinson, Aldrick;WR;atl;h;car;12.8;3000
 4;2016;5341;Hurns, Allen;WR;jac;h;ind;12.7;5200
-4;2016;5148;Floyd, Michael;WR;ari;h;lar;12.6;5100
+4;2016;5148;Floyd, Michael;WR;nwe;h;buf;12.6;5100
 4;2016;5168;Jones, Marvin;WR;det;a;chi;12.4;7300
 4;2016;3824;Britt, Kenny;WR;lar;a;ari;12.2;3900
 4;2016;5215;Wheaton, Markus;WR;pit;h;kan;12;4100
@@ -259,7 +259,7 @@ Week;Year;GID;Name;Pos;Team;h/a;Oppt;DK points;DK salary
 4;2016;5428;Marquez, Bradley;WR;lar;a;ari;0;3000
 4;2016;5480;Erickson, Alex;WR;cin;h;mia;0;3000
 4;2016;3732;Weems, Eric;WR;atl;h;car;0;3000
-4;2016;5234;Whalen, Griff;WR;sdg;h;nor;0;3000
+4;2016;5234;Whalen, Griff;WR;nwe;h;buf;0;3000
 4;2016;5503;Thomas, Mike;WR;lar;a;ari;0;3000
 4;2016;5488;Mitchell, Malcolm;WR;nwe;h;buf;0;3000
 4;2016;5475;Higgins, Rashard;WR;cle;a;was;0;3000
@@ -323,7 +323,7 @@ Week;Year;GID;Name;Pos;Team;h/a;Oppt;DK points;DK salary
 4;2016;4684;Sterling, Neal;TE;jac;h;ind;2;2500
 4;2016;4576;Sims, Dion;TE;mia;a;cin;1.9;2500
 4;2016;4323;Davis, Vernon;TE;was;h;cle;1.8;2500
-4;2016;4669;Pruitt, MyCole;TE;min;h;nyg;1.7;2500
+4;2016;4669;Pruitt, MyCole;TE;chi;h;det;1.7;2500
 4;2016;4594;Doyle, Jack;TE;ind;a;jac;1.6;2500
 4;2016;4554;Ellison, Rhett;TE;min;h;nyg;1.2;2500
 4;2016;4535;Smith, Lee;TE;oak;a;bal;1.1;2500
@@ -358,7 +358,7 @@ Week;Year;GID;Name;Pos;Team;h/a;Oppt;DK points;DK salary
 4;2016;4577;Toilolo, Levine;TE;atl;h;car;0;2500
 4;2016;4565;Harkey, Cory;TE;lar;a;ari;0;2500
 4;2016;4595;Gray, Marqueis;TE;mia;a;cin;0;2500
-4;2016;4484;Dray, Jim;TE;buf;a;nwe;0;2500
+4;2016;4484;Dray, Jim;TE;sfo;h;dal;0;2500
 4;2016;4590;Williams, Brandon;TE;sea;a;nyj;0;2500
 4;2016;4650;Williams, Maxx;TE;bal;h;oak;0;2500
 4;2016;4644;Cleveland, Asante;TE;sdg;h;nor;0;2500

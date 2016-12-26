@@ -64,14 +64,14 @@ Week;Year;GID;Name;Pos;Team;h/a;Oppt;DK points;DK salary
 1;2016;2875;Draughn, Shaun;RB;sfo;h;lar;10.6;3700
 1;2016;2869;Cadet, Travaris;RB;nor;h;oak;10.5;3000
 1;2016;2954;White, James;RB;nwe;a;ari;9.4;3600
-1;2016;2898;Michael, Christine;RB;sea;h;mia;9.1;3700
+1;2016;2898;Michael, Christine;RB;gnb;a;jac;9.1;3700
 1;2016;2830;Vereen, Shane;RB;nyg;a;dal;9.1;3800
 1;2016;2928;Hill, Jeremy;RB;cin;a;nyj;9.1;4600
 1;2016;2896;Lacy, Eddie;RB;gnb;a;jac;8.8;6700
 1;2016;2658;Jennings, Rashad;RB;nyg;a;dal;8.8;5400
 1;2016;5402;Rawls, Thomas;RB;sea;h;mia;8.8;6000
 1;2016;5482;Janovich, Andy;RB;den;h;car;8.8;3000
-1;2016;2642;Forsett, Justin;RB;det;a;ind;8.6;4600
+1;2016;2642;Forsett, Justin;RB;den;h;car;8.6;4600
 1;2016;2987;West, Charcandrick;RB;kan;h;sdg;8.3;3500
 1;2016;2997;Johnson, Duke;RB;cle;a;phi;8;5100
 1;2016;2930;Freeman, Devonta;RB;atl;h;tam;8;6900
@@ -136,6 +136,7 @@ Week;Year;GID;Name;Pos;Team;h/a;Oppt;DK points;DK salary
 1;2016;2863;Rainey, Bobby;RB;nyg;a;dal;0;3000
 1;2016;5446;Drake, Kenyan;RB;mia;a;sea;0;3000
 1;2016;3191;Smith, Rod;RB;dal;h;nyg;0;3000
+1;2016;5392;Montgomery, Ty;RB;gnb;a;jac;0;3600
 1;2016;5413;Fowler, Jalston;RB;ten;h;min;0;3000
 1;2016;2891;Davis, Knile;RB;kan;h;sdg;0;3100
 1;2016;2881;Grimes, Jonathan;RB;hou;h;chi;0;3000
@@ -200,7 +201,7 @@ Week;Year;GID;Name;Pos;Team;h/a;Oppt;DK points;DK salary
 1;2016;1407;Pryor, Terrelle;WR;cle;a;phi;9.8;3000
 1;2016;5333;Thielen, Adam;WR;min;a;ten;9.4;3000
 1;2016;5432;Williams, Tyrell;WR;sdg;a;kan;9.1;3000
-1;2016;5148;Floyd, Michael;WR;ari;h;nwe;9.1;5900
+1;2016;5148;Floyd, Michael;WR;nwe;a;ari;9.1;5900
 1;2016;5452;Coleman, Corey;WR;cle;a;phi;8.9;5100
 1;2016;3997;Thomas, Demaryius;WR;den;h;car;8.8;7000
 1;2016;5252;Watkins, Sammy;WR;buf;a;bal;8.3;6900
@@ -259,7 +260,7 @@ Week;Year;GID;Name;Pos;Team;h/a;Oppt;DK points;DK salary
 1;2016;3848;Heyward-Bey, Darrius;WR;pit;a;was;0;3600
 1;2016;5428;Marquez, Bradley;WR;lar;a;sfo;0;3000
 1;2016;5222;Harper, Chris;WR;sfo;h;lar;0;3000
-1;2016;5261;Huff, Josh;WR;phi;h;cle;0;3000
+1;2016;5261;Huff, Josh;WR;tam;a;atl;0;3000
 1;2016;3732;Weems, Eric;WR;atl;h;tam;0;3000
 1;2016;5383;Strong, Jaelen;WR;hou;h;chi;0;3800
 1;2016;5400;Whitehead, Lucky;WR;dal;h;nyg;0;3000
@@ -275,7 +276,6 @@ Week;Year;GID;Name;Pos;Team;h/a;Oppt;DK points;DK salary
 1;2016;5134;Robinson, Aldrick;WR;atl;h;tam;0;3000
 1;2016;3828;Norwood, Jordan;WR;den;h;car;0;3000
 1;2016;5169;Streater, Rod;WR;sfo;h;lar;0;3000
-1;2016;5392;Montgomery, Ty;WR;gnb;a;jac;0;3600
 1;2016;5429;Bray, Quan;WR;ind;h;det;0;3000
 1;2016;5207;Hunter, Justin;WR;buf;a;bal;0;3000
 1;2016;5191;Bellamy, Josh;WR;chi;a;hou;0;3000
@@ -361,7 +361,7 @@ Week;Year;GID;Name;Pos;Team;h/a;Oppt;DK points;DK salary
 1;2016;4532;Stocker, Luke;TE;tam;a;atl;0;2500
 1;2016;4565;Harkey, Cory;TE;lar;a;sfo;0;2500
 1;2016;4595;Gray, Marqueis;TE;mia;a;sea;0;2500
-1;2016;4484;Dray, Jim;TE;buf;a;bal;0;2500
+1;2016;4484;Dray, Jim;TE;sfo;h;lar;0;2500
 1;2016;4590;Williams, Brandon;TE;sea;h;mia;0;2500
 1;2016;4650;Williams, Maxx;TE;bal;h;buf;0;2600
 1;2016;4450;Johnson, David;TE;pit;a;was;0;2500

@@ -39,7 +39,7 @@ Week;Year;GID;Name;Pos;Team;h/a;Oppt;DK points;DK salary
 3;2016;2707;McCoy, LeSean;RB;buf;h;ari;29.6;6500
 3;2016;2831;Murray, DeMarco;RB;ten;h;oak;29.5;6300
 3;2016;2933;Hyde, Carlos;RB;sfo;a;sea;28.5;4400
-3;2016;2898;Michael, Christine;RB;sea;h;sfo;28.1;5000
+3;2016;2898;Michael, Christine;RB;gnb;h;det;28.1;5000
 3;2016;2484;Sproles, Darren;RB;phi;h;pit;27.7;3700
 3;2016;5395;Johnson, David;RB;ari;a;buf;26.1;7700
 3;2016;2721;Blount, LeGarrette;RB;nwe;h;hou;25.5;4400
@@ -65,7 +65,7 @@ Week;Year;GID;Name;Pos;Team;h/a;Oppt;DK points;DK salary
 3;2016;2887;Barner, Kenjon;RB;phi;h;pit;10.2;3000
 3;2016;3552;Jones, Matt;RB;was;a;nyg;9.9;4100
 3;2016;2889;Bernard, Giovani;RB;cin;h;den;9.4;4300
-3;2016;2642;Forsett, Justin;RB;det;a;gnb;9.2;3900
+3;2016;2642;Forsett, Justin;RB;den;a;cin;9.2;3900
 3;2016;2869;Cadet, Travaris;RB;nor;h;atl;9.2;3100
 3;2016;2871;Morris, Alfred;RB;dal;h;chi;9.1;3700
 3;2016;2998;Ajayi, Jay;RB;mia;h;cle;8.8;4000
@@ -149,6 +149,7 @@ Week;Year;GID;Name;Pos;Team;h/a;Oppt;DK points;DK salary
 3;2016;2990;Toussaint, Fitzgerald;RB;pit;a;phi;0;3000
 3;2016;2913;Olawale, Jamize;RB;oak;a;ten;0;3000
 3;2016;2980;Prosch, Jay;RB;hou;a;nwe;0;3000
+3;2016;5392;Montgomery, Ty;RB;gnb;h;det;-0.1;3000
 3;2016;2754;Mathews, Ryan;RB;phi;h;pit;-0.5;5800
 3;2016;5470;Ervin, Tyler;RB;hou;a;nwe;-1;3000
 3;2016;5168;Jones, Marvin;WR;det;a;gnb;41.5;6200
@@ -190,7 +191,7 @@ Week;Year;GID;Name;Pos;Team;h/a;Oppt;DK points;DK salary
 3;2016;3754;Garcon, Pierre;WR;was;a;nyg;10.9;3900
 3;2016;5408;Roberts, Seth;WR;oak;a;ten;10.7;3500
 3;2016;5387;Hardy, Justin;WR;atl;a;nor;10.6;3000
-3;2016;5148;Floyd, Michael;WR;ari;a;buf;10.5;5800
+3;2016;5148;Floyd, Michael;WR;nwe;h;hou;10.5;5800
 3;2016;5263;Adams, Davante;WR;gnb;h;det;10.3;4100
 3;2016;5376;Cooper, Amari;WR;oak;a;ten;10.2;7700
 3;2016;3900;Cruz, Victor;WR;nyg;h;was;10;4700
@@ -220,7 +221,7 @@ Week;Year;GID;Name;Pos;Team;h/a;Oppt;DK points;DK salary
 3;2016;5097;Inman, Dontrelle;WR;sdg;a;ind;6.2;3600
 3;2016;5454;Fuller, Will;WR;hou;a;nwe;6.1;4800
 3;2016;5159;Sanu, Mohamed;WR;atl;a;nor;6.1;5700
-3;2016;5261;Huff, Josh;WR;phi;h;pit;6;3000
+3;2016;5261;Huff, Josh;WR;tam;h;lar;6;3000
 3;2016;5333;Thielen, Adam;WR;min;a;car;5.9;3200
 3;2016;5270;Powell, Walter;WR;buf;h;ari;5.8;3000
 3;2016;5384;Dorsett, Phillip;WR;ind;h;sdg;5.7;4400
@@ -303,7 +304,6 @@ Week;Year;GID;Name;Pos;Team;h/a;Oppt;DK points;DK salary
 3;2016;5498;Davis, Trevor;WR;gnb;h;det;0;3000
 3;2016;5130;Harris, Dwayne;WR;nyg;h;was;0;3000
 3;2016;5505;McEvoy, Tanner;WR;sea;h;sfo;0;3000
-3;2016;5392;Montgomery, Ty;WR;gnb;h;det;-0.1;3000
 3;2016;3593;Hester, Devin;WR;bal;a;jac;-1;3000
 3;2016;4461;Miller, Zach;TE;chi;a;dal;27.8;2900
 3;2016;4552;Fleener, Coby;TE;nor;h;atl;26.9;3300
@@ -383,7 +383,7 @@ Week;Year;GID;Name;Pos;Team;h/a;Oppt;DK points;DK salary
 3;2016;4494;Gronkowski, Rob;TE;nwe;h;hou;0;6800
 3;2016;4677;Hooper, Austin;TE;atl;a;nor;0;2500
 3;2016;4595;Gray, Marqueis;TE;mia;h;cle;0;2500
-3;2016;4484;Dray, Jim;TE;buf;h;ari;0;2500
+3;2016;4484;Dray, Jim;TE;sfo;a;sea;0;2500
 3;2016;4590;Williams, Brandon;TE;sea;h;sfo;0;2500
 3;2016;4650;Williams, Maxx;TE;bal;a;jac;0;2500
 3;2016;4450;Johnson, David;TE;pit;a;phi;0;2500

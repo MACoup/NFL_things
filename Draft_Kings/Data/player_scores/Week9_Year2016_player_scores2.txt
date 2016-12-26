@@ -48,6 +48,7 @@ Week;Year;GID;Name;Pos;Team;h/a;Oppt;DK points;DK salary
 9;2016;2741;Ivory, Chris;RB;jac;a;kan;13.7;3200
 9;2016;2888;Bell, Le'Veon;RB;pit;a;bal;13;7700
 9;2016;2930;Freeman, Devonta;RB;atl;a;tam;12.5;6700
+9;2016;5392;Montgomery, Ty;RB;gnb;h;ind;12.1;5800
 9;2016;2894;Gillislee, Mike;RB;buf;a;sea;11.6;4100
 9;2016;2992;Gurley, Todd;RB;lar;h;car;11.4;5800
 9;2016;2969;Crowell, Isaiah;RB;cle;h;dal;10.7;3900
@@ -61,14 +62,14 @@ Week;Year;GID;Name;Pos;Team;h/a;Oppt;DK points;DK salary
 9;2016;2754;Mathews, Ryan;RB;phi;a;nyg;8.5;4100
 9;2016;5472;Perkins, Paul;RB;nyg;h;phi;7.7;3000
 9;2016;5446;Drake, Kenyan;RB;mia;h;nyj;7.6;3000
-9;2016;2856;Hillman, Ronnie;RB;min;h;det;7.2;3000
+9;2016;2856;Hillman, Ronnie;RB;sdg;h;ten;7.2;3000
 9;2016;2774;Smith, Antone;RB;tam;h;atl;7.2;3000
 9;2016;2805;DiMarco, Patrick;RB;atl;a;tam;7.1;3000
 9;2016;2957;Williams, Damien;RB;mia;h;nyj;6.9;3100
 9;2016;2658;Jennings, Rashad;RB;nyg;h;phi;6.9;3900
 9;2016;2997;Johnson, Duke;RB;cle;h;dal;6.6;4000
 9;2016;2887;Barner, Kenjon;RB;phi;a;nyg;6.3;3000
-9;2016;2898;Michael, Christine;RB;sea;h;buf;6.1;6700
+9;2016;2898;Michael, Christine;RB;gnb;h;ind;6.1;6700
 9;2016;2873;Asiata, Matt;RB;min;h;det;6.1;4300
 9;2016;2840;Todman, Jordan;RB;ind;a;gnb;6;3000
 9;2016;2871;Morris, Alfred;RB;dal;a;cle;5.6;4600
@@ -157,7 +158,6 @@ Week;Year;GID;Name;Pos;Team;h/a;Oppt;DK points;DK salary
 9;2016;5339;Wilson, Albert;WR;kan;h;jac;12.7;3000
 9;2016;5257;Benjamin, Kelvin;WR;car;a;lar;12.6;6800
 9;2016;5159;Sanu, Mohamed;WR;atl;a;tam;12.4;4100
-9;2016;5392;Montgomery, Ty;WR;gnb;h;ind;12.1;5800
 9;2016;5376;Cooper, Amari;WR;oak;h;den;11.6;7700
 9;2016;5255;Cooks, Brandin;WR;nor;a;sfo;11.6;7500
 9;2016;5097;Inman, Dontrelle;WR;sdg;h;ten;11.6;3100
@@ -231,7 +231,7 @@ Week;Year;GID;Name;Pos;Team;h/a;Oppt;DK points;DK salary
 9;2016;3732;Weems, Eric;WR;atl;a;tam;0;3000
 9;2016;5341;Hurns, Allen;WR;jac;a;kan;0;4900
 9;2016;5481;Louis, Ricardo;WR;cle;h;dal;0;3000
-9;2016;5234;Whalen, Griff;WR;sdg;h;ten;0;3000
+9;2016;5234;Whalen, Griff;WR;nwe;h;-;0;3000
 9;2016;2958;Thomas, De'Anthony;WR;kan;h;jac;0;3000
 9;2016;5515;Robinson, Demarcus;WR;kan;h;jac;0;3000
 9;2016;5500;Rogers, Chester;WR;ind;a;gnb;0;3000

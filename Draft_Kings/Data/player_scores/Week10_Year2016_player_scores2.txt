@@ -79,9 +79,10 @@ Week;Year;GID;Name;Pos;Team;h/a;Oppt;DK points;DK salary
 10;2016;2908;Juszczyk, Kyle;RB;bal;h;cle;4.7;3000
 10;2016;2869;Cadet, Travaris;RB;nor;h;den;4.6;3000
 10;2016;2987;West, Charcandrick;RB;kan;a;car;4;5200
+10;2016;5392;Montgomery, Ty;RB;gnb;a;ten;4;6500
 10;2016;2612;Stewart, Jonathan;RB;car;h;kan;3.9;4900
 10;2016;5507;Barber, Peyton;RB;tam;h;chi;3.8;3900
-10;2016;2898;Michael, Christine;RB;sea;a;nwe;3.6;5900
+10;2016;2898;Michael, Christine;RB;gnb;a;ten;3.6;5900
 10;2016;5472;Perkins, Paul;RB;nyg;h;cin;3.1;3500
 10;2016;5445;Henry, Derrick;RB;ten;h;gnb;3.1;5000
 10;2016;2871;Morris, Alfred;RB;dal;a;pit;2.9;4900
@@ -98,7 +99,7 @@ Week;Year;GID;Name;Pos;Team;h/a;Oppt;DK points;DK salary
 10;2016;2912;Line, Zach;RB;min;a;was;0.5;3000
 10;2016;2775;Spiller, C.J.;RB;nyj;h;lar;0.4;3000
 10;2016;5370;Allen, Javorius;RB;bal;h;cle;0.3;3000
-10;2016;2856;Hillman, Ronnie;RB;min;a;was;0.2;3500
+10;2016;2856;Hillman, Ronnie;RB;sdg;h;mia;0.2;3500
 10;2016;5450;Collins, Alex;RB;sea;a;nwe;0.2;3000
 10;2016;2880;Dunbar, Lance;RB;dal;a;pit;0;3000
 10;2016;5494;Farrow, Kenneth;RB;sdg;h;mia;0;3700
@@ -152,7 +153,7 @@ Week;Year;GID;Name;Pos;Team;h/a;Oppt;DK points;DK salary
 10;2016;5111;Kerley, Jeremy;WR;sfo;a;ari;19.1;3700
 10;2016;5255;Cooks, Brandin;WR;nor;h;den;18.8;7000
 10;2016;5380;Parker, DeVante;WR;mia;a;sdg;18.3;4300
-10;2016;5148;Floyd, Michael;WR;ari;h;sfo;18.1;3800
+10;2016;5148;Floyd, Michael;WR;nwe;h;sea;18.1;3800
 10;2016;3328;Smith, Steve;WR;bal;h;cle;17;5500
 10;2016;3826;Edelman, Julian;WR;nwe;h;sea;15.9;6000
 10;2016;5461;Sharpe, Tajae;WR;ten;h;gnb;15.8;3000
@@ -202,7 +203,6 @@ Week;Year;GID;Name;Pos;Team;h/a;Oppt;DK points;DK salary
 10;2016;5452;Coleman, Corey;WR;cle;a;bal;4.7;5100
 10;2016;5186;Kearse, Jermaine;WR;sea;a;nwe;4.6;3000
 10;2016;5113;Smith, Torrey;WR;sfo;a;ari;4.6;3800
-10;2016;5392;Montgomery, Ty;WR;gnb;a;ten;4;6500
 10;2016;5409;Nelson, J.J.;WR;ari;h;sfo;3.9;4200
 10;2016;5157;Quick, Brian;WR;lar;a;nyj;3.6;3700
 10;2016;5275;Aiken, Kamar;WR;bal;h;cle;3.5;3900
@@ -218,7 +218,7 @@ Week;Year;GID;Name;Pos;Team;h/a;Oppt;DK points;DK salary
 10;2016;5488;Mitchell, Malcolm;WR;nwe;h;sea;2.3;3000
 10;2016;5385;Conley, Chris;WR;kan;a;car;2.2;3500
 10;2016;5169;Streater, Rod;WR;sfo;a;ari;2.1;3000
-10;2016;5234;Whalen, Griff;WR;sdg;h;mia;2;3000
+10;2016;5234;Whalen, Griff;WR;nwe;h;sea;2;3000
 10;2016;5476;Miller, Braxton;WR;hou;a;jac;2;3000
 10;2016;5188;Wright, Jarius;WR;min;a;was;1.9;3000
 10;2016;3946;LaFell, Brandon;WR;cin;a;nyg;1.9;4000

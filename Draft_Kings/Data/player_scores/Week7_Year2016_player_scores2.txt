@@ -41,6 +41,7 @@ Week;Year;GID;Name;Pos;Team;h/a;Oppt;DK points;DK salary
 7;2016;5395;Johnson, David;RB;ari;h;sea;28.1;7400
 7;2016;2888;Bell, Le'Veon;RB;pit;h;nwe;24.9;8000
 7;2016;2831;Murray, DeMarco;RB;ten;h;ind;24.7;7200
+7;2016;5392;Montgomery, Ty;RB;gnb;h;chi;22.6;3000
 7;2016;2914;Ware, Spencer;RB;kan;h;nor;21.1;5800
 7;2016;2818;Rodgers, Jacquizz;RB;tam;a;sfo;20.3;4300
 7;2016;2899;Murray, Latavius;RB;oak;a;jac;20.3;4400
@@ -63,7 +64,7 @@ Week;Year;GID;Name;Pos;Team;h/a;Oppt;DK points;DK salary
 7;2016;2859;Miller, Lamar;RB;hou;a;den;9.7;6000
 7;2016;5397;Zenner, Zach;RB;det;h;was;8.9;3500
 7;2016;5493;Kelley, Rob;RB;was;a;det;8.6;3000
-7;2016;2898;Michael, Christine;RB;sea;a;ari;8.5;6700
+7;2016;2898;Michael, Christine;RB;gnb;h;chi;8.5;6700
 7;2016;2754;Mathews, Ryan;RB;phi;h;min;8.3;3900
 7;2016;5320;Davis, Mike;RB;sfo;h;tam;8.1;3000
 7;2016;2802;Harris, DuJuan;RB;sfo;h;tam;7.7;0
@@ -71,7 +72,7 @@ Week;Year;GID;Name;Pos;Team;h/a;Oppt;DK points;DK salary
 7;2016;2997;Johnson, Duke;RB;cle;a;cin;7.3;3900
 7;2016;2741;Ivory, Chris;RB;jac;h;oak;7.1;3400
 7;2016;2484;Sproles, Darren;RB;phi;h;min;6.9;3800
-7;2016;2642;Forsett, Justin;RB;det;h;was;6.8;3300
+7;2016;2642;Forsett, Justin;RB;den;h;hou;6.8;3300
 7;2016;2972;Carey, Ka'Deem;RB;chi;a;gnb;6.7;3000
 7;2016;2774;Smith, Antone;RB;tam;a;sfo;6.7;0
 7;2016;2935;McKinnon, Jerick;RB;min;a;phi;5.8;4300
@@ -108,13 +109,13 @@ Week;Year;GID;Name;Pos;Team;h/a;Oppt;DK points;DK salary
 7;2016;5469;Dixon, Kenneth;RB;bal;a;nyj;0.9;3000
 7;2016;2863;Rainey, Bobby;RB;nyg;a;lar;0.9;3200
 7;2016;2892;Ellington, Andre;RB;ari;h;sea;0.7;3000
-7;2016;2856;Hillman, Ronnie;RB;min;a;phi;0.6;3000
+7;2016;2856;Hillman, Ronnie;RB;sdg;a;atl;0.6;3000
 7;2016;5509;Jackson, Don;RB;gnb;h;chi;0.6;0
 7;2016;2549;Kuhn, John;RB;nor;a;kan;0.3;3000
 7;2016;5445;Henry, Derrick;RB;ten;h;ind;0.3;3100
 7;2016;2912;Line, Zach;RB;min;a;phi;0.2;3000
 7;2016;5450;Collins, Alex;RB;sea;a;ari;0.2;3000
-7;2016;5510;Pope, Troymaine;RB;nyj;h;bal;0.1;3000
+7;2016;5510;Pope, Troymaine;RB;sea;a;ari;0.1;3000
 7;2016;2891;Davis, Knile;RB;kan;h;nor;0.1;3000
 7;2016;2825;Develin, James;RB;nwe;a;pit;0;3000
 7;2016;5415;Burton, Michael;RB;det;h;was;0;3000
@@ -125,7 +126,7 @@ Week;Year;GID;Name;Pos;Team;h/a;Oppt;DK points;DK salary
 7;2016;5441;Brown, Malcolm;RB;lar;h;nyg;0;3000
 7;2016;2919;Reynolds, Chase;RB;lar;h;nyg;0;3000
 7;2016;2887;Barner, Kenjon;RB;phi;h;min;0;3000
-7;2016;2719;Bell, Joique;RB;chi;a;gnb;0;3000
+7;2016;2719;Bell, Joique;RB;det;h;was;0;3000
 7;2016;2903;Taylor, Stepfan;RB;ari;h;sea;0;3000
 7;2016;2940;Andrews, Antonio;RB;ten;h;ind;0;3000
 7;2016;2874;Bolden, Brandon;RB;nwe;a;pit;0;3000
@@ -154,7 +155,6 @@ Week;Year;GID;Name;Pos;Team;h/a;Oppt;DK points;DK salary
 7;2016;5212;Stills, Kenny;WR;mia;h;buf;24;3100
 7;2016;3872;Crabtree, Michael;WR;oak;a;jac;23.6;6600
 7;2016;5199;Austin, Tavon;WR;lar;h;nyg;22.7;4000
-7;2016;5392;Montgomery, Ty;WR;gnb;h;chi;22.6;3000
 7;2016;3474;Brown, Antonio;WR;pit;h;nwe;21.9;9300
 7;2016;5410;Crowder, Jamison;WR;was;a;det;20.8;4300
 7;2016;5256;Lee, Marqise;WR;jac;h;oak;20.7;3200
@@ -170,7 +170,7 @@ Week;Year;GID;Name;Pos;Team;h/a;Oppt;DK points;DK salary
 7;2016;5420;Enunwa, Quincy;WR;nyj;h;bal;15.3;4600
 7;2016;5335;Landry, Jarvis;WR;mia;h;buf;14.8;6800
 7;2016;3826;Edelman, Julian;WR;nwe;a;pit;14;6500
-7;2016;5261;Huff, Josh;WR;phi;h;min;13.9;3000
+7;2016;5261;Huff, Josh;WR;tam;a;sfo;13.9;3000
 7;2016;5168;Jones, Marvin;WR;det;h;was;13.4;7000
 7;2016;5157;Quick, Brian;WR;lar;h;nyg;13.2;3200
 7;2016;5485;Hill, Tyreek;WR;kan;h;nor;13.1;3000
@@ -179,7 +179,7 @@ Week;Year;GID;Name;Pos;Team;h/a;Oppt;DK points;DK salary
 7;2016;3848;Heyward-Bey, Darrius;WR;pit;h;nwe;12;3000
 7;2016;5409;Nelson, J.J.;WR;ari;h;sea;11.8;3000
 7;2016;3423;Boldin, Anquan;WR;det;h;was;11.8;4000
-7;2016;5148;Floyd, Michael;WR;ari;h;sea;11.5;3900
+7;2016;5148;Floyd, Michael;WR;nwe;a;pit;11.5;3900
 7;2016;3900;Cruz, Victor;WR;nyg;a;lar;10.5;3900
 7;2016;5502;Anderson, Robby;WR;nyj;h;bal;10.1;3000
 7;2016;5461;Sharpe, Tajae;WR;ten;h;ind;9.9;3500
@@ -236,7 +236,7 @@ Week;Year;GID;Name;Pos;Team;h/a;Oppt;DK points;DK salary
 7;2016;5113;Smith, Torrey;WR;sfo;h;tam;2.7;3800
 7;2016;5387;Hardy, Justin;WR;atl;h;sdg;2.6;3000
 7;2016;5491;Holton, Johnny;WR;oak;a;jac;2.5;3000
-7;2016;5234;Whalen, Griff;WR;sdg;a;atl;2.2;3000
+7;2016;5234;Whalen, Griff;WR;nwe;a;pit;2.2;3000
 7;2016;5417;Meredith, Cameron;WR;chi;a;gnb;2.2;4700
 7;2016;5379;Perriman, Breshad;WR;bal;a;nyj;2.1;3500
 7;2016;5260;Richardson, Paul;WR;sea;a;ari;2;3000

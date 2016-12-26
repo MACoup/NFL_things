@@ -3,13 +3,17 @@ import numpy as np
 from pandas.tseries.offsets import *
 
 
-lines_2009 = pd.read_csv('Data/NFL_lines/nfl_lines_2009.csv')
-lines_2010 = pd.read_csv('Data/NFL_lines/nfl_lines_2010.csv')
-lines_2011 = pd.read_csv('Data/NFL_lines/nfl_lines_2011.csv')
-lines_2012 = pd.read_csv('Data/NFL_lines/nfl_lines_2012.csv')
-lines_2013 = pd.read_csv('Data/NFL_lines/nfl_lines_2013.csv')
-lines_2014 = pd.read_csv('Data/NFL_lines/nfl_lines_2014.csv')
-lines_2015 = pd.read_csv('Data/NFL_lines/nfl_lines_2015.csv')
+
+
+def get_lines_2016():
+    df = pd.DataFrame()
+    for w in range(1, 15):
+        new_df = pd.read_csv('Data/NFL_lines/nfl_lines_2016_week{}.csv'.format(w))
+        new_df['week'] = w
+        df = df.append(new_df, ignore_index=True)
+    return df
+
+
 
 team_dict_2015 = {'Bengals': 'CIN', 'Titans': 'TEN', 'Cardinals': 'ARI', 'Falcons': 'ATL', 'Panthers': 'CAR', 'Bears': 'CHI', 'Cowboys': 'DAL', 'Lions': 'DET', 'Packers': 'GB', 'Rams': 'STL', 'Vikings': 'MIN', 'Saints': 'NO', 'Giants': 'NYG', 'Eagles': 'PHI', '49ers': 'SF', 'Seahawks': 'SEA', 'Buccaneers': 'TB', 'Redskins': 'WAS', 'Chargers': 'SD', 'Steelers': 'PIT', 'Raiders': 'OAK', 'Jets': 'NYJ', 'Patriots': 'NE', 'Dolphins': 'MIA', 'Chiefs': 'KC', 'Jaguars': 'JAC', 'Colts': 'IND', 'Texans': 'HOU', 'Broncos': 'DEN', 'Browns': 'CLE', 'Bills': 'BUF', 'Ravens': 'BAL'}
 
@@ -74,6 +78,17 @@ def form(df):
 
 if __name__ == '__main__':
 
+    lines_2009 = pd.read_csv('Data/NFL_lines/nfl_lines_2009.csv')
+    lines_2010 = pd.read_csv('Data/NFL_lines/nfl_lines_2010.csv')
+    lines_2011 = pd.read_csv('Data/NFL_lines/nfl_lines_2011.csv')
+    lines_2012 = pd.read_csv('Data/NFL_lines/nfl_lines_2012.csv')
+    lines_2013 = pd.read_csv('Data/NFL_lines/nfl_lines_2013.csv')
+    lines_2014 = pd.read_csv('Data/NFL_lines/nfl_lines_2014.csv')
+    lines_2015 = pd.read_csv('Data/NFL_lines/nfl_lines_2015.csv')
+    lines_2016 = get_lines_2016()
+
+
+
     form(lines_2009).to_csv('Data/NFL_lines/lines_2009.csv', index=False)
     form(lines_2010).to_csv('Data/NFL_lines/lines_2010.csv', index=False)
     form(lines_2011).to_csv('Data/NFL_lines/lines_2011.csv', index=False)
@@ -81,9 +96,7 @@ if __name__ == '__main__':
     form(lines_2013).to_csv('Data/NFL_lines/lines_2013.csv', index=False)
     form(lines_2014).to_csv('Data/NFL_lines/lines_2014.csv', index=False)
     form(lines_2015).to_csv('Data/NFL_lines/lines_2015.csv', index=False)
-
-
-
+    # form(lines_2016).to_csv('Data/NFL_lines/lines_2016.csv', index=False)
 
 
 

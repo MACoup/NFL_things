@@ -62,7 +62,7 @@ Week;Year;GID;Name;Pos;Team;h/a;Oppt;DK points;DK salary
 2;2016;2859;Miller, Lamar;RB;hou;h;kan;11.7;7200
 2;2016;2914;Ware, Spencer;RB;kan;a;hou;11.5;6100
 2;2016;2645;Johnson, Chris;RB;ari;h;tam;11.4;3700
-2;2016;2898;Michael, Christine;RB;sea;a;lar;10.6;4600
+2;2016;2898;Michael, Christine;RB;gnb;a;min;10.6;4600
 2;2016;2907;Riddick, Theo;RB;det;h;ten;10.5;4300
 2;2016;5446;Drake, Kenyan;RB;mia;a;nwe;9.8;3000
 2;2016;2997;Johnson, Duke;RB;cle;h;bal;9.6;4500
@@ -76,7 +76,7 @@ Week;Year;GID;Name;Pos;Team;h/a;Oppt;DK points;DK salary
 2;2016;5484;Ferguson, Josh;RB;ind;a;den;8.6;3300
 2;2016;5405;Grant, Corey;RB;jac;a;sdg;8.5;3000
 2;2016;2992;Gurley, Todd;RB;lar;h;sea;8;7500
-2;2016;2642;Forsett, Justin;RB;det;h;ten;7.6;4400
+2;2016;2642;Forsett, Justin;RB;den;h;ind;7.6;4400
 2;2016;2998;Ajayi, Jay;RB;mia;a;nwe;7.5;3700
 2;2016;2987;West, Charcandrick;RB;kan;a;hou;7.3;3500
 2;2016;2933;Hyde, Carlos;RB;sfo;a;car;7.2;5100
@@ -151,6 +151,7 @@ Week;Year;GID;Name;Pos;Team;h/a;Oppt;DK points;DK salary
 2;2016;3191;Smith, Rod;RB;dal;a;was;0;3000
 2;2016;2805;DiMarco, Patrick;RB;atl;a;oak;0;3000
 2;2016;5450;Collins, Alex;RB;sea;a;lar;0;3000
+2;2016;5392;Montgomery, Ty;RB;gnb;a;min;0;3000
 2;2016;5413;Fowler, Jalston;RB;ten;a;det;0;3000
 2;2016;2891;Davis, Knile;RB;kan;a;hou;0;3000
 2;2016;5406;Ripkowski, Aaron;RB;gnb;a;min;0;3000
@@ -210,7 +211,7 @@ Week;Year;GID;Name;Pos;Team;h/a;Oppt;DK points;DK salary
 2;2016;5459;Thomas, Michael;WR;nor;a;nyg;9.6;4000
 2;2016;3328;Smith, Steve;WR;bal;a;cle;9.4;4300
 2;2016;5125;Cobb, Randall;WR;gnb;a;min;9.3;7400
-2;2016;5148;Floyd, Michael;WR;ari;h;tam;8.8;5900
+2;2016;5148;Floyd, Michael;WR;nwe;h;mia;8.8;5900
 2;2016;5377;White, Kevin;WR;chi;h;phi;8.5;4300
 2;2016;5258;Robinson, Allen;WR;jac;a;sdg;8.4;7800
 2;2016;3550;Jackson, Vincent;WR;tam;a;ari;8.4;4000
@@ -277,7 +278,7 @@ Week;Year;GID;Name;Pos;Team;h/a;Oppt;DK points;DK salary
 2;2016;5429;Bray, Quan;WR;ind;a;den;1.7;3000
 2;2016;5295;Grant, Ryan;WR;was;h;dal;1.5;
 2;2016;5476;Miller, Braxton;WR;hou;h;kan;1.1;3000
-2;2016;5261;Huff, Josh;WR;phi;a;chi;0.9;3000
+2;2016;5261;Huff, Josh;WR;tam;a;ari;0.9;3000
 2;2016;5496;Lewis, Tommylee;WR;nor;a;nyg;0.9;3000
 2;2016;3949;Mariani, Marc;WR;ten;a;det;0;3000
 2;2016;5219;Butler, Brice;WR;dal;a;was;0;3000
@@ -303,7 +304,6 @@ Week;Year;GID;Name;Pos;Team;h/a;Oppt;DK points;DK salary
 2;2016;3760;Slater, Matthew;WR;nwe;h;mia;0;3000
 2;2016;5273;King, Tavarres;WR;nyg;h;nor;0;3000
 2;2016;5474;Carroo, Leonte;WR;mia;a;nwe;0;3200
-2;2016;5392;Montgomery, Ty;WR;gnb;a;min;0;3000
 2;2016;3593;Hester, Devin;WR;bal;a;cle;0;3000
 2;2016;5497;Burbridge, Aaron;WR;sfo;a;car;0;3000
 2;2016;5486;Grant, Jakeem;WR;mia;a;nwe;0;3000
@@ -391,7 +391,7 @@ Week;Year;GID;Name;Pos;Team;h/a;Oppt;DK points;DK salary
 2;2016;4532;Stocker, Luke;TE;tam;a;ari;0;2500
 2;2016;4565;Harkey, Cory;TE;lar;h;sea;0;2500
 2;2016;4595;Gray, Marqueis;TE;mia;a;nwe;0;2500
-2;2016;4484;Dray, Jim;TE;buf;h;nyj;0;2500
+2;2016;4484;Dray, Jim;TE;sfo;a;car;0;2500
 2;2016;4590;Williams, Brandon;TE;sea;a;lar;0;2500
 2;2016;4650;Williams, Maxx;TE;bal;a;cle;0;2500
 2;2016;4561;Charles, Orson;TE;det;h;ten;0;2500
