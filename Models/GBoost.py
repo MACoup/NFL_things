@@ -100,4 +100,4 @@ if __name__ == '__main__':
 
     gbc = calc_GBC(x_2014_c, y_2014_c)
     df_2016_2['pred_class_label'] = gbc.predict(x_2016_c)
-    df_16_names = df_2016_2[['full_name', 'week', 'DK salary', 'class_label', 'pred_class_label']]
+    df_16_names = df_2016_2[['full_name', 'week', 'DK salary', 'DK points', 'class_label', 'pred_class_label']]
