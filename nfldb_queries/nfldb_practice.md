@@ -126,4 +126,4 @@ FROM game JOIN play_player ON game.gsis_id = play_player.gsis_id JOIN player ON 
 WHERE player.position = 'QB' AND player.full_name = 'Ryan Fitzpatrick' AND game.season_year = 2009;
 ```
 
-# get game data
+# defense vs position stats
