@@ -5,18 +5,21 @@ from pandas.tseries.offsets import *
 
 
 
-def get_lines_2016():
-    df = pd.DataFrame()
-    for w in range(1, 15):
-        new_df = pd.read_csv('Data/NFL_lines/nfl_lines_2016_week{}.csv'.format(w))
-        df = df.append(new_df, ignore_index=True)
+def get_2016_week_1():
+    df = pd.read_csv('Data/NFL_lines/nfl_lines_2016_week1.csv')
+    df = df.iloc[66:,]
+    df['week'] = 1
+    df['Year'] = 2016
     return df
 
-
-
-team_dict_2015 = {'Bengals': 'CIN', 'Titans': 'TEN', 'Cardinals': 'ARI', 'Falcons': 'ATL', 'Panthers': 'CAR', 'Bears': 'CHI', 'Cowboys': 'DAL', 'Lions': 'DET', 'Packers': 'GB', 'Rams': 'STL', 'Vikings': 'MIN', 'Saints': 'NO', 'Giants': 'NYG', 'Eagles': 'PHI', '49ers': 'SF', 'Seahawks': 'SEA', 'Buccaneers': 'TB', 'Redskins': 'WAS', 'Chargers': 'SD', 'Steelers': 'PIT', 'Raiders': 'OAK', 'Jets': 'NYJ', 'Patriots': 'NE', 'Dolphins': 'MIA', 'Chiefs': 'KC', 'Jaguars': 'JAC', 'Colts': 'IND', 'Texans': 'HOU', 'Broncos': 'DEN', 'Browns': 'CLE', 'Bills': 'BUF', 'Ravens': 'BAL'}
-
-team_dict_2016 = {'Bengals': 'CIN', 'Titans': 'TEN', 'Cardinals': 'ARI', 'Falcons': 'ATL', 'Panthers': 'CAR', 'Bears': 'CHI', 'Cowboys': 'DAL', 'Lions': 'DET', 'Packers': 'GB', 'Rams': 'LA', 'Vikings': 'MIN', 'Saints': 'NO', 'Giants': 'NYG', 'Eagles': 'PHI', '49ers': 'SF', 'Seahawks': 'SEA', 'Buccaneers': 'TB', 'Redskins': 'WAS', 'Chargers': 'SD', 'Steelers': 'PIT', 'Raiders': 'OAK', 'Jets': 'NYJ', 'Patriots': 'NE', 'Dolphins': 'MIA', 'Chiefs': 'KC', 'Jaguars': 'JAC', 'Colts': 'IND', 'Texans': 'HOU', 'Broncos': 'DEN', 'Browns': 'CLE', 'Bills': 'BUF', 'Ravens': 'BAL'}
+def get_lines_2016():
+    df = get_2016_week_1()
+    for w in range(2, 15):
+        new_df = pd.read_csv('Data/NFL_lines/nfl_lines_2016_week{}.csv'.format(w))
+        new_df['week'] = w
+        df = df.append(new_df, ignore_index=True)
+        df['Year'] = 2016
+    return df
 
 def to_datetime(df):
     df['Date'] = pd.to_datetime(df['Date'])
@@ -83,12 +86,15 @@ def form_2016(df):
     to_datetime(df)
     strip(df)
     change_team_2016(df)
-    get_season_yrs_wks(df)
     df = append_dfs(df)
     return df
 
 
 if __name__ == '__main__':
+
+    team_dict_2015 = {'Bengals': 'CIN', 'Titans': 'TEN', 'Cardinals': 'ARI', 'Falcons': 'ATL', 'Panthers': 'CAR', 'Bears': 'CHI', 'Cowboys': 'DAL', 'Lions': 'DET', 'Packers': 'GB', 'Rams': 'STL', 'Vikings': 'MIN', 'Saints': 'NO', 'Giants': 'NYG', 'Eagles': 'PHI', '49ers': 'SF', 'Seahawks': 'SEA', 'Buccaneers': 'TB', 'Redskins': 'WAS', 'Chargers': 'SD', 'Steelers': 'PIT', 'Raiders': 'OAK', 'Jets': 'NYJ', 'Patriots': 'NE', 'Dolphins': 'MIA', 'Chiefs': 'KC', 'Jaguars': 'JAC', 'Colts': 'IND', 'Texans': 'HOU', 'Broncos': 'DEN', 'Browns': 'CLE', 'Bills': 'BUF', 'Ravens': 'BAL'}
+
+    team_dict_2016 = {'Bengals': 'CIN', 'Titans': 'TEN', 'Cardinals': 'ARI', 'Falcons': 'ATL', 'Panthers': 'CAR', 'Bears': 'CHI', 'Cowboys': 'DAL', 'Lions': 'DET', 'Packers': 'GB', 'Rams': 'LA', 'Vikings': 'MIN', 'Saints': 'NO', 'Giants': 'NYG', 'Eagles': 'PHI', '49ers': 'SF', 'Seahawks': 'SEA', 'Buccaneers': 'TB', 'Redskins': 'WAS', 'Chargers': 'SD', 'Steelers': 'PIT', 'Raiders': 'OAK', 'Jets': 'NYJ', 'Patriots': 'NE', 'Dolphins': 'MIA', 'Chiefs': 'KC', 'Jaguars': 'JAC', 'Colts': 'IND', 'Texans': 'HOU', 'Broncos': 'DEN', 'Browns': 'CLE', 'Bills': 'BUF', 'Ravens': 'BAL'}
 
     lines_2009 = pd.read_csv('Data/NFL_lines/nfl_lines_2009.csv')
     lines_2010 = pd.read_csv('Data/NFL_lines/nfl_lines_2010.csv')
@@ -108,7 +114,7 @@ if __name__ == '__main__':
     form(lines_2013).to_csv('Data/NFL_lines/lines_2013.csv', index=False)
     form(lines_2014).to_csv('Data/NFL_lines/lines_2014.csv', index=False)
     form(lines_2015).to_csv('Data/NFL_lines/lines_2015.csv', index=False)
-    # form(lines_2016).to_csv('Data/NFL_lines/lines_2016.csv', index=False)
+    form_2016(lines_2016).to_csv('Data/NFL_lines/lines_2016.csv', index=False)
 
 
 
