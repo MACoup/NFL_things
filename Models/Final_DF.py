@@ -11,6 +11,7 @@ class FinalDF(object):
     This creates the DataFrame that will be used in analysis. It combines the position dataframes with the salary and betting line dataframes.
     '''
 
+
     def __init__(self, season_type=None, position=None, year=None, week=None, load_lines=True):
         self.position = position
         self.year = year
@@ -18,10 +19,15 @@ class FinalDF(object):
         self.season_type = season_type
         self.load_lines = load_lines
 
+
+
     def _load_salaries(self):
+
         '''
         Formats salary dataframes. Creates a dataframe from each individual salary file, then appends them together.
         '''
+
+
         df = pd.DataFrame()
         for y in range(2014, 2017):
             for w in range(1, 18):
@@ -37,10 +43,15 @@ class FinalDF(object):
         df['full_name'].replace(to_replace='Odell Beckham Jr.', value='Odell Beckham', inplace=True)
         return df
 
+
+
     def _sal_position(self):
+
         '''
         Gets the correct position salary dataframe.
         '''
+
+
         df = self._load_salaries()
         if self.position:
             df = df[df['position'] == self.position]
@@ -48,10 +59,16 @@ class FinalDF(object):
             df = df
         return df
 
+
+
+
     def _load_lines(self):
+
         '''
         Adds the vegas lines to the dataframe.
         '''
+
+
         if self.load_lines:
             if self.season_type != 'Regular':
                 return None
@@ -76,6 +93,9 @@ class FinalDF(object):
             return df
         else:
             return None
+
+
+
 
     def _get_nfldb_df(self):
         '''

@@ -1,8 +1,0 @@
- - Clean up the code by using helper functions to organize things better.
-
- - There are so many determining factors, that it might be more beneficial to analyze things from a one player perspective. Projections could be for in game stats per player.
-
- - Other variables to consider:
-    a. Time of possession
-    b. Ranking of defensive/offensive line
-    c. could be considering scraping data from other sources
