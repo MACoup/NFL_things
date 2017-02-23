@@ -1,4 +1,4 @@
-from Lineup_Class import dfAnalysis
+from EDA.Lineup_Class import *
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -7,15 +7,25 @@ import statsmodels.api as sm
 import itertools
 
 
+'''
+This is an exploratory script for the contests that I have personally entered. The goal was to come up with the best lineup based on salary and point production
+
+'''
+
+
+
+contest_folder = 'Data/dk_sun_mon_contests/'
+
+point_folder = 'Data/Player_DK_Salaries/'
 
 # Find data sets
-contest_week5 = 'Data/contest-standings-sunday-monday-night-week5.csv'
+contest_week5 = contest_folder + 'contest-standings-sunday-monday-night-week5.csv'
 
-point_week5 = 'Data/Week5_player_scores.txt'
+point_week5 = point_folder + 'Week5_Year2016_player_scores2.txt'
 
-contest_week4 = 'Data/contest-standings-sunday-monday-night-week4.csv'
+contest_week4 = contest_folder + 'contest-standings-sunday-monday-night-week4.csv'
 
-point_week4 = 'Data/Week4_player_scores.txt'
+point_week4 = point_folder + 'Week4_Year2016_player_scores2.txt'
 
 
 # create object

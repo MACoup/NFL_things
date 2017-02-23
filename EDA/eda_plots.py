@@ -3,22 +3,16 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn
 import scipy.stats as scs
+from Models.Final_DF import FinalDF
 
-filepath = '../nfldb_queries/Data/'
 
-passing = pd.read_csv(filepath + 'passing.csv')
 
-# plot Aaron Rodgers DK points for all regular season games 2009 - 2015
-
-a_rodg = passing[passing['full_name'] == 'Aaron Rodgers']
-a_rodg = a_rodg[a_rodg['season_type'] == 'Regular']
-a_rodg = a_rodg[a_rodg['season_year'] != 2016]
 
 col = 'DK points'
 
 def plot_hist(df, col):
     data = df[col]
-    ax = data.hist(bins=20, normed=True, edgecolor='none', figsize=(10,7))
+    ax = data.hist(bins=30, normed=True, edgecolor='none', figsize=(10,6))
     ax.set_ylabel('Probability Distribution')
     ax.set_title(col)
     return ax
@@ -72,7 +66,7 @@ def plot_mle(df, col, ax=None, gamma=True, normal=True):
         ax.plot(x_vals, normal_p, color='g', label='Normal MLE', alpha=0.6)
 
     ax.set_ylabel('Probability Density')
-    # uniform axes for rainfall data
+
     ax.legend()
 
     return ax
@@ -81,9 +75,9 @@ cols = ['DK points', 'passing_yds', 'rushing_yds', 'score_percentage']
 
 def plot_many(df, cols, plot_funcs, gamma=True, normal=True):
     cols_srt = sorted(cols)
-    axes = df[cols_srt].hist(bins=20, normed=1,
+    axes = df[cols_srt].hist(bins=30, normed=1,
                     grid=0, edgecolor='none',
-                    figsize=(12, 8),
+                    figsize=(10, 6),
                     layout=(2,2))
 
     for col, ax in zip(cols_srt, axes.flatten()):
@@ -100,7 +94,7 @@ def plot_many_kde(df, cols):
     cols_srt = sorted(cols)
     axes = df[cols_srt].hist(bins=30, normed=1,
                     grid=0, edgecolor='none',
-                    figsize=(12, 8),
+                    figsize=(10, 6),
                     layout=(2,2))
     for col, ax in zip(cols_srt, axes.flatten()):
         data = df[col]
@@ -112,8 +106,13 @@ def plot_many_kde(df, cols):
     return ax
 
 if __name__ == '__main__':
-    # plot_many(a_rodg, cols, [plot_mom], normal=True)
-    # plot_mle(a_rodg, 'passing_yds')
-    # plot_kde(a_rodg, 'DK points')
+    passing = FinalDF(season_type='Regular', position='QB', load_salaries=False).get_df()
+
+    # plot Aaron Rodgers DK points for all regular season games 2009 - 2015
+
+    a_rodg = passing[passing['full_name'] == 'Aaron Rodgers']
+    a_rodg = a_rodg[a_rodg['season_year'] != 2016]
+    plot_many(a_rodg, cols, [plot_mom], normal=True)
+    plot_mle(a_rodg, 'passing_yds')
     plot_many_kde(a_rodg, cols)
     plt.show()

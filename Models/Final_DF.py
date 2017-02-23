@@ -2,8 +2,8 @@ import pandas as pd
 import numpy as np
 
 
-dk_data_root = '../Draft_Kings/Data/'
-data_root = '../nfldb_queries/Data/'
+NFL_lines = 'Data/NFL_lines_formatted/'
+Player_data_root = 'Data/Position_dfs/'
 
 class FinalDF(object):
 
@@ -12,12 +12,13 @@ class FinalDF(object):
     '''
 
 
-    def __init__(self, season_type=None, position=None, year=None, week=None, load_lines=True):
+    def __init__(self, season_type=None, position=None, year=None, week=None, load_lines=True, load_salaries=True):
         self.position = position
         self.year = year
         self.week = week
         self.season_type = season_type
         self.load_lines = load_lines
+        self.load_salaries = load_salaries
 
 
 
@@ -27,21 +28,23 @@ class FinalDF(object):
         Formats salary dataframes. Creates a dataframe from each individual salary file, then appends them together.
         '''
 
-
-        df = pd.DataFrame()
-        for y in range(2014, 2017):
-            for w in range(1, 18):
-                new_df = pd.read_csv(dk_data_root + '/player_scores/Week{}_Year{}_player_scores2.txt'.format(w, y), delimiter=';')
-                new_df['Name'] = new_df['Name'].apply(lambda x: ' '.join(x.split(', ')[::-1]))
-                new_df['h/a'] = new_df['h/a'].map({'h' : 0, 'a' : 1})
-                new_df.rename(index=str, columns={'Name': 'full_name', 'Week': 'week', 'Year': 'season_year', 'Pos': 'position'}, inplace=True)
-                new_df = new_df[['week', 'season_year', 'full_name', 'position', 'DK salary']]
-                df = df.append(new_df)
-        df['week'] = df['week'].astype(int)
-        df['season_year'] = df['season_year'].astype(int)
-        df['position'].replace(to_replace='Def', value='DST', inplace=True)
-        df['full_name'].replace(to_replace='Odell Beckham Jr.', value='Odell Beckham', inplace=True)
-        return df
+        if self.load_salaries:
+            df = pd.DataFrame()
+            for y in range(2014, 2017):
+                for w in range(1, 18):
+                    new_df = pd.read_csv('Data/Player_DK_Salaries/Week{}_Year{}_player_scores2.txt'.format(w, y), delimiter=';')
+                    new_df['Name'] = new_df['Name'].apply(lambda x: ' '.join(x.split(', ')[::-1]))
+                    new_df['h/a'] = new_df['h/a'].map({'h' : 0, 'a' : 1})
+                    new_df.rename(index=str, columns={'Name': 'full_name', 'Week': 'week', 'Year': 'season_year', 'Pos': 'position'}, inplace=True)
+                    new_df = new_df[['week', 'season_year', 'full_name', 'position', 'DK salary']]
+                    df = df.append(new_df)
+            df['week'] = df['week'].astype(int)
+            df['season_year'] = df['season_year'].astype(int)
+            df['position'].replace(to_replace='Def', value='DST', inplace=True)
+            df['full_name'].replace(to_replace='Odell Beckham Jr.', value='Odell Beckham', inplace=True)
+            return df
+        else:
+            return None
 
 
 
@@ -51,13 +54,15 @@ class FinalDF(object):
         Gets the correct position salary dataframe.
         '''
 
-
-        df = self._load_salaries()
-        if self.position:
-            df = df[df['position'] == self.position]
+        if self.load_salaries:
+            df = self._load_salaries()
+            if self.position:
+                df = df[df['position'] == self.position]
+            else:
+                df = df
+            return df
         else:
-            df = df
-        return df
+            return None
 
 
 
@@ -70,27 +75,14 @@ class FinalDF(object):
 
 
         if self.load_lines:
-            if self.season_type != 'Regular':
-                return None
-            if self.year == 2009:
-                df = pd.read_csv(dk_data_root + 'NFL_lines/lines_2009.csv')
-            if self.year == 2010:
-                df = pd.read_csv(dk_data_root + 'NFL_lines/lines_2010.csv')
-            if self.year == 2011:
-                df = pd.read_csv(dk_data_root + 'NFL_lines/lines_2011.csv')
-            if self.year == 2012:
-                df = pd.read_csv(dk_data_root + 'NFL_lines/lines_2012.csv')
-            if self.year == 2013:
-                df = pd.read_csv(dk_data_root + 'NFL_lines/lines_2013.csv')
-            if self.year == 2014:
-                df = pd.read_csv(dk_data_root + 'NFL_lines/lines_2014.csv')
-            if self.year == 2015:
-                df = pd.read_csv(dk_data_root + 'NFL_lines/lines_2015.csv')
-            else:
-                df = pd.read_csv(dk_data_root + 'NFL_lines/all_lines.csv')
-            if self.week:
-                df = df[df['week'] == self.week]
-            return df
+            if self.season_type == 'Regular':
+                if self.year:
+                    df = pd.read_csv(NFL_lines + 'lines_{}.csv'.format(self.year))
+                else:
+                    df = pd.read_csv(NFL_lines + 'all_lines.csv')
+                if self.week:
+                    df = df[df['week'] == self.week]
+                return df
         else:
             return None
 
@@ -98,22 +90,25 @@ class FinalDF(object):
 
 
     def _get_nfldb_df(self):
+
         '''
         Creates the correct position statistic dataframe.
         '''
+
+
         if self.position:
             if self.position == 'QB':
-                df = pd.read_csv(data_root + 'passing.csv')
+                df = pd.read_csv(Player_data_root + 'passing.csv')
             elif self.position == 'WR':
-                df = pd.read_csv(data_root + 'rec.csv')
+                df = pd.read_csv(Player_data_root + 'rec.csv')
             elif self.position == 'RB':
-                df = pd.read_csv(data_root + 'rush.csv')
+                df = pd.read_csv(Player_data_root + 'rush.csv')
             elif self.position == 'TE':
-                df = pd.read_csv(data_root + 'te.csv')
+                df = pd.read_csv(Player_data_root + 'te.csv')
             elif self.position == 'DST':
-                df = pd.read_csv(data_root + 'dst.csv')
+                df = pd.read_csv(Player_data_root + 'dst.csv')
         else:
-            df = pd.read_csv(data_root + 'all_stats.csv')
+            df = pd.read_csv(Player_data_root + 'all_stats.csv')
         if self.season_type:
             df = df[df['season_type'] == self.season_type]
         if self.year:
@@ -122,32 +117,41 @@ class FinalDF(object):
             df = df[df['week'] == self.week]
         return df
 
+
+
     def _merge_df(self):
+
         '''
-        Merges the two dataframes.
+        Merges salaries with nfldb dataframes if both are True.
         '''
+
+
         df1 = self._get_nfldb_df()
         df2 = self._sal_position()
-        df = df1.merge(df2, on=['week', 'season_year', 'position', 'full_name'])
+        df3 = self._load_lines()
+        if self.load_salaries and self.load_lines:
+            df4 = df1.merge(df2, on=['week', 'season_year', 'position', 'full_name'])
+            df = df4.merge(df3, on=['week', 'season_year', 'team'])
+        elif self.load_lines:
+            df = df1.merge(df3, on=['week', 'season_year', 'team'])
+        elif self.load_salaries:
+            df = df1.merge(df2, on=['week', 'season_year', 'position', 'full_name'])
+        else:
+            df = df1
         return df
 
-    def _add_lines(self):
-        '''
-        Add the spreads and lines to the dataframe.
-        '''
-        if self.load_lines:
-            df1 = self._load_lines()
-            df2 = self._merge_df()
-            df = df1.merge(df2, on=['week', 'season_year', 'team'])
-            return df
-        else:
-            return self._merge_df()
+
 
 
     def get_df(self):
+
+
         '''
         Allows the user to get the final dataframe.
         '''
-        df = self._add_lines()
-        df['points_per_dollar'] = (df['DK points'] / df['DK salary']) * 1000
+
+
+        df = self._merge_df()
+        if self.load_salaries:
+            df['points_per_dollar'] = (df['DK points'] / df['DK salary']) * 1000
         return df

@@ -14,6 +14,8 @@ def load_dfs():
     tight_end_df = pd.read_csv('Data/NFLDB_queries/tight_end_df.csv')
     defense_df = pd.read_csv('Data/NFLDB_queries/defense_df.csv')
     return passing_df, receiving_df, rushing_df, tight_end_df, defense_df
+
+    
 # create new column for the player's team's score
 def team_score(row):
     if row['team'] == row['home_team']:
