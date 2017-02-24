@@ -15,7 +15,7 @@ def load_dfs():
     defense_df = pd.read_csv('Data/NFLDB_queries/defense_df.csv')
     return passing_df, receiving_df, rushing_df, tight_end_df, defense_df
 
-    
+
 # create new column for the player's team's score
 def team_score(row):
     if row['team'] == row['home_team']:
@@ -89,12 +89,14 @@ def DK_def_pa_points(row):
     return row['DK points']
 
 
-def drop_columns(df, drop_cols):
+def drop_and_fill(df, drop_cols):
     df.drop(drop_cols, axis=1, inplace=True)
+    df.fillna(value=0, axis=1, inplace=True)
     return df
 
 
 def passing_data(df):
+
 
     df = team_score_player(df)
 
@@ -111,10 +113,12 @@ def passing_data(df):
     pd.get_dummies(df[['season_year', 'season_type', 'week']])
 
     df['DK points'] = df['DK points'] + (df['passing_yds']* 0.04) + (df['passing_tds']*4) + (df['passing_twoptm'] * 2) + (df['rushing_yds'] * 0.1) + (df['rushing_tds'] * 6) + (df['rushing_twoptm'] * 2) + (df['receiving_yds'] * 0.1) + (df['receiving_tds'] * 6) + (df['receiving_twoptm'] * 2) + (df['receiving_rec']) + (df['fumble_rec_tds'] * 6) + (df['puntret_tds'] * 6) + (df['kicking_rec_tds'] * 6) + (df['kickret_tds'] * 6) - (df['passing_int']) - (df['fumbles_total'])
-
     return df
 
+
 def rec_rush_data(df):
+
+
     df = team_score_player(df)
 
     df['total_points'] = (df['receiving_tds'] * 6) + (df['rushing_tds'] * 6) + (df['rushing_twoptm'] * 2) + (df['receiving_twoptm'] * 2) + (df['fumble_rec_tds'] * 6) + (df['puntret_tds'] * 6) + (df['kicking_rec_tds'] * 6) + (df['kickret_tds'] * 6)
@@ -133,7 +137,11 @@ def rec_rush_data(df):
     df['DK points'] = df['DK points'] + (df['rushing_yds'] * 0.1) + (df['rushing_tds'] * 6) + (df['rushing_twoptm'] * 2) + (df['receiving_yds'] * 0.1) + (df['receiving_tds'] * 6) + (df['receiving_twoptm'] * 2) + (df['receiving_rec']) + (df['fumble_rec_tds'] * 6) + (df['puntret_tds'] * 6) + (df['kicking_rec_tds'] * 6) + (df['kickret_tds'] * 6) - (df['fumbles_total'])
     return df
 
+
+
 def defense_data(df):
+
+
     df = team_score_player(df)
 
     pd.get_dummies(df[['season_year', 'season_type', 'week']])
@@ -142,6 +150,8 @@ def defense_data(df):
 
     df['DK points'] = df['DK points'] + df['sack'] + (df['ints'] * 2) + (df['fumble_rec'] * 2) + (df['fumble_rec_tds'] * 6) + (df['kickret_tds'] * 6) + (df['puntret_tds'] * 6) + (df['misc_tds'] * 6)  + (df['int_tds'] * 6) + (df['safety'] * 2) + (df['punt_block'] * 2) + (df['fg_block'] * 2) + (df['xp_block'] * 2)
     return df
+
+
 
 
 
@@ -161,12 +171,29 @@ if __name__ == '__main__':
     dst = defense_data(defense_df)
     all_stats = passing.append(rec).append(rush).append(te).append(dst)
 
-    passing = drop_columns(passing, drop_cols)
-    rec = drop_columns(rec, drop_cols)
-    rush = drop_columns(rush, drop_cols)
-    te = drop_columns(te, drop_cols)
-    dst = drop_columns(dst, drop_cols)
-    all_stats = drop_columns(all_stats, drop_cols)
+    passing.sort_values(['season_year', 'week'], ascending=True, inplace=True)
+    rec.sort_values(['season_year', 'week'], ascending=True, inplace=True)
+    rush.sort_values(['season_year', 'week'], ascending=True, inplace=True)
+    te.sort_values(['season_year', 'week'], ascending=True, inplace=True)
+    dst.sort_values(['season_year', 'week'], ascending=True, inplace=True)
+    all_stats.sort_values(['season_year', 'week'], ascending=True, inplace=True)
+
+    passing.reset_index(inplace=True).drop('index', axis=1, inplace=True)
+    rec.reset_index(drop=True, inplace=True)
+    rush.reset_index(drop=True, inplace=True)
+    te.reset_index(idrop=True, nplace=True)
+    dst.reset_index(drop=True, inplace=True)
+    all_stats.reset_index(drop=True, inplace=True)
+
+    drop_cols = ['home_team', 'home_score', 'away_team', 'away_score', 'index']
+
+    passing = drop_and_fill(passing, drop_cols)
+    rec = drop_and_fill(rec, drop_cols)
+    rush = drop_and_fill(rush, drop_cols)
+    te = drop_and_fill(te, drop_cols)
+    dst = drop_and_fill(dst, drop_cols)
+    all_stats = drop_and_fill(all_stats, drop_cols)
+
 
     passing.to_csv('Data/Position_dfs/passing.csv', index=False)
     rec.to_csv('Data/Position_dfs/rec.csv', index=False)

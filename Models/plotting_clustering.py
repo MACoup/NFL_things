@@ -12,7 +12,7 @@ if __name__ == '__main__':
     df = cc.get_df()
 
     points_cols = ['DK salary', 'points_per_dollar']
-    points_k = cc.get_cluster(points_cols)
+    points_k = cc.get_cluster(df, points_cols)
 
     labels = points_k.labels_
 

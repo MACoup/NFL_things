@@ -90,6 +90,17 @@ def plot_many(df, cols, plot_funcs, gamma=True, normal=True):
 
     return ax
 
+
+def plot_kde(df, col):
+    ax = df[col].hist(bins=30, normed=1, grid=0, edgecolor='k', figsize=(10,6))
+    data = df[col]
+    density = scs.kde.gaussian_kde(data, bw_method=0.3)
+    x_vals = np.linspace(data.min(), data.max(), 100)
+    kde_vals = density(x_vals)
+    ax.plot(x_vals, kde_vals)
+
+    
+
 def plot_many_kde(df, cols):
     cols_srt = sorted(cols)
     axes = df[cols_srt].hist(bins=30, normed=1,
@@ -102,6 +113,7 @@ def plot_many_kde(df, cols):
         x_vals = np.linspace(data.min(), data.max(), 100)
         kde_vals = density(x_vals)
         ax.plot(x_vals, kde_vals, 'r-')
+
 
     return ax
 

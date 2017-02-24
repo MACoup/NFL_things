@@ -12,7 +12,7 @@ class FinalDF(object):
     '''
 
 
-    def __init__(self, season_type=None, position=None, year=None, week=None, load_lines=True, load_salaries=True):
+    def __init__(self, season_type='Regular', position=None, year=None, week=None, load_lines=True, load_salaries=False):
         self.position = position
         self.year = year
         self.week = week
@@ -75,14 +75,13 @@ class FinalDF(object):
 
 
         if self.load_lines:
-            if self.season_type == 'Regular':
-                if self.year:
-                    df = pd.read_csv(NFL_lines + 'lines_{}.csv'.format(self.year))
-                else:
-                    df = pd.read_csv(NFL_lines + 'all_lines.csv')
-                if self.week:
-                    df = df[df['week'] == self.week]
-                return df
+            if self.year:
+                df = pd.read_csv(NFL_lines + 'lines_{}.csv'.format(self.year))
+            else:
+                df = pd.read_csv(NFL_lines + 'all_lines.csv')
+            if self.week:
+                df = df[df['week'] == self.week]
+            return df
         else:
             return None
 
@@ -131,15 +130,13 @@ class FinalDF(object):
         df3 = self._load_lines()
         if self.load_salaries and self.load_lines:
             df4 = df1.merge(df2, on=['week', 'season_year', 'position', 'full_name'])
-            df = df4.merge(df3, on=['week', 'season_year', 'team'])
+            return df4.merge(df3, on=['week', 'season_year', 'team'])
         elif self.load_lines:
-            df = df1.merge(df3, on=['week', 'season_year', 'team'])
+            return df1.merge(df3, on=['week', 'season_year', 'team'])
         elif self.load_salaries:
-            df = df1.merge(df2, on=['week', 'season_year', 'position', 'full_name'])
+            return df1.merge(df2, on=['week', 'season_year', 'position', 'full_name'])
         else:
-            df = df1
-        return df
-
+            return df1
 
 
 
