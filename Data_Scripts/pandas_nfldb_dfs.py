@@ -178,14 +178,14 @@ if __name__ == '__main__':
     dst.sort_values(['season_year', 'week'], ascending=True, inplace=True)
     all_stats.sort_values(['season_year', 'week'], ascending=True, inplace=True)
 
-    passing.reset_index(inplace=True).drop('index', axis=1, inplace=True)
+    passing.reset_index(drop=True, inplace=True)
     rec.reset_index(drop=True, inplace=True)
     rush.reset_index(drop=True, inplace=True)
-    te.reset_index(idrop=True, nplace=True)
+    te.reset_index(drop=True, inplace=True)
     dst.reset_index(drop=True, inplace=True)
     all_stats.reset_index(drop=True, inplace=True)
 
-    drop_cols = ['home_team', 'home_score', 'away_team', 'away_score', 'index']
+    drop_cols = ['home_team', 'home_score', 'away_team', 'away_score']
 
     passing = drop_and_fill(passing, drop_cols)
     rec = drop_and_fill(rec, drop_cols)

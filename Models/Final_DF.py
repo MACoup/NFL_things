@@ -96,8 +96,10 @@ class FinalDF(object):
 
 
         if self.position:
+            if self.position = 'QB_agg':
+                df = pd.read_csv('Data/Positions_agg/passing_agg.csv')
             if self.position == 'QB':
-                df = pd.read_csv(Player_data_root + 'passing.csv')
+                df = pd.read_csv(Player_data_root + 'passing_agg.csv')
             elif self.position == 'WR':
                 df = pd.read_csv(Player_data_root + 'rec.csv')
             elif self.position == 'RB':

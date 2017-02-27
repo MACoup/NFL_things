@@ -5,14 +5,12 @@ import time
 
 
 '''
-
-This script is for potential feature engineering of data after the intital data transformations and formatting.
-
+This script is for aggregating features for offensive positions.
 '''
 
+# Defense will need to have special aggregations
 
-
-def get_last_week(row, df):
+def get_last_week(row, df, col, defense=False):
 
     '''
     INPUT: DataFrame row
@@ -36,7 +34,7 @@ def get_last_week(row, df):
 
 
 
-def get_last_4_weeks(row, df):
+def get_last_4_weeks(row, df, col, defense=False):
 
     '''
     INPUT: DataFrame row
@@ -46,31 +44,42 @@ def get_last_4_weeks(row, df):
     '''
 
 
-    week = row['week'] - 1
-    team = row['opp_team']
-    year = row['season_year']
-    position = row['position']
-    new_df = df[df['opp_team'] == team].reset_index()
-    try:
-        ind = new_df[new_df['week'] == week].index.tolist()[0]
-    except IndexError:
-        year -= 1
-        for i in range(17, 0, -1):
-            week = i
+    if defense=True:
+        position = row[row['team']]
+    else:
+        week = row['week'] - 1
+        team = row['opp_team']
+        year = row['season_year']
+        position = row['position']
+        new_df = df[df['opp_team'] == team].reset_index()
+        try:
             ind = new_df[new_df['week'] == week].index.tolist()[0]
-            if ind:
-                break
-            else:
-                continue
-    ind_low = ind-3
-    ind_high = ind+1
-    if ind_low < 0:
-        ind_low = 0
-    fin_df = new_df.iloc[ind_low:ind_high,]
-    return fin_df['DK points'].mean()
+        except IndexError:
+            try:
+                year -= 1
+                for i in range(17, 0, -1):
+                    week = i
+                    print week
+                    ind = new_df[(new_df['week'] == week) & (new_df['season_year'] == year)].index.tolist()[0]
+                    if ind:
+                        break
+                    else:
+                        continue
+            except IndexError:
+                week = row['week']
+                year = row['season_year']
+                ind = new_df[(new_df['week'] == week) & (new_df['season_year'] == year)].index.tolist()[0]
+        ind_low = ind-3
+        ind_high = ind+1
+        if ind_low < 0:
+            ind_low = 0
+        fin_df = new_df.iloc[ind_low:ind_high,]
+        return fin_df['DK points'].mean()
 
 
-def format_fp_allowed(df):
+
+
+def format_fp_allowed(df, cols, defense=False):
 
     '''
     INPUT: DataFrame
@@ -79,23 +88,21 @@ def format_fp_allowed(df):
     Formats the dataframes to get each player's opponent's allowed fantasy points.
     '''
 
+    for col in cols:
+        df['opp_fp_allowed_last_week'] = df.apply(lambda row: get_last_week(row, df, col, defense=defense), axis=1)
+        df['opp_fp_allowed_last_4_weeks'] = df.apply(lambda row: get_last_4_weeks(row, df, col, defense=defense), axis=1)
 
-    df['opp_fp_allowed_last_week'] = df.apply(lambda row: get_last_week(row, df), axis=1)
-    t0 = time.time()
-    df['opp_fp_allowed_last_4_weeks'] = df.apply(lambda row: get_last_4_weeks(row, df), axis=1)
-    t1 = time.time()
-    t2 = t1-t0
-    print t2
 
 
 def get_mean_column_last_4_weeks(row, df, col):
 
     '''
-    INPUT: DataFrame
-    OUTPUT: DataFrame with mean_score_percentage column.
+    INPUT: DataFrame row, DataFrame, column to be aggregated
+    OUTPUT: Aggregated Statistic
 
     Creates a new attribute based on the player's average score percentage.
     '''
+
 
     player = row['full_name']
     week = row['week'] - 1
@@ -130,16 +137,141 @@ def get_mean_column_last_4_weeks(row, df, col):
 
 
 
-def get_average_everything(df, remove_cols):
+def get_mean_column_last_4_weeks_dst(row, df, col):
+
+    '''
+    INPUT: DataFrame row, DataFrame, column to be aggregated
+    OUTPUT: Aggregated Statistic
+
+    Creates a new attribute based on the player's average column value percentage for the defense/special teams DataFrame.
+    '''
+
+
+    player = row['team']
+    week = row['week'] - 1
+    year = row['season_year']
+    print player + str(week) + str(year)
+    new_df = df[df['team'] == player].reset_index(drop=True)
+    if week <= 0:
+        week = 1
+    try:
+        ind = new_df[(new_df['week'] == week) & (new_df['season_year'] == year)].index.tolist()[0]
+    except IndexError:
+        print IndexError
+        try:
+            year -= 1
+            for i in range(17, 0, -1):
+                week = i
+                print week
+                ind = new_df[(new_df['week'] == week) & (new_df['season_year'] == year)].index.tolist()[0]
+                if ind:
+                    break
+                else:
+                    continue
+        except IndexError:
+            week = row['week']
+            year = row['season_year']
+            ind = new_df[(new_df['week'] == week) & (new_df['season_year'] == year)].index.tolist()[0]
+    ind_low = ind-3
+    ind_high = ind+1
+    if ind_low < 0:
+        ind_low = 0
+    return new_df.iloc[ind_low:ind_high,][col].mean()
+
+
+
+def get_average_everything(df, exclude_cols):
+
+    '''
+    INPUT: DataFrame and columns to not be aggregated.
+    OUTPUT: None
+
+    Provides average stats for each plaer over the last 4 weeks.
+    '''
+
+
     cols = [col for col in df.columns if col not in remove_cols]
     for col in cols:
         df['mean_{}_last_4_weeks'.format(col)] = df.apply(lambda row: get_mean_column_last_4_weeks(row, df, col), axis=1)
 
 
+def get_average_everything_dst(df, exclude_cols):
 
+    '''
+    INPUT: DataFrame and columns to not be aggregated.
+    OUTPUT: None
+
+    Provides average stats for each plaer over the last 4 weeks.
+    '''
+
+
+    cols = [col for col in df.columns if col not in exclude_cols]
+    for col in cols:
+        df['mean_{}_last_4_weeks'.format(col)] = df.apply(lambda row: get_mean_column_last_4_weeks_dst(row, df, col), axis=1)
+
+
+def apply_aggs(dfs, exclude_cols):
+
+    '''
+    INPUT: DataFrame, Columns to not be considered for Aggregation.
+    OUTPUT: None
+
+    Applies all transformations and aggregations to DataFrames.
+    '''
+
+
+    for df in dfs:
+        get_average_everything(df, exclude_cols)
+        format_last_weekallowed(df, exclude_cols)
+
+
+def append_all_stats(dfs):
+
+    '''
+    INPUT: List of position DataFrames
+    OUTPUT: DataFrame of all position DataFrames
+    '''
+
+    new_df = pd.DataFrame()
+    for df in dfs:
+        if 'Unnamed: 0' in df.columns:
+            df.drop('Unnamed: 0', axis=1, inplace=True)
+        new_df = new_df.append(df).reset_index(drop=True)
+    new_df.sort_values(['season_year', 'week'], inplace=True)
+    return new_df
+
+
+# Thinking about discretizing some variables and target
+# pd.cut, find characteristics of high point performances
 
 if __name__ == '__main__':
-    df = pd.read_csv('Data/Position_dfs/passing.csv')
-    df = df[df['season_type'] == 'Regular']
-    format_fp_allowed(df)
-    remove_cols = ['DK points', 'h/a', 'full_name', 'team', 'opp_team', 'position', 'season_type', 'season_year', 'week', 'spread', 'o/u']
+    passing = pd.read_csv('Data/Position_dfs/passing.csv')
+    rec = pd.read_csv('Data/Position_dfs/rec.csv')
+    rush = pd.read_csv('Data/Position_dfs/rush.csv')
+    te = pd.read_csv('Data/Position_dfs/te.csv')
+
+
+    passing = passing[passing['season_type'] == 'Regular']
+    rec = rec[rec['season_type'] == 'Regular']
+    rush = rush[rush['season_type'] == 'Regular']
+    te = te[te['season_type'] == 'Regular']
+
+    exclude_cols = ['DK points', 'h/a', 'full_name', 'team', 'opp_team', 'position', 'season_type', 'season_year', 'week', 'spread', 'o/u']
+
+
+    passing_agg = passing.copy()
+    rec_agg = rec.copy()
+    rush_agg = rush.copy()
+    te_agg = te.copy()
+
+
+    dfs = [passing_agg, rec_agg, rush_agg, te_agg]
+
+    t0 = time.time()
+
+    t1 = time.time()
+
+    all_offense_agg = append_all_stats(dfs)
+
+
+    print 'Run Time: ' + str(t1-t0)
