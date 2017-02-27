@@ -3,7 +3,7 @@ import numpy as np
 
 
 NFL_lines = 'Data/NFL_lines_formatted/'
-Player_data_root = 'Data/Position_dfs/'
+Player_data_root = 'Data/Positions_agg/'
 
 class FinalDF(object):
 
@@ -96,18 +96,16 @@ class FinalDF(object):
 
 
         if self.position:
-            if self.position = 'QB_agg':
-                df = pd.read_csv('Data/Positions_agg/passing_agg.csv')
             if self.position == 'QB':
                 df = pd.read_csv(Player_data_root + 'passing_agg.csv')
             elif self.position == 'WR':
-                df = pd.read_csv(Player_data_root + 'rec.csv')
+                df = pd.read_csv(Player_data_root + 'rec_agg.csv')
             elif self.position == 'RB':
-                df = pd.read_csv(Player_data_root + 'rush.csv')
+                df = pd.read_csv(Player_data_root + 'rush_agg.csv')
             elif self.position == 'TE':
-                df = pd.read_csv(Player_data_root + 'te.csv')
+                df = pd.read_csv(Player_data_root + 'te_agg.csv')
             elif self.position == 'DST':
-                df = pd.read_csv(Player_data_root + 'dst.csv')
+                df = pd.read_csv('Data/Position_dfs' + 'dst.csv')
         else:
             df = pd.read_csv(Player_data_root + 'all_stats.csv')
         if self.season_type:

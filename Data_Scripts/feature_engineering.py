@@ -10,7 +10,7 @@ This script is for aggregating features for offensive positions.
 
 # Defense will need to have special aggregations
 
-def get_last_week(row, df, col, defense=False):
+def get_last_week(row, df, defense=False):
 
     '''
     INPUT: DataFrame row
@@ -34,7 +34,7 @@ def get_last_week(row, df, col, defense=False):
 
 
 
-def get_last_4_weeks(row, df, col, defense=False):
+def get_last_4_weeks(row, df, defense=False):
 
     '''
     INPUT: DataFrame row
@@ -44,7 +44,7 @@ def get_last_4_weeks(row, df, col, defense=False):
     '''
 
 
-    if defense=True:
+    if defense == True:
         position = row[row['team']]
     else:
         week = row['week'] - 1
@@ -59,7 +59,6 @@ def get_last_4_weeks(row, df, col, defense=False):
                 year -= 1
                 for i in range(17, 0, -1):
                     week = i
-                    print week
                     ind = new_df[(new_df['week'] == week) & (new_df['season_year'] == year)].index.tolist()[0]
                     if ind:
                         break
@@ -79,7 +78,7 @@ def get_last_4_weeks(row, df, col, defense=False):
 
 
 
-def format_fp_allowed(df, cols, defense=False):
+def format_fp_allowed(df, defense=False):
 
     '''
     INPUT: DataFrame
@@ -88,9 +87,9 @@ def format_fp_allowed(df, cols, defense=False):
     Formats the dataframes to get each player's opponent's allowed fantasy points.
     '''
 
-    for col in cols:
-        df['opp_fp_allowed_last_week'] = df.apply(lambda row: get_last_week(row, df, col, defense=defense), axis=1)
-        df['opp_fp_allowed_last_4_weeks'] = df.apply(lambda row: get_last_4_weeks(row, df, col, defense=defense), axis=1)
+
+    df['opp_fp_allowed_last_week'] = df.apply(lambda row: get_last_week(row, df, defense=defense), axis=1)
+    df['opp_fp_allowed_last_4_weeks'] = df.apply(lambda row: get_last_4_weeks(row, df,  defense=defense), axis=1)
 
 
 
@@ -223,6 +222,7 @@ def apply_aggs(dfs, exclude_cols):
     for df in dfs:
         get_average_everything(df, exclude_cols)
         format_last_weekallowed(df, exclude_cols)
+        cut_points(df)
 
 
 def append_all_stats(dfs):
@@ -241,8 +241,29 @@ def append_all_stats(dfs):
     return new_df
 
 
-# Thinking about discretizing some variables and target
-# pd.cut, find characteristics of high point performances
+
+def cut_points(dfs):
+
+    '''
+    INPUT: DataFrames
+    OUTPUT: DataFrames with discretized DK points
+    '''
+
+    for df in dfs:
+        df['points_bin'] = pd.cut(df['DK points'], bins=3, labels=[1, 2, 3]).astype(int32)
+
+
+
+def eliminate_feats(df, remove_cols):
+
+    '''
+    INPUT: DataFrames.
+    OUTPUT: DataFrames with unwanted features removed.
+    '''
+
+
+    return df.drop(remove_cols, axis=1, inplace=False)
+
 
 if __name__ == '__main__':
     passing = pd.read_csv('Data/Position_dfs/passing.csv')
@@ -259,19 +280,55 @@ if __name__ == '__main__':
     exclude_cols = ['DK points', 'h/a', 'full_name', 'team', 'opp_team', 'position', 'season_type', 'season_year', 'week', 'spread', 'o/u']
 
 
-    passing_agg = passing.copy()
-    rec_agg = rec.copy()
-    rush_agg = rush.copy()
-    te_agg = te.copy()
 
 
-    dfs = [passing_agg, rec_agg, rush_agg, te_agg]
 
-    t0 = time.time()
+    dfs = [passing, rec, rush, te]
 
-    t1 = time.time()
+    # apply_aggs(dfs, exclude_cols)
+    # cut_points(dfs)
+    # all_offense_agg = append_all_stats(dfs)
 
-    all_offense_agg = append_all_stats(dfs)
 
+    remove_cols = ['passing_att',
+ 'passing_cmp',
+ 'passing_yds',
+ 'passing_int',
+ 'passing_tds',
+ 'passing_twopta',
+ 'passing_twoptm',
+ 'receiving_rec',
+ 'receiving_tar',
+ 'receiving_tds',
+ 'receiving_twopta',
+ 'receiving_twoptm',
+ 'receiving_yac',
+ 'receiving_yds',
+ 'rushing_att',
+ 'rushing_yds',
+ 'rushing_tds',
+ 'rushing_loss_yards',
+ 'rushing_twoptm',
+ 'fumbles_total',
+ 'fumble_rec_tds',
+ 'puntret_tds',
+ 'kickret_tds',
+ 'kicking_rec_tds',
+ 'team_score',
+ 'opp_score',
+ 'total_points',
+ 'cmp_percentage',
+ 'score_percentage',
+ 'yds_per_rush']
 
-    print 'Run Time: ' + str(t1-t0)
+    passing_agg = eliminate_feats(passing, remove_cols)
+    rec_agg = eliminate_feats(rec, remove_cols)
+    rush_agg = eliminate_feats(rush, remove_cols)
+    te_agg = eliminate_feats(te, remove_cols)
+
+    directory = 'Data/Positions_agg/'
+
+    passing_agg.to_csv(directory + 'passing_agg.csv', index=False)
+    # rec_agg.to_csv(directory + 'rec_agg.csv', index=False)
+    # rush_agg.to_csv(directory + 'rush_agg.csv', index=False)
+    # te_agg.to_csv(directory + 'te_agg.csv', index=False)
