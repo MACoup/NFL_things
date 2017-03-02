@@ -204,4 +204,4 @@ if __name__ == '__main__':
 
     drop_col_2 = ['season_year', 'season_type', 'week', 'full_name', 'position', 'DK points', 'team', 'opp_team', 'points_per_dollar', 'points_category']
 
-    x_2, y_2 = get_second_feature_matrix(df_qb_2, )
+    # x_2, y_2 = get_second_feature_matrix(df_qb_2, )
