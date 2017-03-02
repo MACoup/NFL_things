@@ -6,6 +6,10 @@ import seaborn
 import statsmodels.regression.linear_model as sm
 
 
+'''
+This script is for analysis of specific contests I have entered. Ownership information is only available after the contests are over.
+'''
+
 defense_lst = ['Arizona Defense',
          'Los Angeles Defense',
          'Oakland Defense',

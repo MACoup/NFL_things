@@ -13,7 +13,12 @@ from imblearn.over_sampling import SMOTE
 
 
 
+'''
+This model is used to predict whether or not the player's points will be in the top 75th percentile of all players.
 
+TARGET: points_category
+
+'''
 
 
 
@@ -22,15 +27,14 @@ from imblearn.over_sampling import SMOTE
 # need to deal with imbalanced classes
 
 
-def get_feature_matrix(position, drop_cols, balance=True, k=0, m=0):
+def get_feature_matrix(df, drop_cols, balance=True, k=0, m=0):
 
     '''
     INPUT: Desired position matrix, columns to drop.
     OUTPUT: X, Y
     '''
 
-    fin = FinalDF(position=position)
-    df_qb = fin.get_df()
+
 
     df_qb.drop(drop_cols, axis=1, inplace=True)
 
@@ -45,6 +49,52 @@ def get_feature_matrix(position, drop_cols, balance=True, k=0, m=0):
 
 
 
+def determine_points_per_dollar_cat(df, row, percentile):
+
+    '''
+    INPUT: DataFrame, row
+    OUTPUT: Boolean
+    '''
+
+    if row['points_per_dollar'] >= percentile:
+        return 1
+    else:
+        return 0
+
+
+
+def get_second_feature_matrix(df, classifier, drop_cols, balance=True, k=0, m=0):
+
+    '''
+    INPUT: Desired position matrix, columns to drop, values for k and m.
+    OUTPUT: X, Y
+    '''
+
+    if df.columns[0] == 'Unnamed: 0':
+        df.drop('Unnamed: 0', axis=1, inplace=True)
+
+    percentile = df['points_per_dollar'].describe()['75%']
+
+    df['points_per_dollar_category'] = df.apply(lambda row: determine_points_per_dollar_cat(df, row, percentile), axis=1)
+
+    df.drop(drop_cols, axis=1, inplace=True)
+
+    df['predicted_points_category'] = classifier.predict(x)
+
+    y = df.pop('points_per_dollar_category')
+    x = df
+
+
+
+    if balance:
+        return balance_classes(x, y, k=k, m=m)
+
+
+
+
+
+    else:
+        return x, y
 
 
 
@@ -70,6 +120,10 @@ def balance_classes(x, y, k=0, m=0):
 
 def grid_search(classifier, parameters, x, y):
 
+    '''
+    Runs a gridsearch cross validation algorithm.
+    '''
+
     gs = GridSearchCV(classifier, param_grid=parameters, cv=5)
 
     gs.fit(x, y)
@@ -77,14 +131,18 @@ def grid_search(classifier, parameters, x, y):
     return gs
 
 
-def custom_grid_sampling():
+def custom_grid_sampling(df):
+
+    '''
+    Custom grid search to optimize SMOTE parameters.
+    '''
 
     score_dict = {}
 
     for k in np.arange(2, 10, 1):
         for m in np.arange(2, 20, 1):
 
-            x, y = get_feature_matrix('QB', drop_cols, balance=False, k=k, m=m)
+            x, y = get_feature_matrix(df, drop_cols, balance=False, k=k, m=m)
 
 
             X_train, X_test, y_train, y_test = train_test_split(x, y, random_state=42, stratify=y)
@@ -105,13 +163,16 @@ def custom_grid_sampling():
 
 if __name__ == '__main__':
 
+    fin = FinalDF(position='QB')
+    df_qb = fin.get_df()
+
     drop_cols = ['season_year', 'season_type', 'week', 'full_name', 'position', 'DK points', 'team', 'opp_team']
 
     # score_dict, key = custom_grid_sampling()
 
     key = (7, 8)
 
-    x, y = get_feature_matrix('QB', drop_cols, balance=True, k=key[0], m=key[1])
+    x, y = get_feature_matrix(df_qb, drop_cols, balance=True, k=key[0], m=key[1])
 
 
     X_train, X_test, y_train, y_test = train_test_split(x, y, random_state=42, stratify=y)
@@ -138,4 +199,9 @@ if __name__ == '__main__':
 
     clf_3.score(X_test, y_test)
 
-    # 0.80852994555353896
+    fin_2 = FinalDF(position='QB', load_salaries=True)
+    df_qb_2 = fin_2.get_df()
+
+    drop_col_2 = ['season_year', 'season_type', 'week', 'full_name', 'position', 'DK points', 'team', 'opp_team', 'points_per_dollar', 'points_category']
+
+    x_2, y_2 = get_second_feature_matrix(df_qb_2, )
