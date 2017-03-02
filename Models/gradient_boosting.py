@@ -4,10 +4,12 @@ from Final_DF import FinalDF
 import matplotlib.pyplot as plt
 import seaborn
 from sklearn.model_selection import train_test_split, GridSearchCV, cross_val_score
-from sklearn.ensemble import GradientBoostingRegressor
-from sklearn.ensemble import GradientBoostingClassifier as gbc
-from sklearn.metrics import mean_squared_error, accuracy_score
-from sklearn.preprocessing import StandardScaler, MinMaxScaler
+from sklearn.ensemble import GradientBoostingClassifier
+from sklearn.metrics import accuracy_score
+from sklearn.neighbors import NearestNeighbors
+from imblearn.over_sampling import SMOTE
+
+
 
 
 
@@ -17,9 +19,10 @@ from sklearn.preprocessing import StandardScaler, MinMaxScaler
 
 # starting with QB
 # without scale
+# need to deal with imbalanced classes
 
 
-def get_feature_matrix(position, drop_cols):
+def get_feature_matrix(position, drop_cols, balance=True, k=0, m=0):
 
     '''
     INPUT: Desired position matrix, columns to drop.
@@ -31,30 +34,38 @@ def get_feature_matrix(position, drop_cols):
 
     df_qb.drop(drop_cols, axis=1, inplace=True)
 
-
-    y = df_qb.pop('points_bin')
+    y = df_qb.pop('points_category')
     x = df_qb
 
-    return x, y
+    if balance:
+        return balance_classes(x, y, k=k, m=m)
+
+    else:
+        return x, y
 
 
-def raw_data_model(x, y):
+
+
+
+
+
+def balance_classes(x, y, k=0, m=0):
 
     '''
-    INPUT: x, y
-    OUTPUT: Classifier, predicted y
+    INPUT: DataFrame, num_neighbors
+    OUTPUT: Resamped DataFrame
+
+    Performs SMOTE on minority class.
     '''
 
 
-    X_train, X_test, y_train, y_test = train_test_split(x, y)
+    n_n = NearestNeighbors(n_neighbors=k)
 
-    clf = gbc()
+    sm = SMOTE(random_state=42, k_neighbors=n_n, m_neightbors=10)
 
-    clf.fit(X_train, y_train)
+    return sm.fit_sample(x, y)
 
-    y_pred = clf.predict(X_test)
 
-    return clf, y_pred
 
 
 def grid_search(classifier, parameters, x, y):
@@ -66,25 +77,45 @@ def grid_search(classifier, parameters, x, y):
     return gs
 
 
+def custom_grid_sampling():
+
+    score_dict = {}
+
+    for k in np.arange(2, 10, 1):
+        for m in np.arange(2, 20, 1):
+
+            x, y = get_feature_matrix('QB', drop_cols, balance=False, k=k, m=m)
 
 
+            X_train, X_test, y_train, y_test = train_test_split(x, y, random_state=42, stratify=y)
+
+            clf = GradientBoostingClassifier()
+
+            cv_score = cross_val_score(clf, X_train, y_train, cv=5)
+
+
+            score_dict[tuple([k, m])] = cv_score.mean()
+
+    desired_number = max(score_dict.values())
+    key = None
+    for k, v in score_dict.iteritems():
+        if v == desired_number:
+            key = k
+    return key
 
 if __name__ == '__main__':
 
     drop_cols = ['season_year', 'season_type', 'week', 'full_name', 'position', 'DK points', 'team', 'opp_team']
 
-    x, y = get_feature_matrix('QB', drop_cols)
+    x, y = get_feature_matrix('QB', drop_cols, balance=False, k=5)
 
-    clf = gbc()
 
-    X_train, X_test, y_train, y_test = train_test_split(x, y)
+    X_train, X_test, y_train, y_test = train_test_split(x, y, random_state=42, stratify=y)
 
-    parameters = {'max_features': [None, 'auto', 'log2'],  'learning_rate': [0.1, 0.2, 0.3, 0.4, 0.5]}
+    parameters = {'max_feature': ['log2', 'sqrt', None], 'verbose': np.arange(1, 11, 1), 'max_depth': np.arange(1, 11, 1)}
 
-    gs = grid_search(clf, parameters, X_train, y_train)
+    # gs = grid_search(clf, parameters, X_train, y_train)
 
-    In [145]: gs.best_score_
-Out[145]: 0.59257582616568583
+    clf = GradientBoostingClassifier(max_features='log2', learning_rate=0.05, verbose=3, max_depth=2).fit(X_train, y_train)
 
-In [146]: gs.best_params_
-Out[146]: {'learning_rate': 0.1, 'max_features': 'log2'}
+    score_dict = custom_grid_sampling()

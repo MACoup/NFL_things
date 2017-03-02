@@ -89,9 +89,11 @@ def make_subplot_again(X, c, ax,pcX=0,pcY=1,fontSize=24,fontName='sans serif',ms
     if title:
         ax.set_title(title,fontsize=fontSize+2,fontname=fontName)
 
+
+
 if __name__ == '__main__':
 
-    fin = FinalDF(season_type='Regular', position='QB')
+    fin = FinalDF(season_type='Regular', position='QB', load_salaries=True)
     df = fin.get_df()
     df = df.replace([np.inf, -np.inf], 0)
 

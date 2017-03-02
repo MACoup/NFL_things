@@ -241,6 +241,18 @@ def append_all_stats(dfs):
     return new_df
 
 
+def determine_points_cat(df, row, percentile):
+
+    '''
+    INPUT: DataFrame, row
+    OUTPUT: Boolean
+    '''
+
+    if row['DK points'] >= percentile:
+        return 1
+    else:
+        return 0
+
 
 def cut_points(dfs):
 
@@ -250,7 +262,8 @@ def cut_points(dfs):
     '''
 
     for df in dfs:
-        df['points_bin'] = pd.cut(df['DK points'], bins=3, labels=[1, 2, 3]).astype(int32)
+        percentile = df['DK points'].describe()['75%']
+        df['points_category'] = df.apply(lambda row: determine_points_cat(df, row, percentile), axis=1).astype('category')
 
 
 
