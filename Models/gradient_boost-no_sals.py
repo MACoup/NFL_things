@@ -13,7 +13,12 @@ from imblearn.over_sampling import SMOTE
 
 
 
+'''
+This model is used to predict whether or not the player's points will be in the top 75th percentile of all players.
 
+TARGET: points_category
+
+'''
 
 
 
