@@ -8,6 +8,7 @@ from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.metrics import accuracy_score
 from sklearn.neighbors import NearestNeighbors
 from imblearn.over_sampling import SMOTE
+from sklearn.preprocessing import StandardScaler
 
 
 
@@ -27,7 +28,7 @@ TARGET: points_category
 # need to deal with imbalanced classes
 
 
-def get_feature_matrix(df, drop_cols, balance=True, k=0, m=0):
+def get_feature_matrix(df, drop_cols, cat_cols, balance=True, k=0, m=0):
 
     '''
     INPUT: Desired position matrix, columns to drop.
@@ -37,6 +38,8 @@ def get_feature_matrix(df, drop_cols, balance=True, k=0, m=0):
 
 
     df_qb.drop(drop_cols, axis=1, inplace=True)
+
+    c_col = df_qb.pop([col for col in cat_cols])
 
     y = df_qb.pop('points_category')
     x = df_qb
@@ -165,6 +168,8 @@ if __name__ == '__main__':
 
     fin = FinalDF(position='QB')
     df_qb = fin.get_df()
+
+    cat_cols = ['h/a']
 
     drop_cols = ['season_year', 'season_type', 'week', 'full_name', 'position', 'DK points', 'team', 'opp_team']
 

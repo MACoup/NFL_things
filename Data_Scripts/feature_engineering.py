@@ -341,7 +341,7 @@ if __name__ == '__main__':
 
     directory = 'Data/Positions_agg/'
 
-    passing_agg.to_csv(directory + 'passing_agg.csv', index=False)
+    # passing_agg.to_csv(directory + 'passing_agg.csv', index=False)
     # rec_agg.to_csv(directory + 'rec_agg.csv', index=False)
     # rush_agg.to_csv(directory + 'rush_agg.csv', index=False)
     # te_agg.to_csv(directory + 'te_agg.csv', index=False)
