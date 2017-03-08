@@ -9,6 +9,7 @@ from sklearn.metrics import accuracy_score
 from sklearn.neighbors import NearestNeighbors
 from imblearn.over_sampling import SMOTE
 from sklearn.preprocessing import StandardScaler
+from sklearn.base import BaseEstimator, TransformerMixin
 
 
 
@@ -27,8 +28,29 @@ TARGET: points_category
 # without scale
 # need to deal with imbalanced classes
 
+class CustomScaler(BaseEstimator,TransformerMixin):
 
-def get_feature_matrix(df, drop_cols, cat_col, balance=True, k=0, m=0):
+    '''
+    Custom class to scale only the non-categorical columns of my dataframe.
+    '''
+
+
+    def __init__(self,columns,copy=True,with_mean=True,with_std=True):
+        self.scaler = StandardScaler()
+        self.columns = columns
+
+    def fit(self, X, y=None):
+        self.scaler.fit(X[self.columns], y)
+        return self
+
+    def transform(self, X, y=None, copy=None):
+        init_col_order = X.columns
+        X_scaled = pd.DataFrame(self.scaler.transform(X[self.columns]), columns=self.columns)
+        X_not_scaled = X.ix[:,~X.columns.isin(self.columns)]
+        return pd.concat([X_not_scaled, X_scaled], axis=1)[init_col_order]
+
+
+def get_feature_matrix(df, drop_cols, scale_cols, balance=False, k=0, m=0):
 
     '''
     INPUT: Desired position matrix, columns to drop.
@@ -37,18 +59,20 @@ def get_feature_matrix(df, drop_cols, cat_col, balance=True, k=0, m=0):
 
 
     if 'Unnamed: 0' in df.columns:
-        df.drop(drop_cols, axis=1, inplace=True)
+        drop_cols.append('Unnamed: 0')
+    df.drop(drop_cols, axis=1, inplace=True)
 
 
-    c_col = df_qb.pop(cat_col)
+    y = df_qb.pop('points_category')
+    x = df_qb
 
-    y = df_qb.pop('points_category').values
-    x = df_qb.values
 
+    scaler = 
 
 
     if balance:
         return balance_classes(x, y, k=k, m=m)
+
 
     else:
         return x, y
@@ -169,6 +193,7 @@ def custom_grid_sampling(df):
 
 if __name__ == '__main__':
 
+
     fin = FinalDF(position='QB')
     df_qb = fin.get_df()
 
@@ -176,40 +201,42 @@ if __name__ == '__main__':
 
     drop_cols = ['season_year', 'season_type', 'week', 'full_name', 'position', 'DK points', 'team', 'opp_team']
 
+    scale_cols = [col for col in df_qb.columns if col != 'h/a']
+
     # score_dict, key = custom_grid_sampling()
 
     key = (7, 8)
 
-    x, y = get_feature_matrix(df_qb, drop_cols, cat_col, balance=True, k=key[0], m=key[1])
+    x, y, = get_feature_matrix(df_qb, drop_cols, balance=False, k=key[0], m=key[1])
 
-
-    X_train, X_test, y_train, y_test = train_test_split(x, y, random_state=42, stratify=y)
-
-    parameters = {'verbose': np.arange(1, 11, 1), 'max_depth': np.arange(1, 5, 1), 'learning_rate': np.arange(0.01, 0.12, 0.01)}
-
-    clf = GradientBoostingClassifier(max_features='log2')
-
-    # gs = grid_search(clf, parameters, X_train, y_train)
-
-    # gs.best_params_ : {'learning_rate': 0.11, 'max_depth': 4, 'max_features': 'sqrt', 'verbose': 5}
-
-    clf_2 = GradientBoostingClassifier(learning_rate=0.11, max_features='sqrt', verbose=5, max_depth=4)
-
-    params_2 = {'n_estimators': np.arange(50, 250, 10)}
-
-    # gs_2 = grid_search(clf_2, params_2, X_train, y_train)
-
-    # gs_2.best_params_ : {'n_estimators': 240}
-
-    clf_3 = GradientBoostingClassifier(learning_rate=0.08, max_features='log2', verbose=10, max_depth=3, n_estimators=240)
-
-    clf_3.fit(X_train, y_train)
-
-    clf_3.score(X_test, y_test)
-
-    fin_2 = FinalDF(position='QB', load_salaries=True)
-    df_qb_2 = fin_2.get_df()
-
-    drop_col_2 = ['season_year', 'season_type', 'week', 'full_name', 'position', 'DK points', 'team', 'opp_team', 'points_per_dollar', 'points_category']
+    #
+    # X_train, X_test, y_train, y_test = train_test_split(x, y, random_state=42, stratify=y)
+    #
+    # parameters = {'verbose': np.arange(1, 11, 1), 'max_depth': np.arange(1, 5, 1), 'learning_rate': np.arange(0.01, 0.12, 0.01)}
+    #
+    # clf = GradientBoostingClassifier(max_features='log2')
+    #
+    # # gs = grid_search(clf, parameters, X_train, y_train)
+    #
+    # # gs.best_params_ : {'learning_rate': 0.11, 'max_depth': 4, 'max_features': 'sqrt', 'verbose': 5}
+    #
+    # clf_2 = GradientBoostingClassifier(learning_rate=0.11, max_features='sqrt', verbose=5, max_depth=4)
+    #
+    # params_2 = {'n_estimators': np.arange(50, 250, 10)}
+    #
+    # # gs_2 = grid_search(clf_2, params_2, X_train, y_train)
+    #
+    # # gs_2.best_params_ : {'n_estimators': 240}
+    #
+    # clf_3 = GradientBoostingClassifier(learning_rate=0.08, max_features='log2', verbose=10, max_depth=3, n_estimators=240)
+    #
+    # clf_3.fit(X_train, y_train)
+    #
+    # clf_3.score(X_test, y_test)
+    #
+    # fin_2 = FinalDF(position='QB', load_salaries=True)
+    # df_qb_2 = fin_2.get_df()
+    #
+    # drop_col_2 = ['season_year', 'season_type', 'week', 'full_name', 'position', 'DK points', 'team', 'opp_team', 'points_per_dollar', 'points_category']
 
     # x_2, y_2 = get_second_feature_matrix(df_qb_2, )
