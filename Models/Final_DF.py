@@ -151,4 +151,6 @@ class FinalDF(object):
         df = self._merge_df()
         if self.load_salaries:
             df['points_per_dollar'] = (df['DK points'] / df['DK salary']) * 1000
+        if 'Unnamed: 0' in df.columns:
+            df.drop('Unnamed: 0', axis=1, inplace=True)
         return df

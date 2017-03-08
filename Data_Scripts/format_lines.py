@@ -90,11 +90,14 @@ def form_2016(df):
     return df
 
 
+team_dict_2015 = {'Bengals': 'CIN', 'Titans': 'TEN', 'Cardinals': 'ARI', 'Falcons': 'ATL', 'Panthers': 'CAR', 'Bears': 'CHI', 'Cowboys': 'DAL', 'Lions': 'DET', 'Packers': 'GB', 'Rams': 'STL', 'Vikings': 'MIN', 'Saints': 'NO', 'Giants': 'NYG', 'Eagles': 'PHI', '49ers': 'SF', 'Seahawks': 'SEA', 'Buccaneers': 'TB', 'Redskins': 'WAS', 'Chargers': 'SD', 'Steelers': 'PIT', 'Raiders': 'OAK', 'Jets': 'NYJ', 'Patriots': 'NE', 'Dolphins': 'MIA', 'Chiefs': 'KC', 'Jaguars': 'JAC', 'Colts': 'IND', 'Texans': 'HOU', 'Broncos': 'DEN', 'Browns': 'CLE', 'Bills': 'BUF', 'Ravens': 'BAL'}
+
+team_dict_2016 = {'Bengals': 'CIN', 'Titans': 'TEN', 'Cardinals': 'ARI', 'Falcons': 'ATL', 'Panthers': 'CAR', 'Bears': 'CHI', 'Cowboys': 'DAL', 'Lions': 'DET', 'Packers': 'GB', 'Rams': 'LA', 'Vikings': 'MIN', 'Saints': 'NO', 'Giants': 'NYG', 'Eagles': 'PHI', '49ers': 'SF', 'Seahawks': 'SEA', 'Buccaneers': 'TB', 'Redskins': 'WAS', 'Chargers': 'SD', 'Steelers': 'PIT', 'Raiders': 'OAK', 'Jets': 'NYJ', 'Patriots': 'NE', 'Dolphins': 'MIA', 'Chiefs': 'KC', 'Jaguars': 'JAC', 'Colts': 'IND', 'Texans': 'HOU', 'Broncos': 'DEN', 'Browns': 'CLE', 'Bills': 'BUF', 'Ravens': 'BAL'}
+
+
 if __name__ == '__main__':
 
-    team_dict_2015 = {'Bengals': 'CIN', 'Titans': 'TEN', 'Cardinals': 'ARI', 'Falcons': 'ATL', 'Panthers': 'CAR', 'Bears': 'CHI', 'Cowboys': 'DAL', 'Lions': 'DET', 'Packers': 'GB', 'Rams': 'STL', 'Vikings': 'MIN', 'Saints': 'NO', 'Giants': 'NYG', 'Eagles': 'PHI', '49ers': 'SF', 'Seahawks': 'SEA', 'Buccaneers': 'TB', 'Redskins': 'WAS', 'Chargers': 'SD', 'Steelers': 'PIT', 'Raiders': 'OAK', 'Jets': 'NYJ', 'Patriots': 'NE', 'Dolphins': 'MIA', 'Chiefs': 'KC', 'Jaguars': 'JAC', 'Colts': 'IND', 'Texans': 'HOU', 'Broncos': 'DEN', 'Browns': 'CLE', 'Bills': 'BUF', 'Ravens': 'BAL'}
 
-    team_dict_2016 = {'Bengals': 'CIN', 'Titans': 'TEN', 'Cardinals': 'ARI', 'Falcons': 'ATL', 'Panthers': 'CAR', 'Bears': 'CHI', 'Cowboys': 'DAL', 'Lions': 'DET', 'Packers': 'GB', 'Rams': 'LA', 'Vikings': 'MIN', 'Saints': 'NO', 'Giants': 'NYG', 'Eagles': 'PHI', '49ers': 'SF', 'Seahawks': 'SEA', 'Buccaneers': 'TB', 'Redskins': 'WAS', 'Chargers': 'SD', 'Steelers': 'PIT', 'Raiders': 'OAK', 'Jets': 'NYJ', 'Patriots': 'NE', 'Dolphins': 'MIA', 'Chiefs': 'KC', 'Jaguars': 'JAC', 'Colts': 'IND', 'Texans': 'HOU', 'Broncos': 'DEN', 'Browns': 'CLE', 'Bills': 'BUF', 'Ravens': 'BAL'}
 
     lines_2009 = pd.read_csv('Data/NFL_lines_downloaded/nfl_lines_2009.csv')
     lines_2010 = pd.read_csv('Data/NFL_lines_downloaded/nfl_lines_2010.csv')
@@ -107,17 +110,25 @@ if __name__ == '__main__':
 
 
 
-    form(lines_2009).to_csv('Data/NFL_lines_formatted/lines_2009.csv', index=False)
-    form(lines_2010).to_csv('Data/NFL_lines_formatted/lines_2010.csv', index=False)
-    form(lines_2011).to_csv('Data/NFL_lines_formatted/lines_2011.csv', index=False)
-    form(lines_2012).to_csv('Data/NFL_lines_formatted/lines_2012.csv', index=False)
-    form(lines_2013).to_csv('Data/NFL_lines_formatted/lines_2013.csv', index=False)
-    form(lines_2014).to_csv('Data/NFL_lines_formatted/lines_2014.csv', index=False)
-    form(lines_2015).to_csv('Data/NFL_lines_formatted/lines_2015.csv', index=False)
-    form_2016(lines_2016).to_csv('Data/NFL_lines_formatted/lines_2016.csv', index=False)
+    formed_2009 = form(lines_2009)
+    formed_2009.to_csv('Data/NFL_lines_formatted/lines_2009.csv', index=False)
+    formed_2010 = form(lines_2010)
+    formed_2010.to_csv('Data/NFL_lines_formatted/lines_2010.csv', index=False)
+    formed_2011 = form(lines_2011)
+    formed_2011.to_csv('Data/NFL_lines_formatted/lines_2011.csv', index=False)
+    formed_2012 = form(lines_2012)
+    formed_2012.to_csv('Data/NFL_lines_formatted/lines_2012.csv', index=False)
+    formed_2013 = form(lines_2013)
+    formed_2013.to_csv('Data/NFL_lines_formatted/lines_2013.csv', index=False)
+    formed_2014 = form(lines_2014)
+    formed_2014.to_csv('Data/NFL_lines_formatted/lines_2014.csv', index=False)
+    formed_2015 = form(lines_2015)
+    formed_2015.to_csv('Data/NFL_lines_formatted/lines_2015.csv', index=False)
+    formed_2016 = form_2016(lines_2016)
+    formed_2016.to_csv('Data/NFL_lines_formatted/lines_2016.csv', index=False)
 
 
 
-    all_lines = form(lines_2009).append(form(lines_2010)).append(form(lines_2011)).append(form(lines_2012)).append(form(lines_2013)).append(form(lines_2014)).append(form(lines_2015))
+    all_lines = formed_2009.append(formed_2010).append(formed_2011).append(formed_2012).append(formed_2013).append(formed_2014).append(formed_2015).append(formed_2016).reset_index(drop=True)
 
-    all_lines.to_csv('Data/NFL_lines_downloaded/all_lines.csv', index=False)
+    # all_lines.to_csv('Data/NFL_lines_formatted/all_lines.csv', index=False)

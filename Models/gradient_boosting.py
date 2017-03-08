@@ -28,7 +28,7 @@ TARGET: points_category
 # need to deal with imbalanced classes
 
 
-def get_feature_matrix(df, drop_cols, cat_cols, balance=True, k=0, m=0):
+def get_feature_matrix(df, drop_cols, cat_col, balance=True, k=0, m=0):
 
     '''
     INPUT: Desired position matrix, columns to drop.
@@ -36,13 +36,16 @@ def get_feature_matrix(df, drop_cols, cat_cols, balance=True, k=0, m=0):
     '''
 
 
+    if 'Unnamed: 0' in df.columns:
+        df.drop(drop_cols, axis=1, inplace=True)
 
-    df_qb.drop(drop_cols, axis=1, inplace=True)
 
-    c_col = df_qb.pop([col for col in cat_cols])
+    c_col = df_qb.pop(cat_col)
 
-    y = df_qb.pop('points_category')
-    x = df_qb
+    y = df_qb.pop('points_category').values
+    x = df_qb.values
+
+
 
     if balance:
         return balance_classes(x, y, k=k, m=m)
@@ -169,7 +172,7 @@ if __name__ == '__main__':
     fin = FinalDF(position='QB')
     df_qb = fin.get_df()
 
-    cat_cols = ['h/a']
+    cat_col = 'h/a'
 
     drop_cols = ['season_year', 'season_type', 'week', 'full_name', 'position', 'DK points', 'team', 'opp_team']
 
@@ -177,7 +180,7 @@ if __name__ == '__main__':
 
     key = (7, 8)
 
-    x, y = get_feature_matrix(df_qb, drop_cols, balance=True, k=key[0], m=key[1])
+    x, y = get_feature_matrix(df_qb, drop_cols, cat_col, balance=True, k=key[0], m=key[1])
 
 
     X_train, X_test, y_train, y_test = train_test_split(x, y, random_state=42, stratify=y)
