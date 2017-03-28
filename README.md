@@ -31,7 +31,7 @@ Because of the limited time period of this project, I have decided to focus on D
 This folder contains all my code for querying the nfldb, saving it to .csv, loading into a pandas data frame, and doing necessary cleaning and feature engineering. I found it best to load each position into a separate data frame, for ease of position specific features. It is easy to combine the dataframes together based on the slate of games you want and/or positions needed.
 
 # EDA
-In an effort to explore the feature space and discover which features were the most beneficial to which metrics, I used Recursive Feature Elimination to determine which features were best for each position.
+In an effort to explore the feature space and discover which features were the most beneficial to which metrics, I used Recursive Feature Extraction to determine which features were best for each position.
 
 # Models
 The clustering models were implemented for an effort to classify players who might be outliers. The elliptic envelope is just one outlier detection algorithm I have used so far. Final_DF is a class to make it easy to create the dataframes you need. GBoost provides a way for classifying a player's points per $1000, with threshold at 3.75. At the same time, I am using a regressor to predict the exact value of points per $1000.
