@@ -118,13 +118,6 @@ def plot_many_kde(df, cols):
     return ax
 
 
-def plot_boxes(df):
-
-    for col in df.columns:
-        if dtype(df[col]) == 'object':
-            continue
-        else:
-            df[col].plot(kind='box', showmeans=True, showfliers=True, title=col)
 
 if __name__ == '__main__':
     passing = FinalDF(season_type='Regular', position='QB', load_salaries=False).get_df()

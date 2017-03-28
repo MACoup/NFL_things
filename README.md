@@ -24,7 +24,7 @@ I have scraped the web for Draft Kings salary data and saved these as .csv. The 
 
 # Draft Kings
 
-Because of the limited time period of this project, I have decided to focus on Draft Kings salary and contests. Inside the Draft Kings/Data folder is various scraped data. The folder with Draft Kings contest data is from a Primetime slate contest that I enter every week. There is also a folder containing all historical salary data for all NFL players. Draft Kings is relatively new, and as such only has salary data since 2014. There is also some other data scraped from the popular daily fantasy site rotogrinders. Here you can get projections and salary for players.
+Because of the limited time period of this project, I have decided to focus on Draft Kings salary and contests. Inside the Draft Kings/Data folder is various scraped data. The folder with Draft Kings contest data is from a Primetime slate contest that I enter every week. There is also a folder containing all historical salary data for all NFL players. Draft Kings is relatively new, and as such only has salary data since 2014.
 
 # NFLDB queries
 
@@ -37,4 +37,4 @@ In an effort to explore the feature space and discover which features were the m
 The clustering models were implemented for an effort to classify players who might be outliers. The elliptic envelope is just one outlier detection algorithm I have used so far. Final_DF is a class to make it easy to create the dataframes you need. GBoost provides a way for classifying a player's points per $1000, with threshold at 3.5. At the same time, I am using a regressor to predict the exact value of points per $1000.
 
 # Graphs
-![alt text](Elliptic Envelope 2 copy.png "Threshold for Value Quaterbacks")
+![alt text](http://github.com/MACoup/NFL_things/Elliptic Envelope 2 copy.png "Threshold for Value Quaterbacks")
