@@ -37,4 +37,4 @@ In an effort to explore the feature space and discover which features were the m
 The clustering models were implemented for an effort to classify players who might be outliers. The elliptic envelope is just one outlier detection algorithm I have used so far. Final_DF is a class to make it easy to create the dataframes you need. GBoost provides a way for classifying a player's points per $1000, with threshold at 3.5. At the same time, I am using a regressor to predict the exact value of points per $1000.
 
 # Graphs
-![alt text](http://github.com/MACoup/NFL_things/Quarterback_Value.png "Threshold for Value Quaterbacks")
+![alt text](Quarterback_Value.png "Threshold for Value Quaterbacks")
