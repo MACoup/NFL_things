@@ -39,11 +39,10 @@ Because of the limited time period of this project, I have decided to focus on D
 
 This folder contains all my code for querying the nfldb, saving it to .csv, loading into a pandas data frame, and doing necessary cleaning and feature engineering.
 
-points category is 1 if point production
+Points category is 1 if point production is above the 75% percentile of player points that week.
 
 # EDA
 
-Points-category
 
 In an effort to explore the feature space and discover which features were the most beneficial to which metrics, I used Recursive Feature Extraction to determine which features were best for each position.
 
