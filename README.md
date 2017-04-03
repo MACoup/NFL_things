@@ -1,10 +1,19 @@
 # Motivation
 
-The purpose of this project is to formalize a regimen for selecting players for a Daily Fantasy Football team. This repo is aimed at giving the user intelligent means to analyze and predict fantasy football performance measures in order to maximize win percentage.
+The purpose of this project is to formalize a regimen for selecting players for a Daily Fantasy Football team. This repo is aimed at the understanding of football data and how data science can be used to intelligently draft solid Daily Fantasy Football lineups
 
 Players earn points for their performance in each game. Here is a link to the scoring rules for Draft Kings fantasy football:
 
 https://www.draftkings.com/help/nfl
+
+
+# The Problem
+
+Daily Fantasy Football is huge. So huge that talking about every strategy, platform, analysis topics, and business strategies would be way outside the scope of this project. For now, I will focus only on tournament play.
+
+Tournament play is a different monster than the other game styles. It is very easy for a lineup that looks solid at first glance and performs well to be lost in the crowd of other similar lineups. They key here is finding those outliers, those players who nobody -- or very few --  will own. A lot of the time, these low-owned players will also have a high point-per-dollar metric.
+
+The goal is to find the best point-per-dollar players and build your lineups around them.
 
 # Tools
 
@@ -26,11 +35,16 @@ I have scraped the web for Draft Kings salary data and saved these as .csv. The 
 
 Because of the limited time period of this project, I have decided to focus on Draft Kings salary and contests. Inside the Draft Kings/Data folder is various scraped data. The folder with Draft Kings contest data is from a Primetime slate contest that I enter every week. There is also a folder containing all historical salary data for all NFL players. Draft Kings is relatively new, and as such only has salary data since 2014.
 
-# NFLDB queries
+# Data Scripts
 
-This folder contains all my code for querying the nfldb, saving it to .csv, loading into a pandas data frame, and doing necessary cleaning and feature engineering. I found it best to load each position into a separate data frame, for ease of position specific features. It is easy to combine the dataframes together based on the slate of games you want and/or positions needed.
+This folder contains all my code for querying the nfldb, saving it to .csv, loading into a pandas data frame, and doing necessary cleaning and feature engineering.
+
+points category is 1 if point production
 
 # EDA
+
+Points-category
+
 In an effort to explore the feature space and discover which features were the most beneficial to which metrics, I used Recursive Feature Extraction to determine which features were best for each position.
 
 # Models

@@ -241,13 +241,15 @@ def append_all_stats(dfs):
     return new_df
 
 
-def determine_points_cat(df, row, percentile):
+def determine_points_cat(df, row):
 
     '''
     INPUT: DataFrame, row
     OUTPUT: Boolean
     '''
-
+    week = row['week']
+    year = row['season_year']
+    percentile = df[(df['season_year'] == year) & (df['week'] == week)]['DK points'].describe()['75%']
     if row['DK points'] >= percentile:
         return 1
     else:
@@ -262,8 +264,7 @@ def cut_points(dfs):
     '''
 
     for df in dfs:
-        percentile = df['DK points'].describe()['75%']
-        df['points_category'] = df.apply(lambda row: determine_points_cat(df, row, percentile), axis=1).astype('category')
+        df['points_category'] = df.apply(lambda row: determine_points_cat(df, row), axis=1).astype('category')
 
 
 
@@ -293,10 +294,16 @@ if __name__ == '__main__':
     exclude_cols = ['DK points', 'h/a', 'full_name', 'team', 'opp_team', 'position', 'season_type', 'season_year', 'week', 'spread', 'o/u']
 
 
+    passing_agg = pd.read_csv('Data/Positions_agg/passing_agg.csv')
+    rec_agg = pd.read_csv('Data/Positions_agg/rec_agg.csv')
+    rush_agg = pd.read_csv('Data/Positions_agg/rush_agg.csv')
+    te_agg = pd.read_csv('Data/Positions_agg/rush_agg.csv')
 
 
 
-    dfs = [passing, rec, rush, te]
+    # dfs = [passing, rec, rush, te]
+
+    dfs = [passing_agg, rec_agg, rush_agg, te_agg]
 
     # apply_aggs(dfs, exclude_cols)
     # cut_points(dfs)
@@ -333,15 +340,15 @@ if __name__ == '__main__':
  'cmp_percentage',
  'score_percentage',
  'yds_per_rush']
-
-    passing_agg = eliminate_feats(passing, remove_cols)
-    rec_agg = eliminate_feats(rec, remove_cols)
-    rush_agg = eliminate_feats(rush, remove_cols)
-    te_agg = eliminate_feats(te, remove_cols)
+    #
+    # passing_agg = eliminate_feats(passing, remove_cols)
+    # rec_agg = eliminate_feats(rec, remove_cols)
+    # rush_agg = eliminate_feats(rush, remove_cols)
+    # te_agg = eliminate_feats(te, remove_cols)
 
     directory = 'Data/Positions_agg/'
 
-    # passing_agg.to_csv(directory + 'passing_agg.csv', index=False)
-    # rec_agg.to_csv(directory + 'rec_agg.csv', index=False)
-    # rush_agg.to_csv(directory + 'rush_agg.csv', index=False)
-    # te_agg.to_csv(directory + 'te_agg.csv', index=False)
+    passing_agg.to_csv(directory + 'passing_agg.csv', index=False)
+    rec_agg.to_csv(directory + 'rec_agg.csv', index=False)
+    rush_agg.to_csv(directory + 'rush_agg.csv', index=False)
+    te_agg.to_csv(directory + 'te_agg.csv', index=False)
