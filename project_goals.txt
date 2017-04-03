@@ -1,10 +1,7 @@
-1. I want to make the file system more efficient. Need to experiment with ways in which to do this.
+Shit to do:
 
-2. Clean up the code by using helper functions to organize things better.
-
-3. Definitely some data leakage happening. I need to create a new feature matrix that contains only variables not known at the time of the event.
-    a. With this, looking at different correlations with the in game stats
-    b. This could get into game theory land
+EDA:
+    Actually coming to some conclusions about the data in an impactful way
 
 4. There are so many determining factors, that it might be more beneficial to analyze things from a one player perspective. Projections could be for in game stats per player.
 
