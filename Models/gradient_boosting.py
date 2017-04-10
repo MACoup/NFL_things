@@ -50,32 +50,49 @@ class CustomScaler(BaseEstimator,TransformerMixin):
         return pd.concat([X_not_scaled, X_scaled], axis=1)[init_col_order]
 
 
-def get_feature_matrix(df, drop_cols, scale_cols, balance=False, k=0, m=0):
+def get_feature_matrix(df, balance=False, k=0, m=0):
 
     '''
-    INPUT: Desired position matrix, columns to drop.
+    INPUT: Desired position matrix, boolean for balancing classes, and keys for SMOTE algorithm.
     OUTPUT: X, Y
     '''
 
 
+    cat_col = 'h/a'
+
+    drop_cols = ['season_year', 'season_type', 'week', 'full_name', 'position', 'DK points', 'team', 'opp_team']
+
+    scale_cols = [col for col in df.columns if col not in drop_cols]
+
     if 'Unnamed: 0' in df.columns:
         drop_cols.append('Unnamed: 0')
+
+    d_cols = [col for col in df.columns if col in drop_cols]
     df.drop(drop_cols, axis=1, inplace=True)
 
 
-    y = df_qb.pop('points_category')
-    x = df_qb
+    y = df.pop('points_category')
+    x = df
+
+    scale_cols.remove('h/a')
+    if 'points_category' in scale_cols:
+        scale_cols.remove('points_category')
 
 
-    scaler = 
+    scaler = CustomScaler(columns=scale_cols)
+    scaler.fit(x)
+    df = scaler.transform(x)
+
+    x = df
 
 
     if balance:
-        return balance_classes(x, y, k=k, m=m)
+        x, y = balance_classes(x, y, k=k, m=m)
+        fin_df = pd.concat([pd.DataFrame(x, columns=df.columns), pd.DataFrame(y, columns=['points_category'])], axis=1)
 
 
     else:
-        return x, y
+        return x, y, scaler
 
 
 
@@ -96,7 +113,7 @@ def determine_points_per_dollar_cat(df, row, percentile):
 def get_second_feature_matrix(df, classifier, drop_cols, balance=True, k=0, m=0):
 
     '''
-    INPUT: Desired position matrix, columns to drop, values for k and m.
+    INPUT: Desired position matrix, estimator, columns to drop, values for k and m.
     OUTPUT: X, Y
     '''
 
@@ -117,10 +134,8 @@ def get_second_feature_matrix(df, classifier, drop_cols, balance=True, k=0, m=0)
 
 
     if balance:
-        return balance_classes(x, y, k=k, m=m)
-
-
-
+        x, y = balance_classes(x, y, k=k, m=m)
+        fin_df = pd.concat([pd.DataFrame(x, columns=df.columns), pd.DataFrame(y, columns=['points_category'])], axis=1)
 
 
     else:
@@ -191,23 +206,102 @@ def custom_grid_sampling(df):
             key = k
     return score_dict, key
 
-if __name__ == '__main__':
+
+def build_model(x, y):
+
+    '''
+    INPUT: feature space, Target variable
+    OUTPUT: Fitted model
+    '''
 
 
-    fin = FinalDF(position='QB')
-    df_qb = fin.get_df()
+    X_train, X_test, y_train, y_test = train_test_split(x, y, random_state=42, stratify=y)
+
+    gbc = GradientBoostingClassifier(learning_rate=0.11, max_depth=4, max_features='sqrt', verbose=5, n_estimators=400)
+
+    gbc.fit(X_train, y_train)
+
+    return gbc
+
+
+
+def predict(clf, df, week=9):
+
+    '''
+    INPUT: Fitted estimator, target dataframe.
+    OUTPUT:
+
+    Scales the data and predicts the point category for each player.
+    '''
 
     cat_col = 'h/a'
 
     drop_cols = ['season_year', 'season_type', 'week', 'full_name', 'position', 'DK points', 'team', 'opp_team']
 
-    scale_cols = [col for col in df_qb.columns if col != 'h/a']
+    scale_cols = [col for col in df.columns if col not in drop_cols]
+
+    if 'Unnamed: 0' in df.columns:
+        drop_cols.append('Unnamed: 0')
+
+    d_cols = [col for col in df.columns if col in drop_cols]
+    df.drop(drop_cols, axis=1, inplace=True)
+
+
+    y = df.pop('points_category')
+    x = df
+
+    scale_cols.remove('h/a')
+    if 'points_category' in scale_cols:
+        scale_cols.remove('points_category')
+
+    x = scaler.transform(x)
+
+    return clf.predict(x)
+
+
+
+
+
+def load_dfs():
+
+    '''
+    INPUT: None
+    OUTPUT:
+
+    '''
+
+    fin = FinalDF(position='QB', load_salaries=False)
+    df_qb = fin.get_df()
+
+    df_qb_2016 = df_qb[(df_qb['season_year'] == 2016) & (df_qb['week'] > 8)]
+
+    drop_ind = df_qb_2016.index.tolist()[0]
+    df_qb = df_qb.iloc[:3209,:]
+
+    return df_qb, df_qb_2016
+
+
+
+if __name__ == '__main__':
+
+
+    df_qb, target_df = load_dfs()
+
+
+
+
 
     # score_dict, key = custom_grid_sampling()
 
     key = (7, 8)
 
-    x, y, = get_feature_matrix(df_qb, drop_cols, balance=False, k=key[0], m=key[1])
+    x, y, scaler = get_feature_matrix(df_qb, balance=False, k=key[0], m=key[1])
+
+
+
+    gbc = build_model(x, y)
+
+    # prediction = predict(gbc, target_df,week=9)
 
     #
     # X_train, X_test, y_train, y_test = train_test_split(x, y, random_state=42, stratify=y)
