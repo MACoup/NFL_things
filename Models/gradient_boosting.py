@@ -16,7 +16,7 @@ from sklearn.base import BaseEstimator, TransformerMixin
 
 
 '''
-This model is used to predict whether or not the player's points will be in the top 75th percentile of all players.
+This model is used to predict whether or not the player's points will be in the top 75th percentile of players for a given week.
 
 TARGET: points_category
 
@@ -225,15 +225,18 @@ def build_model(x, y):
 
 
 
-def predict(clf, df, week=9):
+def predict(clf, df, scaler, week=None):
 
     '''
-    INPUT: Fitted estimator, target dataframe.
-    OUTPUT:
+    INPUT: Fitted estimator, target dataframe, scaler object.
+    OUTPUT: Prediction of players over threshold.
 
-    Scales the data and predicts the point category for each player.
+    Applies all transformations and predicts the point category for each player.
     '''
 
+    fin_df = df.copy()
+    if week:
+        df = df[df['week'] == week]
     cat_col = 'h/a'
 
     drop_cols = ['season_year', 'season_type', 'week', 'full_name', 'position', 'DK points', 'team', 'opp_team']
@@ -256,7 +259,12 @@ def predict(clf, df, week=9):
 
     x = scaler.transform(x)
 
-    return clf.predict(x)
+    x['prediction'] = clf.predict(x)
+
+    pred_inds = x[x['prediction'] == 1].index.tolist()
+
+    
+    return list(fin_df.iloc[pred_inds]['full_name']), fin_df.iloc[pred_inds]
 
 
 
@@ -266,7 +274,9 @@ def load_dfs():
 
     '''
     INPUT: None
-    OUTPUT:
+    OUTPUT: QB training DataFrame. Target DataFrame
+
+    Loads QB DataFrame, then removes the second half of 2016 for testing predictions.
 
     '''
 
@@ -276,9 +286,11 @@ def load_dfs():
     df_qb_2016 = df_qb[(df_qb['season_year'] == 2016) & (df_qb['week'] > 8)]
 
     drop_ind = df_qb_2016.index.tolist()[0]
-    df_qb = df_qb.iloc[:3209,:]
+    df_qb = df_qb.iloc[:drop_ind,:]
 
-    return df_qb, df_qb_2016
+    target = df_qb_2016.reset_index(drop=True)
+
+    return df_qb, target
 
 
 
@@ -301,7 +313,7 @@ if __name__ == '__main__':
 
     gbc = build_model(x, y)
 
-    # prediction = predict(gbc, target_df,week=9)
+    predictions = predict(gbc, target_df, scaler, week=9)
 
     #
     # X_train, X_test, y_train, y_test = train_test_split(x, y, random_state=42, stratify=y)
